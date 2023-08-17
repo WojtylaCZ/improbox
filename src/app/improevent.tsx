@@ -59,6 +59,8 @@ export const ImproEventCard = ({
     setIsExpanded(!isExpanded);
   }, [improEvent.id, isExpanded]);
 
+  const day = new Date(Date.parse(improEvent.playDate));
+
   return (
     <div
       style={{
@@ -99,7 +101,7 @@ export const ImproEventCard = ({
                 marginBottom: "0px",
               }}
             >
-              {improEvent.playDate}
+              {day.getDate()}.{day.getMonth() + 1}
             </h3>
           </span>
           <span>
@@ -156,6 +158,7 @@ export const ImproEventCard = ({
                       {improEvent.name}
                     </a>
                   </h6>
+                  {improEvent.district}
                 </div>
               )}
             </Row>
@@ -175,7 +178,16 @@ export const ImproEventCard = ({
                     color: "grey",
                   }}
                 >
-                  {t("trailpark.lastUpdatedAt")} {improEvent.organizer.websiteUrl}
+                  {t("trailpark.lastUpdatedAt")}
+
+                  <a
+                    href={improEvent.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#000000" }}
+                  >
+                    {improEvent.organizer.websiteUrl}
+                  </a>
                 </span>
               </div>
               {}
