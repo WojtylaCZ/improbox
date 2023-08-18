@@ -1,43 +1,57 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { ImproEventCard } from "./improevent";
-import { ImproEvent } from "../assets/data/data-improbox";
+import { MonthEventsCalendar } from "../assets/data/data-improbox";
 import { useTranslation } from "react-i18next";
+import Travolta from "../assets/img/travolta.gif";
+import { Image } from "react-bootstrap";
 
 export type District = {
-  name: string;
-  improEvents: Array<ImproEvent>;
+  monthSection: MonthEventsCalendar;
+  isForUpcomingEvents: boolean;
 };
 
 export const MonthCalendarSection = ({
-  name,
-  improEvents,
+  monthSection,
   isFirst,
+  isForUpcomingEvents,
 }: District & { isFirst: boolean }) => {
   const { t } = useTranslation();
 
-  const date = Date.now();
+  const todayDate = Date.now();
 
-  const upcomingEvents = improEvents.filter((improEvent) => {
-    const eventDate = Date.parse(improEvent.playDate);
-    return eventDate >= date;
-  });
+  const monthDate = Date.parse(monthSection.monthDate);
 
-  const pastEvents = improEvents.filter((improEvent) => {
-    const eventDate = Date.parse(improEvent.playDate);
-    return eventDate < date;
-  });
+  if (
+    isForUpcomingEvents &&
+    monthDate < todayDate &&
+    new Date(monthDate).getMonth() !== new Date(todayDate).getMonth()
+  ) {
+    return null;
+  }
+  if (!isForUpcomingEvents && Date.parse(monthSection.monthDate) > todayDate) {
+    return null;
+  }
 
-  const upcomingEventsList = upcomingEvents.map((improEvent, id) => (
-    <ImproEventCard key={id} improEvent={improEvent} isFirst={isFirst && id < 4} />
-  ));
-
-  const pastEventsList = pastEvents.map((improEvent, id) => (
-    <ImproEventCard key={id} improEvent={improEvent} isFirst={isFirst && id < 4} />
-  ));
+  const events = monthSection.events
+    .filter((improEvent) => {
+      const eventDate = Date.parse(improEvent.playDate);
+      return isForUpcomingEvents ? eventDate >= todayDate : eventDate <= todayDate;
+    })
+    .map((improEvent, id) => (
+      <ImproEventCard key={id} improEvent={improEvent} isFirst={isFirst && id < 2} />
+    ));
 
   return (
-    <>
+    <div>
+      <h2
+        style={{
+          fontFamily: "Jockey One",
+          fontSize: "calc(1.075rem + 1.1vw)",
+        }}
+      >
+        {monthSection.monthName}
+      </h2>
       <div
         style={{
           display: "flex",
@@ -46,33 +60,17 @@ export const MonthCalendarSection = ({
           width: "100%",
         }}
       >
-        <h2
-          style={{
-            fontFamily: "Kaushan Script",
-            color: "#c51515",
-            marginBottom: "24px",
-            fontSize: "calc(1.775rem + 1.1vw)",
-          }}
-        >
-          {name}
-        </h2>
-        {Boolean(upcomingEventsList.length) && (
-          <>
-            {t("section.futureEvents")}
-            <Stack gap={4}>{upcomingEventsList}</Stack>
-            <br />
-            <br />
-          </>
-        )}
-        {Boolean(pastEventsList.length) && (
-          <>
-            {t("section.pastEvents")}
-            <Stack gap={4}>{pastEventsList}</Stack>
-            <br />
-            <br />
-          </>
+        {Boolean(events.length) && <Stack gap={4}>{events}</Stack>}
+        {!Boolean(events.length) && (
+          <Image
+            src={Travolta}
+            style={{
+              maxWidth: "300px",
+              width: "100%",
+            }}
+          />
         )}
       </div>
-    </>
+    </div>
   );
 };

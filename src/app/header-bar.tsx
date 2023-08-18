@@ -1,5 +1,5 @@
 import { Navbar, Container } from "react-bootstrap";
-import { SelectLocaleDropdown } from "./select-locale-dropdown";
+// import { SelectLocaleDropdown } from "./select-locale-dropdown";
 
 export const HeaderBar = () => {
   return (
@@ -16,21 +16,25 @@ export const HeaderBar = () => {
         <Container
           style={{
             maxWidth: "1080px",
+            width: "100%",
           }}
         >
-          <Navbar.Brand>
+          {/* <Navbar.Brand> */}
+          <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
             <h3
               style={{
-                // fontFamily: "Kaushan Script",
-                color: "white",
+                fontFamily: "Jockey One",
+                color: "#dd2822",
+                fontSize: "64px",
                 margin: "0px",
               }}
             >
-              Improbox.cz (beta)
+              IMPROBOX.CZ
             </h3>
-          </Navbar.Brand>
+          </div>
+          {/* </Navbar.Brand> */}
 
-          <SelectLocaleDropdown />
+          {/* <SelectLocaleDropdown /> */}
         </Container>
       </Navbar>
     </>

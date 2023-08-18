@@ -1,7 +1,8 @@
-import { useEffect } from "react";
-import { Image, Stack } from "react-bootstrap";
+import { useCallback, useEffect, useState } from "react";
+import { Collapse, Image, Stack } from "react-bootstrap";
 import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors612.jpeg";
+import MailIcon from "../assets/img/mail.png";
 
 import { data } from "../assets/data/data-improbox";
 import { useNavigate, useParams } from "react-router-dom";
@@ -27,14 +28,29 @@ export const Main = () => {
     }
   }, [navigate, trailparkSlug, locale]);
 
-  const districtsList = data.map((district, id) => (
+  const upcomingMonthSections = data.map((monthSection, id) => (
     <MonthCalendarSection
       key={id}
-      name={district.monthName}
-      improEvents={district.events}
+      monthSection={monthSection}
       isFirst={id === 0}
+      isForUpcomingEvents={true}
     />
   ));
+
+  const pastMonthSections = data.map((monthSection, id) => (
+    <MonthCalendarSection
+      key={id}
+      monthSection={monthSection}
+      isFirst={false}
+      isForUpcomingEvents={false}
+    />
+  ));
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleClick = useCallback(() => {
+    setIsExpanded(!isExpanded);
+  }, [isExpanded]);
 
   return (
     <>
@@ -43,29 +59,30 @@ export const Main = () => {
         style={{
           margin: "auto",
           maxWidth: "1400px",
-          height: "800px",
+          height: "500px",
           position: "relative",
           width: "100%",
-          backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #FFFFFF 92.61%), url("https://www.theatre-impro.be/assets/img/backgrounds/1@2x.jpg")`,
-          // "Tiia Monto, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons",
+          backgroundImage: `url("https://uploads-ssl.webflow.com/6449ba271e8d58c3c47c1dce/64764a32d875dac6c84b98f6_desktop-hero-img.webp")`,
           backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <h1
+        <h3
           style={{
             color: "#ffffff",
             textAlign: "center",
-            fontFamily: "Kaushan Script",
+            fontFamily: "Jockey One",
             zIndex: "10",
             position: "absolute",
             left: "0px",
-            bottom: "50%",
+            bottom: "8%",
             right: "0px",
-            fontSize: "calc(1.975rem + 1.3vw)",
+            fontSize: "calc(0.975rem + 1.2vw)",
           }}
         >
           {t("titles.mainH1")}
-        </h1>
+        </h3>
       </div>
 
       <Stack
@@ -75,7 +92,7 @@ export const Main = () => {
           width: "95%",
           margin: "auto",
           maxWidth: "690px",
-          marginBottom: "16px",
+          marginBottom: "44px",
           marginTop: "16px",
         }}
       >
@@ -87,15 +104,58 @@ export const Main = () => {
             textAlign: "center",
           }}
         >
-          <span>{t("text.introLine1")}</span>
+          <span
+            style={{
+              fontSize: "12px",
+              marginTop: "4px",
+              marginBottom: "12px",
+            }}
+          >
+            {t("text.introLine1")}
+          </span>
 
-          <span>{t("text.introLine2")}</span>
-          <br />
-          <span>{t("text.introLine3")}</span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: "8px",
+            }}
+            onClick={handleClick}
+          >
+            <Image
+              src={MailIcon}
+              style={{
+                maxWidth: "24px",
+                marginRight: "8px",
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "Jockey One",
+                fontSize: "20px",
+                color: "#dd2822",
+                textDecoration: "underline",
+              }}
+            >
+              {t("text.introLine2")}
+            </span>
+          </div>
+          <Collapse in={isExpanded}>
+            <iframe
+              title="improbox"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?embedded=true"
+              width={400}
+              height={500}
+            >
+              Načítání…
+            </iframe>
+          </Collapse>
+
           <hr
             style={{
-              width: "100px",
-              color: "#c51515",
+              width: "110px",
+              color: "#dd2822",
               border: 0,
               borderTop: "1px solid",
               opacity: "90%",
@@ -103,7 +163,21 @@ export const Main = () => {
           />
         </div>
 
-        <Stack gap={5}>{districtsList}</Stack>
+        <Stack gap={5}>{upcomingMonthSections}</Stack>
+
+        <hr
+          style={{
+            width: "110px",
+            color: "#dd2822",
+            border: 0,
+            borderTop: "1px solid",
+            opacity: "90%",
+          }}
+        />
+
+        <h4 style={{}}>Uplynulé události</h4>
+
+        <Stack gap={5}>{pastMonthSections}</Stack>
 
         <Image
           src={Actors}
@@ -113,18 +187,27 @@ export const Main = () => {
           }}
         />
 
+        <iframe
+          title="Feedback"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSejGG8NV6FbXSAO-sjIrWoqX29FY1CmNx2cuHbe-aMoSS2veg/viewform?embedded=true"
+          width={"100%"}
+          height={500}
+        >
+          Načítání…
+        </iframe>
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
+            alignItems: "start",
+            width: "100%",
           }}
         >
           <h2
             style={{
-              fontFamily: "Kaushan Script",
-              color: "#c51515",
+              fontFamily: "Jockey One",
+              color: "#dd2822",
               marginBottom: "24px",
               fontSize: "calc(1.775rem + 1.1vw)",
             }}
@@ -144,20 +227,6 @@ export const Main = () => {
               after
             </Trans>
           </span>
-          <br />
-          <span>{t("text.footerLine1")}</span>
-        </div>
-        <div
-          style={{
-            color: "#0a3383",
-            textAlign: "center",
-          }}
-        >
-          <span>{t("text.footerLine2")}</span>
-          <br />
-          <a href={"https://www.facebook.com/WojtylaCZ/"} target="_blank" rel="noopener noreferrer">
-            {t("text.footerLine3")}
-          </a>
         </div>
       </Stack>
       <FooterBar />

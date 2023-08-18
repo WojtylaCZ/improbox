@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Col, Collapse, Container, Image, Row, Stack } from "react-bootstrap";
+import { Col, Collapse, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
-import FacebookIcon from "../assets/icons/facebook.svg";
+// import FacebookIcon from "../assets/icons/facebook.svg";
 // import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { ImproEvent } from "../assets/data/data-improbox";
@@ -61,12 +61,30 @@ export const ImproEventCard = ({
 
   const day = new Date(Date.parse(improEvent.playDate));
 
+  const dayNames = ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"];
+
+  const monthNames = [
+    "led.",
+    "Úno.",
+    "Bře.",
+    "Dub.",
+    "Kvě.",
+    "Čvn.",
+    "Čvc.",
+    "Srp.",
+    "Zář.",
+    "Říj.",
+    "Lis.",
+    "Pro.",
+  ];
+
   return (
     <div
       style={{
         backgroundColor: "#ffffff",
-        borderRadius: "2px",
-        boxShadow: "0 0 20px 0 rgba(29, 17, 86, 0.12)",
+        border: "1px solid #220101",
+        borderRadius: "8px",
+        boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
       }}
       aria-controls="example-collapse-text"
       aria-expanded={isExpanded}
@@ -76,225 +94,156 @@ export const ImproEventCard = ({
         {`
           .trailparkHeader:hover {
             background-color: #F8F8F8;
+            border-radius: 8px;
+
           }
-          
-          .trailparkHeader:hover .detailDropdown {
-            text-decoration: underline
-        }
+        
           `}
       </style>
-      <div className="trailparkHeader">
-        <div
-          style={{
-            display: "flex",
-            padding: "16px 16px 16px 16px ",
-            alignItems: "center",
-            cursor: "pointer",
-            justifyContent: "space-between",
-            alignContent: "center",
-          }}
+      <div className="trailparkHeader" style={{ padding: "14px" }}>
+        <Container
           onClick={handleClick}
+          style={{
+            cursor: "pointer",
+            // margin: "20px",
+          }}
         >
-          <span>
-            <h3
-              style={{
-                marginBottom: "0px",
-              }}
-            >
-              {day.getDate()}.{day.getMonth() + 1}
-            </h3>
-          </span>
-          <span>
-            <h3
-              style={{
-                marginBottom: "0px",
-              }}
-            >
-              {improEvent.organizer.id === "unknown" ? improEvent.name : improEvent.organizer.name}
-            </h3>
-          </span>
-
-          <div
-            className="detailDropdown"
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "center",
-            }}
-          >
-            <h6
-              style={{
-                fontSize: "smaller",
-                paddingRight: "0.6em",
-                marginBottom: "-0.2em",
-                width: "95px",
-                textAlign: "right",
-              }}
-            >
-              {isExpanded ? t("trailpark.hideDetailsH6") : t("trailpark.showDetailsH6")}
-            </h6>
-
-            <div style={{ width: "10px" }}>
-              {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
-            </div>
-          </div>
-        </div>
-      </div>
-      <Collapse in={isExpanded}>
-        <div id="example-collapse-text">
-          <hr style={{ marginTop: "0px" }} />
-
-          <Container>
-            <Row>
-              {improEvent.name && (
-                <div>
-                  <h6 style={{}}>
-                    <a
-                      href={improEvent.websiteUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ color: "#000000" }}
-                    >
-                      {improEvent.name}
-                    </a>
-                  </h6>
-                  {improEvent.district}
+          <Row>
+            <Col xs={8} sm={3}>
+              {/* DATE */}
+              <div style={{ display: "flex" }}>
+                <span style={{ marginRight: "6px", marginTop: "12px", fontSize: "12px" }}>
+                  {dayNames[day.getDay()]}
+                </span>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
+                  <span
+                    style={{
+                      fontSize: "40px",
+                    }}
+                  >
+                    {day.getDate()}
+                  </span>
+                  <span style={{ marginLeft: "4px", fontSize: "12" }}>
+                    {monthNames[day.getMonth()]}
+                  </span>
                 </div>
-              )}
-            </Row>
-            <Row>
+              </div>
+            </Col>
+
+            <Col xs={4} sm={{ span: 2, order: 2 }}>
+              {/* MISC */}
+
               <div
                 style={{
-                  marginTop: "auto",
                   display: "flex",
-                  alignItems: "flex-start",
-                  flexDirection: "row-reverse",
-                  alignSelf: "flex-end",
+                  height: "100%",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
                 }}
               >
-                <span
+                <div
                   style={{
-                    fontSize: "x-small",
-                    color: "grey",
+                    display: "flex",
+                    padding: "4px 8px",
+                    alignSelf: "flex-end",
+                    borderRadius: "4px",
+                    backgroundColor: `${improEvent.eventType === "play" ? "#FFF7D9" : "#FFD9E7"}`,
+                    fontSize: "12px",
+                    maxWidth: "81px",
                   }}
                 >
-                  {t("trailpark.lastUpdatedAt")}
+                  {improEvent.eventType === "play" ? "Představení" : "Workshop"}
+                </div>
+                <div
+                  style={{
+                    marginTop: "6px",
 
+                    display: "flex",
+                    paddingRight: "8px",
+                    alignSelf: "flex-end",
+                    color: "#000000",
+                    fontSize: "12px",
+                  }}
+                >
+                  <span>{improEvent.district}</span>
+                </div>
+              </div>
+            </Col>
+
+            <Col xs={11} sm={{ span: 6, order: 1 }}>
+              {/* EVENT NAME */}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div>
                   <a
                     href={improEvent.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: "#000000" }}
-                  >
-                    {improEvent.organizer.websiteUrl}
-                  </a>
-                </span>
-              </div>
-              {}
-            </Row>
-
-            {/* <Row>
-              <Col sm style={{ marginBottom: "0.5em" }}>
-                <h5 style={{ fontWeight: "bold", minWidth: "210px" }}>{t("trailpark.qrCodeH5")}</h5>
-
-                <div style={{ margin: "auto", maxWidth: "250px" }}>
-                  {improEvent.qrImage ? <Image src={improEvent.qrImage} thumbnail /> : "❌"}
-                </div>
-              </Col>
-              <Col sm style={{ marginBottom: "0.5em" }}>
-                <div>
-                  <h5 style={{ fontWeight: "bold" }}>{t("trailpark.accountNumberH5")}</h5>
-                  <h6
                     style={{
-                      fontSize: "large",
+                      fontFamily: "Jockey One",
+                      fontSize: "20px",
                       color: "#000000",
-                      fontWeight: "bold",
                     }}
                   >
-                    {improEvent.bankAccountNumber || "❌"}
-                  </h6>
+                    {improEvent.name}
+                  </a>
                 </div>
-
-                {improEvent.transparentBankAccountUrl && (
-                  <div style={{ marginTop: "12px" }}>
-                    <h6>
-                      <a
-                        href={improEvent.transparentBankAccountUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: "#000000" }}
-                      >
-                        {t("trailpark.publicAccountH6")}
-                      </a>
-                    </h6>
-                  </div>
-                )}
-              </Col>
-
-              <Col sm style={{ marginBottom: "0.5em" }}>
-                <div
+                <span
                   style={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
+                    color: "#dd2822",
+                    fontSize: "16px",
                   }}
                 >
-                  <Stack gap={3}>
-                    <div>
-                      <h5 style={{ fontWeight: "bold" }}>{t("trailpark.operatorH5")}</h5>
-                      <h6 style={{ color: "#000000" }}>{improEvent.operator}</h6>
-                    </div>
+                  {improEvent.organizer.id === "unknown"
+                    ? improEvent.name
+                    : improEvent.organizer.name}
+                </span>
+              </div>
+            </Col>
 
-                    {improEvent.url && (
-                      <div>
-                        <h5 style={{ fontWeight: "bold" }}>Web:</h5>
-                        <h6 style={{}}>
-                          <a
-                            href={improEvent.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#000000" }}
-                          >
-                            {improEvent.name}
-                          </a>
-                        </h6>
-                      </div>
-                    )}
-                    {improEvent.facebookPageUrl && (
-                      <a
-                        href={improEvent.facebookPageUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ textDecoration: "none" }}
-                      >
-                        <h5 style={{ fontWeight: "bold" }}>Facebook: </h5>
-                        <Image src={FacebookIcon} />
-                      </a>
-                    )}
-                    <div></div>
-                  </Stack>
-                  <div
-                    style={{
-                      marginTop: "auto",
-                      display: "flex",
-                      alignItems: "flex-start",
-                      flexDirection: "row-reverse",
-                      alignSelf: "flex-end",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "x-small",
-                        color: "grey",
-                      }}
-                    >
-                      {t("trailpark.lastUpdatedAt")} {improEvent.checkedAt}
-                    </span>
-                  </div>
+            <Col xs={1} sm={{ span: 1, order: 3 }}>
+              {/* CHEVRON */}
+
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  marginRight: "8px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "10px",
+                    alignSelf: "center",
+                  }}
+                >
+                  {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
                 </div>
-              </Col>
-            </Row> */}
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        {/* </div> */}
+      </div>
+      <Collapse in={isExpanded}>
+        <div id="example-collapse-text">
+          <hr style={{ marginTop: "0px", marginBottom: "0px" }} />
+
+          <Container>
+            <Row>
+              <span style={{ margin: "12px", fontSize: "12px" }}>
+                {t("trailpark.lastUpdatedAt")}
+
+                <a
+                  href={improEvent.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#000000" }}
+                >
+                  {improEvent.organizer.websiteUrl}
+                </a>
+              </span>
+            </Row>
           </Container>
         </div>
       </Collapse>

@@ -1,15 +1,15 @@
 {
   "titles": {
-    "mainH1": "Přehled akcí ve světě improvizace",
+    "mainH1": "Přehled impro akcí v Česku",
     "contactH2": "Kontakt",
     "error": "Tady se improvizavalo až moc.",
     "jumpHome": "Přejít na začátek"
   },
   "text": {
-    "introLine1": "Improbox přináší souhrn pžedstavení, workshopů či kempů v Čechách.",
-    "introLine2": "Lorem ipsum.",
+    "introLine1": "Co, kdy kde v Českém světě improvizace.",
+    "introLine2": "Rád(a) bych novinky do emailu",
     "introLine3": "Lorem ipsum.",
-    "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1> , improvizátor, programátor.",
+    "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor.",
     "footerLine1": "Lorem ipsum.",
     "footerLine2": "Lorem ipsum.",
     "footerLine3": "Napište a dejte mi vědet! ✍️"
@@ -25,6 +25,6 @@
     "accountNumberH5": "Číslo účtu:",
     "publicAccountH6": "Transparentní účet",
     "operatorH5": "Provozovatel:",
-    "lastUpdatedAt": "Web uskupení: "
+    "lastUpdatedAt": "Web organizátora: "
   }
 }
