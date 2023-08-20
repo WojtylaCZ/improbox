@@ -3,28 +3,51 @@
     "mainH1": "Přehled impro akcí v Česku",
     "contactH2": "Kontakt",
     "error": "Tady se improvizavalo až moc.",
-    "jumpHome": "Přejít na začátek"
+    "jumpHome": "Přejít na začátek",
+    "showPastEvents": "Zobrazit uplynulé akce",
+    "hidePastEvents": "Skrýt uplynulé akce"
   },
   "text": {
     "introLine1": "Co, kdy kde v Českém světě improvizace.",
     "introLine2": "Rád(a) bych novinky do emailu",
-    "introLine3": "Lorem ipsum.",
-    "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor.",
-    "footerLine1": "Lorem ipsum.",
-    "footerLine2": "Lorem ipsum.",
-    "footerLine3": "Napište a dejte mi vědet! ✍️"
+    "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor."
   },
-  "section": {
-    "futureEvents": "Nadcházející:",
-    "pastEvents": "Proběhlé:"
-  },
-  "trailpark": {
-    "showDetailsH6": "Zobrazit uplynulé akce",
-    "hideDetailsH6": "Skrýt uplynulé akce",
-    "qrCodeH5": "QR kód pro platbu:",
-    "accountNumberH5": "Číslo účtu:",
-    "publicAccountH6": "Transparentní účet",
-    "operatorH5": "Provozovatel:",
+  "event": {
     "lastUpdatedAt": "Web organizátora: "
+  },
+  "dataLabels": {
+    "workshop": "Workshop",
+    "play": "Představení",
+    "monday": "Po",
+    "tuesday": "Út",
+    "wednesday": "St",
+    "thursday": "Čt",
+    "friday": "Pá",
+    "saturday": "So",
+    "sunday": "Ne",
+    "januaryShort": "Led.",
+    "februaryShort": "Úno.",
+    "marchShort": "Bře.",
+    "aprilShort": "Dub.",
+    "mayShort": "Kvě.",
+    "juneShort": "Čvn.",
+    "julyShort": "Čvc.",
+    "augustShort": "Srp.",
+    "septemberShort": "Zář.",
+    "octoberShort": "Říj.",
+    "novemberShort": "Lis.",
+    "decemberShort": "Pro.",
+    "january": "Leden",
+    "february": "Únor",
+    "march": "Březen",
+    "april": "Duben",
+    "may": "Květen",
+    "june": "Červen",
+    "july": "Červenec",
+    "august": "Srpen",
+    "september": "Září",
+    "october": "Říjen",
+    "november": "Listopad",
+    "december": "Prosinec"
   }
 }

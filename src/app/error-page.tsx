@@ -9,29 +9,33 @@ export const ErrorPage = () => {
     <>
       <style type="text/css">
         {`
-          .navbar-custom {
-            background-color: #0a3383;
-          }
-          `}
+        .navbar-custom {
+          background-color: #000000;
+        }
+        `}
       </style>
 
-      <Navbar variant="custom" sticky="top">
+      <Navbar variant="custom">
         <Container
           style={{
             maxWidth: "1080px",
+            width: "100%",
           }}
         >
-          <Navbar.Brand>
+          <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
             <h3
               style={{
+                fontFamily: "Jockey One",
+                color: "#dd2822",
+                fontSize: "64px",
                 margin: "0px",
               }}
             >
-              <a style={{ color: "white", textDecoration: "none" }} href="/">
-                Improbox.cz
-              </a>
+              IMPROBOX.CZ
             </h3>
-          </Navbar.Brand>
+          </div>
+
+          {/* <SelectLocaleDropdown /> */}
         </Container>
       </Navbar>
 
@@ -39,26 +43,26 @@ export const ErrorPage = () => {
         style={{
           margin: "auto",
           maxWidth: "1400px",
-          height: "200px",
+          height: "500px",
           position: "relative",
           width: "100%",
-          backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 92.61%), url("https://upload.wikimedia.org/wikipedia/commons/2/28/Skate_skiing_track.jpg")`,
-          // "Tiia Monto, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons",
+          backgroundImage: `url("https://uploads-ssl.webflow.com/6449ba271e8d58c3c47c1dce/64764a32d875dac6c84b98f6_desktop-hero-img.webp")`,
           backgroundSize: "cover",
-          filter: "grayscale(100%)",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
           style={{
-            color: "#0a3383",
+            color: "#ffffff",
             textAlign: "center",
-            fontFamily: "Kaushan Script",
+            fontFamily: "Jockey One",
             zIndex: "10",
             position: "absolute",
             left: "0px",
-            bottom: "30%",
+            bottom: "8%",
             right: "0px",
-            fontSize: "calc(1.975rem + 1.3vw)",
+            fontSize: "calc(0.975rem + 1.2vw)",
           }}
         >
           Oops!
@@ -79,15 +83,22 @@ export const ErrorPage = () => {
         <span>{t("titles.error")}</span>
         <hr
           style={{
-            width: "100px",
-            color: "#f7b500",
+            width: "120px",
+            color: "#dd2822",
             border: 0,
             borderTop: "1px solid",
             opacity: "90%",
           }}
         />
 
-        <a href="/">{t("titles.jumpHome")}</a>
+        <a
+          style={{
+            color: "#dd2822",
+          }}
+          href="/"
+        >
+          {t("titles.jumpHome")}
+        </a>
 
         <Image
           src={Actors}

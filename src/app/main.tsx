@@ -18,17 +18,17 @@ export const Main = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const { trailparkSlug, locale } = useParams();
+  const { eventSlug, locale } = useParams();
 
   useEffect(() => {
     if (locale && !supportedLocales.includes(locale)) {
       navigate("/", { replace: true });
     }
     const slugs = data.flatMap((district) => district.events).map((t) => t.slug);
-    if (trailparkSlug && !slugs.includes(trailparkSlug)) {
+    if (eventSlug && !slugs.includes(eventSlug)) {
       navigate("/", { replace: true });
     }
-  }, [navigate, trailparkSlug, locale]);
+  }, [navigate, eventSlug, locale]);
 
   const upcomingMonthSections = data.map((monthSection, id) => (
     <MonthCalendarSection
@@ -212,8 +212,8 @@ export const Main = () => {
               }}
             >
               {isPastEventsSectionExpanded
-                ? t("trailpark.hideDetailsH6")
-                : t("trailpark.showDetailsH6")}
+                ? t("titles.hidePastEvents")
+                : t("titles.showPastEvents")}
             </h2>
 
             <div style={{ width: "10px", marginBottom: "8px" }}>

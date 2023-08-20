@@ -19,7 +19,7 @@ export const ImproEventCard = ({
 }) => {
   const { t } = useTranslation();
 
-  const { trailparkSlug } = useParams();
+  const { eventSlug } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
 
@@ -31,17 +31,17 @@ export const ImproEventCard = ({
   };
 
   useEffect(() => {
-    if (trailparkSlug === improEvent.slug) {
+    if (eventSlug === improEvent.slug) {
       setIsExpanded(true);
       scrollToTarget();
       return;
     }
 
-    if (!trailparkSlug) {
+    if (!eventSlug) {
       setIsExpanded(isFirst);
       window.scrollTo(0, 0);
     }
-  }, [trailparkSlug, improEvent.slug, setIsExpanded, isFirst]);
+  }, [eventSlug, improEvent.slug, setIsExpanded, isFirst]);
 
   const handleClick = useCallback(() => {
     if (!isExpanded) {
@@ -61,21 +61,29 @@ export const ImproEventCard = ({
 
   const isPastEvent = eventPlay < todayDate;
 
-  const dayNames = ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"];
+  const dayNames = [
+    t("dataLabels.sunday"),
+    t("dataLabels.monday"),
+    t("dataLabels.tuesday"),
+    t("dataLabels.wednesday"),
+    t("dataLabels.thursday"),
+    t("dataLabels.friday"),
+    t("dataLabels.saturday"),
+  ];
 
   const monthNames = [
-    "led.",
-    "Úno.",
-    "Bře.",
-    "Dub.",
-    "Kvě.",
-    "Čvn.",
-    "Čvc.",
-    "Srp.",
-    "Zář.",
-    "Říj.",
-    "Lis.",
-    "Pro.",
+    t("dataLabels.januaryShort"),
+    t("dataLabels.februaryShort"),
+    t("dataLabels.marchShort"),
+    t("dataLabels.aprilShort"),
+    t("dataLabels.mayShort"),
+    t("dataLabels.juneShort"),
+    t("dataLabels.julyShort"),
+    t("dataLabels.augustShort"),
+    t("dataLabels.septemberShort"),
+    t("dataLabels.octoberShort"),
+    t("dataLabels.novemberShort"),
+    t("dataLabels.decemberShort"),
   ];
 
   return (
@@ -92,7 +100,7 @@ export const ImproEventCard = ({
     >
       <style type="text/css">
         {`
-          .trailparkHeader:hover {
+          .eventHeader:hover {
             background-color: #F8F8F8;
             border-radius: 8px;
 
@@ -100,7 +108,7 @@ export const ImproEventCard = ({
         
           `}
       </style>
-      <div className="trailparkHeader" style={{ padding: "14px" }}>
+      <div className="eventHeader" style={{ padding: "14px" }}>
         <Container
           onClick={handleClick}
           style={{
@@ -165,7 +173,9 @@ export const ImproEventCard = ({
                     maxWidth: "81px",
                   }}
                 >
-                  {improEvent.eventType === "play" ? "Představení" : "Workshop"}
+                  {improEvent.eventType === "play"
+                    ? t("dataLabels.play")
+                    : t("dataLabels.workshop")}
                 </div>
                 <div
                   style={{
@@ -236,7 +246,6 @@ export const ImproEventCard = ({
             </Col>
           </Row>
         </Container>
-        {/* </div> */}
       </div>
       <Collapse in={isExpanded}>
         <div id="event-description-collapse">
@@ -245,7 +254,7 @@ export const ImproEventCard = ({
           <Container>
             <Row>
               <span style={{ margin: "12px", fontSize: "12px" }}>
-                {t("trailpark.lastUpdatedAt")}
+                {t("event.lastUpdatedAt")}
 
                 <a
                   href={improEvent.websiteUrl}

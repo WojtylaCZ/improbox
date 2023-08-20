@@ -12,11 +12,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/:locale?" element={<Main />} errorElement={<ErrorPage />} />
-      <Route
-        path="/:locale?/oblast/:trailparkSlug"
-        element={<Main />}
-        errorElement={<ErrorPage />}
-      />
+      <Route path="/:locale?/event/:eventSlug" element={<Main />} errorElement={<ErrorPage />} />
       <Route path="*" element={<ErrorPage />} errorElement={<ErrorPage />} />
     </>
   )
