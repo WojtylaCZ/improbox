@@ -16,7 +16,7 @@ export const FooterBar = () => {
         right: "0px",
       }}
     >
-      <span style={{ color: "white" }}>2023, Vojtech Uhlir</span>
+      <span style={{ color: "white" }}>2023, Vojtěch Uhlíř</span>
     </div>
   );
 };

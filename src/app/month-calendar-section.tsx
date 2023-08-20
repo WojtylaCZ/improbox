@@ -62,13 +62,18 @@ export const MonthCalendarSection = ({
       >
         {Boolean(events.length) && <Stack gap={4}>{events}</Stack>}
         {!Boolean(events.length) && (
-          <Image
-            src={Travolta}
-            style={{
-              maxWidth: "300px",
-              width: "100%",
-            }}
-          />
+          <>
+            Zatím o žádné akci v tomto měsíci nevíme.
+            <Image
+              src={Travolta}
+              alt="No events. Confused Travolta meme."
+              style={{
+                maxWidth: "300px",
+                width: "100%",
+                marginTop: "32px",
+              }}
+            />
+          </>
         )}
       </div>
     </div>

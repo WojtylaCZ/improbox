@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Collapse, Image, Stack } from "react-bootstrap";
+import { Collapse, Container, Image, Stack } from "react-bootstrap";
 import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors612.jpeg";
 import MailIcon from "../assets/img/mail.png";
@@ -11,6 +11,8 @@ import { useTranslation, Trans } from "react-i18next";
 import { HeaderBar } from "./header-bar";
 import { supportedLocales } from "./i18n";
 import { FooterBar } from "./footer-bar";
+import { ChevronUpIcon } from "../assets/icons/chevronUp";
+import { ChevronDownIcon } from "../assets/icons/chevronDown";
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -46,11 +48,17 @@ export const Main = () => {
     />
   ));
 
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMailFormExpanded, setIsMailFormExpanded] = useState(false);
 
-  const handleClick = useCallback(() => {
-    setIsExpanded(!isExpanded);
-  }, [isExpanded]);
+  const handleMailFormClick = useCallback(() => {
+    setIsMailFormExpanded(!isMailFormExpanded);
+  }, [isMailFormExpanded]);
+
+  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(false);
+
+  const handlePastEventsSectionClick = useCallback(() => {
+    setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
+  }, [isPastEventsSectionExpanded]);
 
   return (
     <>
@@ -68,7 +76,7 @@ export const Main = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h3
+        <h1
           style={{
             color: "#ffffff",
             textAlign: "center",
@@ -82,7 +90,7 @@ export const Main = () => {
           }}
         >
           {t("titles.mainH1")}
-        </h3>
+        </h1>
       </div>
 
       <Stack
@@ -121,10 +129,13 @@ export const Main = () => {
               justifyContent: "center",
               marginBottom: "8px",
             }}
-            onClick={handleClick}
+            onClick={handleMailFormClick}
+            aria-controls="email-subscription-collapse"
+            aria-expanded={isMailFormExpanded}
           >
             <Image
               src={MailIcon}
+              alt="Email icon."
               style={{
                 maxWidth: "24px",
                 marginRight: "8px",
@@ -141,12 +152,13 @@ export const Main = () => {
               {t("text.introLine2")}
             </span>
           </div>
-          <Collapse in={isExpanded}>
+          <Collapse in={isMailFormExpanded}>
             <iframe
               title="improbox"
               src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?embedded=true"
               width={400}
               height={500}
+              id="email-subscription-collapse"
             >
               Načítání…
             </iframe>
@@ -172,15 +184,67 @@ export const Main = () => {
             border: 0,
             borderTop: "1px solid",
             opacity: "90%",
+            marginTop: "64px",
+            marginBottom: "64px",
           }}
         />
 
-        <h4 style={{}}>Uplynulé události</h4>
+        <Container
+          onClick={handlePastEventsSectionClick}
+          style={{
+            cursor: "pointer",
+          }}
+          aria-controls="past-events-collapse"
+          aria-expanded={isPastEventsSectionExpanded}
+        >
+          <div
+            className="detailDropdown"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <h2
+              style={{
+                paddingRight: "0.6em",
+                fontFamily: "Jockey One",
+              }}
+            >
+              {isPastEventsSectionExpanded
+                ? t("trailpark.hideDetailsH6")
+                : t("trailpark.showDetailsH6")}
+            </h2>
 
-        <Stack gap={5}>{pastMonthSections}</Stack>
+            <div style={{ width: "10px", marginBottom: "8px" }}>
+              {isPastEventsSectionExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+            </div>
+          </div>
+        </Container>
+
+        <Collapse in={isPastEventsSectionExpanded}>
+          <div id="past-events-collapse">
+            <Container>
+              <Stack gap={5}>{pastMonthSections}</Stack>
+            </Container>
+          </div>
+        </Collapse>
+
+        <hr
+          style={{
+            width: "110px",
+            color: "#dd2822",
+            border: 0,
+            borderTop: "1px solid",
+            opacity: "90%",
+            marginTop: "64px",
+            marginBottom: "64px",
+          }}
+        />
 
         <Image
           src={Actors}
+          alt="Theather actors siluetes."
           style={{
             maxWidth: "300px",
             width: "100%",

@@ -19,8 +19,8 @@
     "pastEvents": "Proběhlé:"
   },
   "trailpark": {
-    "showDetailsH6": "Zobrazit detail",
-    "hideDetailsH6": "Skrýt detail",
+    "showDetailsH6": "Zobrazit uplynulé akce",
+    "hideDetailsH6": "Skrýt uplynulé akce",
     "qrCodeH5": "QR kód pro platbu:",
     "accountNumberH5": "Číslo účtu:",
     "publicAccountH6": "Transparentní účet",

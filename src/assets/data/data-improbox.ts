@@ -1,4 +1,4 @@
-export type District = "Praha" | "unknown";
+export type District = "Praha" | "Středočeský kraj" | "Brno" | "unknown";
 
 export type Organizer = {
   id: string;
@@ -116,6 +116,11 @@ export const organizers: Array<Organizer> = [
     name: "Paleťáci",
     websiteUrl: "www.paletaci.cz",
   },
+  {
+    id: "bafni",
+    name: "Bafni",
+    websiteUrl: "www.bafni.cz",
+  },
 ];
 
 // {
@@ -136,12 +141,32 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
+        slug: "2023-08-07-skolaimprovizace",
+        name: "Impro v parku",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-08-07",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-08-08-improvariace",
         name: "Letní IMPROshow na Terase Smíchov",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/245946518251331/245946521584664",
         organizer: organizers.find((o) => o.id === "improvariace")!,
         playDate: "2023-08-08",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-08-14-skolaimprovizace",
+        name: "Impro v parku",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-08-14",
         district: "Praha",
       },
       {
@@ -172,6 +197,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://www.skolaimprovizace.cz/letniskola",
         organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
         playDate: "2023-08-20",
+        district: "Středočeský kraj",
+      },
+      {
+        id: "1",
+        slug: "2023-08-21-skolaimprovizace",
+        name: "Impro v parku",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-08-21",
         district: "Praha",
       },
       {
@@ -182,6 +217,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://www.facebook.com/events/245946518251331/245946528251330",
         organizer: organizers.find((o) => o.id === "improvariace")!,
         playDate: "2023-08-22",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-08-28-skolaimprovizace",
+        name: "Impro v parku",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-08-28",
         district: "Praha",
       },
       {
@@ -229,6 +274,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "cnid")!,
         playDate: "2023-09-13",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-13-bafni",
+        name: "Generál Torstenson Impro Cup",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/267767889369877",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-09-13",
+        district: "Brno",
       },
       {
         id: "1",
@@ -309,6 +364,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-18-bafni",
+        name: "O nás dvou",
+        eventType: "play",
+        websiteUrl: "http://bafni.cz/repertoar/o-nas-dvou.html",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-10-18",
+        district: "Brno",
+      },
+      {
+        id: "1",
         slug: "2023-10-30-justimpro",
         name: "Just! Impro Show",
         eventType: "play",
@@ -332,6 +397,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "kecky")!,
         playDate: "2023-11-10",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-11-22-bafni",
+        name: "Palmaskán",
+        eventType: "play",
+        websiteUrl: "http://bafni.cz/repertoar/palmaskan.html",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-11-22",
+        district: "Brno",
       },
       {
         id: "1",
@@ -359,7 +434,18 @@ export const data: Array<MonthEventsCalendar> = [
   {
     monthName: "Prosinec",
     monthDate: "2023-12",
-    events: [],
+    events: [
+      //   {
+      //     id: "1",
+      //     slug: "2023-12-20-bafni",
+      //     name: "Vánoční improshow",
+      //     eventType: "play",
+      //     websiteUrl: "",
+      //     organizer: organizers.find((o) => o.id === "bafni")!,
+      //     playDate: "2023-12-20",
+      //     district: "Brno",
+      //   },
+    ],
   },
   {
     monthName: "Červenec 2023",
@@ -373,7 +459,7 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://www.facebook.com/events/256600993556480",
         organizer: organizers.find((o) => o.id === "paletaci")!,
         playDate: "2023-07-24",
-        district: "Praha",
+        district: "Středočeský kraj",
       },
       {
         id: "1",

@@ -59,7 +59,11 @@ export const ImproEventCard = ({
     setIsExpanded(!isExpanded);
   }, [improEvent.id, isExpanded]);
 
-  const day = new Date(Date.parse(improEvent.playDate));
+  const eventPlay = Date.parse(improEvent.playDate);
+  const eventPlayDate = new Date(eventPlay);
+  const todayDate = Date.now();
+
+  const isPastEvent = eventPlay < todayDate;
 
   const dayNames = ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"];
 
@@ -86,7 +90,7 @@ export const ImproEventCard = ({
         borderRadius: "8px",
         boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
       }}
-      aria-controls="example-collapse-text"
+      aria-controls="event-description-collapse"
       aria-expanded={isExpanded}
       ref={ref}
     >
@@ -105,26 +109,39 @@ export const ImproEventCard = ({
           onClick={handleClick}
           style={{
             cursor: "pointer",
-            // margin: "20px",
           }}
         >
           <Row>
             <Col xs={8} sm={3}>
               {/* DATE */}
               <div style={{ display: "flex" }}>
-                <span style={{ marginRight: "6px", marginTop: "12px", fontSize: "12px" }}>
-                  {dayNames[day.getDay()]}
+                <span
+                  style={{
+                    marginRight: "6px",
+                    marginTop: "12px",
+                    fontSize: "12px",
+                    color: isPastEvent ? "#aaa8a8" : undefined, //default color,
+                  }}
+                >
+                  {dayNames[eventPlayDate.getDay()]}
                 </span>
                 <div style={{ display: "flex", alignItems: "baseline" }}>
                   <span
                     style={{
                       fontSize: "40px",
+                      color: isPastEvent ? "#aaa8a8" : undefined, //default color,
                     }}
                   >
-                    {day.getDate()}
+                    {eventPlayDate.getDate()}
                   </span>
-                  <span style={{ marginLeft: "4px", fontSize: "12" }}>
-                    {monthNames[day.getMonth()]}
+                  <span
+                    style={{
+                      marginLeft: "4px",
+                      fontSize: "12",
+                      color: isPastEvent ? "#aaa8a8" : undefined, //default color
+                    }}
+                  >
+                    {monthNames[eventPlayDate.getMonth()]}
                   </span>
                 </div>
               </div>
@@ -181,13 +198,13 @@ export const ImproEventCard = ({
                     style={{
                       fontFamily: "Jockey One",
                       fontSize: "20px",
-                      color: "#000000",
+                      color: isPastEvent ? "#878787" : "#000000",
                     }}
                   >
                     {improEvent.name}
                   </a>
                 </div>
-                <span
+                <h3
                   style={{
                     color: "#dd2822",
                     fontSize: "16px",
@@ -196,7 +213,7 @@ export const ImproEventCard = ({
                   {improEvent.organizer.id === "unknown"
                     ? improEvent.name
                     : improEvent.organizer.name}
-                </span>
+                </h3>
               </div>
             </Col>
 
@@ -226,7 +243,7 @@ export const ImproEventCard = ({
         {/* </div> */}
       </div>
       <Collapse in={isExpanded}>
-        <div id="example-collapse-text">
+        <div id="event-description-collapse">
           <hr style={{ marginTop: "0px", marginBottom: "0px" }} />
 
           <Container>
