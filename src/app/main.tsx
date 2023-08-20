@@ -238,7 +238,7 @@ export const Main = () => {
             borderTop: "1px solid",
             opacity: "90%",
             marginTop: "64px",
-            marginBottom: "64px",
+            marginBottom: "16px",
           }}
         />
 
