@@ -2,7 +2,6 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { ImproEventCard } from "./improevent";
 import { MonthEventsCalendar } from "../assets/data/data-improbox";
-import { useTranslation } from "react-i18next";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
 
@@ -16,8 +15,6 @@ export const MonthCalendarSection = ({
   isFirst,
   isForUpcomingEvents,
 }: District & { isFirst: boolean }) => {
-  const { t } = useTranslation();
-
   const todayDate = Date.now();
 
   const monthDate = Date.parse(monthSection.monthDate);

@@ -4,12 +4,11 @@ import { useParams } from "react-router-dom";
 
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
-// import FacebookIcon from "../assets/icons/facebook.svg";
-// import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { ImproEvent } from "../assets/data/data-improbox";
+import ReactGA from "react-ga4";
 
-// ReactGA.initialize("G-TJGECJ2MHV");
+ReactGA.initialize("G-0BFJTSYSSM");
 
 export const ImproEventCard = ({
   improEvent,
@@ -46,18 +45,15 @@ export const ImproEventCard = ({
 
   const handleClick = useCallback(() => {
     if (!isExpanded) {
-      // ReactGA.event("trailparkcard_expanded", {
-      //   trailparkId: trailpark.id,
-      // });
-      // ReactGA.event({
-      //   // action becomes the event name
-      //   action: `trailparkcardexpanded2_${trailpark.id}`,
-      //   //  "event_category" becomes a custom parameter
-      //   category: `${trailpark.id}`,
-      // });
+      ReactGA.event({
+        // action becomes the event name
+        action: `improevent-expanded-${improEvent.slug}`,
+        //  "event_category" becomes a custom parameter
+        category: `${improEvent.slug}`,
+      });
     }
     setIsExpanded(!isExpanded);
-  }, [improEvent.id, isExpanded]);
+  }, [improEvent.slug, isExpanded]);
 
   const eventPlay = Date.parse(improEvent.playDate);
   const eventPlayDate = new Date(eventPlay);
