@@ -1,4 +1,4 @@
-export type District = "Praha" | "Středočeský kraj" | "Brno" | "unknown";
+export type District = "Praha" | "Středočeský kraj" | "Brno" | "Ostrava" | "unknown";
 
 export type Organizer = {
   id: string;
@@ -121,18 +121,12 @@ export const organizers: Array<Organizer> = [
     name: "Bafni",
     websiteUrl: "www.bafni.cz",
   },
+  {
+    id: "divadloodvaz",
+    name: "Divadlo Odvaz",
+    websiteUrl: "www.odvaz.eu",
+  },
 ];
-
-// {
-//     id: "1",
-//     slug: "2023-09-16-cnid",
-//     name: "",
-//     eventType: "play",
-//     websiteUrl: "",
-//     organizer: organizers.find((o) => o.id === "cnid")!,
-//     playDate: "2023-09-16",
-//     district: "Praha",
-//   },
 
 export const data: Array<MonthEventsCalendar> = [
   {
@@ -208,6 +202,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
         playDate: "2023-08-21",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-08-21-divadloodvaz",
+        name: "Vyletněná Improshow",
+        eventType: "play",
+        websiteUrl: "https://www.odvaz.eu/akce?&idA=1397",
+        organizer: organizers.find((o) => o.id === "divadloodvaz")!,
+        playDate: "2023-08-21",
+        district: "Ostrava",
       },
       {
         id: "1",
