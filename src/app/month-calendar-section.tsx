@@ -33,7 +33,10 @@ export const MonthCalendarSection = ({
   const events = monthSection.events
     .filter((improEvent) => {
       const eventDate = Date.parse(improEvent.playDate);
-      return isForUpcomingEvents ? eventDate >= todayDate : eventDate <= todayDate;
+      // past event is 24 hours old
+      return isForUpcomingEvents
+        ? eventDate >= todayDate - 86400000
+        : eventDate < todayDate - 86400000;
     })
     .map((improEvent, id) => (
       <ImproEventCard key={id} improEvent={improEvent} isFirst={isFirst && id < 2} />

@@ -59,7 +59,8 @@ export const ImproEventCard = ({
   const eventPlayDate = new Date(eventPlay);
   const todayDate = Date.now();
 
-  const isPastEvent = eventPlay < todayDate;
+  // past event is 24 hours old
+  const isPastEvent = eventPlay < todayDate - 86400000;
 
   const dayNames = [
     t("dataLabels.sunday"),

@@ -54,7 +54,7 @@ export const Main = () => {
     setIsMailFormExpanded(!isMailFormExpanded);
   }, [isMailFormExpanded]);
 
-  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(false);
+  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(true);
 
   const handlePastEventsSectionClick = useCallback(() => {
     setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
@@ -184,8 +184,29 @@ export const Main = () => {
             border: 0,
             borderTop: "1px solid",
             opacity: "90%",
-            marginTop: "64px",
-            marginBottom: "64px",
+            marginTop: "32px",
+            marginBottom: "8px",
+          }}
+        />
+
+        <iframe
+          title="Feedback"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSejGG8NV6FbXSAO-sjIrWoqX29FY1CmNx2cuHbe-aMoSS2veg/viewform?embedded=true"
+          width={"100%"}
+          height={500}
+        >
+          Načítání…
+        </iframe>
+
+        <hr
+          style={{
+            width: "110px",
+            color: "#dd2822",
+            border: 0,
+            borderTop: "1px solid",
+            opacity: "90%",
+            marginTop: "1px",
+            marginBottom: "16px",
           }}
         />
 
@@ -250,15 +271,6 @@ export const Main = () => {
             width: "100%",
           }}
         />
-
-        <iframe
-          title="Feedback"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSejGG8NV6FbXSAO-sjIrWoqX29FY1CmNx2cuHbe-aMoSS2veg/viewform?embedded=true"
-          width={"100%"}
-          height={500}
-        >
-          Načítání…
-        </iframe>
 
         <div
           style={{
