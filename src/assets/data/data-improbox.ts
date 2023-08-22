@@ -126,6 +126,11 @@ export const organizers: Array<Organizer> = [
     name: "Divadlo Odvaz",
     websiteUrl: "www.odvaz.eu",
   },
+  {
+    id: "divadlo301",
+    name: "Divadlo 301",
+    websiteUrl: "www.facebook.com/Divadlo301",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -251,11 +256,31 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
+        slug: "2023-09-02-divadlo301",
+        name: "Divadlo 301: Dřez v Nymburce",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1678866019286817",
+        organizer: organizers.find((o) => o.id === "divadlo301")!,
+        playDate: "2023-09-02",
+        district: "Středočeský kraj",
+      },
+      {
+        id: "1",
         slug: "2023-09-05-kecky",
         name: "Impro Kecky a Pája Sedláčková",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1026480205026852",
         organizer: organizers.find((o) => o.id === "kecky")!,
+        playDate: "2023-09-05",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-05-divadlo301",
+        name: "Divadlo 301: Dřez",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/203724492427888",
+        organizer: organizers.find((o) => o.id === "divadlo301")!,
         playDate: "2023-09-05",
         district: "Praha",
       },

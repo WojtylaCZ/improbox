@@ -109,12 +109,13 @@ export const ImproEventCard = ({
         
           `}
       </style>
-      <div className="eventHeader" style={{ padding: "14px" }}>
+      <div className="eventHeader" style={{ padding: "12px 8px" }}>
         <Container
           onClick={handleClick}
           style={{
             cursor: "pointer",
           }}
+          fluid
         >
           <Row>
             <Col xs={8} sm={3}>
@@ -152,7 +153,7 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={4} sm={{ span: 2, order: 2 }}>
+            <Col xs={4} sm={{ span: 3, order: 2 }}>
               {/* MISC */}
 
               <div
@@ -194,7 +195,7 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={11} sm={{ span: 6, order: 1 }}>
+            <Col xs={11} sm={{ span: 5, order: 1 }}>
               {/* EVENT NAME */}
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div>
