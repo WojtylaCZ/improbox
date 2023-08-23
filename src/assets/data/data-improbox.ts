@@ -362,6 +362,17 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
+        slug: "2023-10-03-improvariace",
+        name: "Gilty Pležr: Telenovela",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/336407808735178",
+        organizer: organizers.find((o) => o.id === "improvariace")!,
+        playDate: "2023-10-03",
+        district: "Praha",
+      },
+
+      {
+        id: "1",
         slug: "2023-10-10-kecky",
         name: "Impro Kecky a Lukáš Rumlena",
         eventType: "play",
