@@ -256,10 +256,10 @@ export const ImproEventCard = ({
           <Container>
             <Row>
               <span style={{ margin: "12px", fontSize: "12px" }}>
-                {t("event.lastUpdatedAt")}
+                {t("event.groupWebsite")}
 
                 <a
-                  href={improEvent.websiteUrl}
+                  href={"http://" + improEvent.organizer.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#000000" }}

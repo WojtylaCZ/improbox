@@ -34,22 +34,22 @@ export const organizers: Array<Organizer> = [
   {
     id: "cnid",
     name: "ČNID - České Národní Improvizační Divadlo",
-    websiteUrl: "wwww.cnid.cz",
+    websiteUrl: "www.cnid.cz",
   },
   {
     id: "padenapade",
     name: "Pade na pade",
-    websiteUrl: "wwww.padenapade.com",
+    websiteUrl: "www.padenapade.com",
   },
   {
     id: "alibiprochyby",
     name: "Alibi pro Chyby",
-    websiteUrl: "https://www.facebook.com/Alibi.pro.Chyby",
+    websiteUrl: "www.facebook.com/Alibi.pro.Chyby",
   },
   {
     id: "nedivse",
     name: "NeDivSe - Neobvyklá Divadelní Sešlost",
-    websiteUrl: "https://www.facebook.com/nedivse",
+    websiteUrl: "www.facebook.com/nedivse",
   },
   {
     id: "justimpro",
@@ -64,7 +64,7 @@ export const organizers: Array<Organizer> = [
   {
     id: "fofrvzupanu",
     name: "Fofr v županu",
-    websiteUrl: "https://www.facebook.com/fofr.impro",
+    websiteUrl: "www.facebook.com/fofr.impro",
   },
   {
     id: "improvariace",
@@ -79,7 +79,7 @@ export const organizers: Array<Organizer> = [
   {
     id: "blancinybileboty",
     name: "Blančiny bílé boty",
-    websiteUrl: "https://www.facebook.com/profile.php?id=100066485512990",
+    websiteUrl: "www.facebook.com/profile.php?id=100066485512990",
   },
   {
     id: "skolaimprovizace",
@@ -327,7 +327,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-09-16-padenapade",
-        name: "Pade na pade",
+        name: "Z nuly na pade, z pade na sto",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
         organizer: organizers.find((o) => o.id === "padenapade")!,
@@ -337,7 +337,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-09-16-cnid",
-        name: "Improzero",
+        name: "Klasika",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
         organizer: organizers.find((o) => o.id === "cnid")!,
