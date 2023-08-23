@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0565a104.css",
-    "main.js": "/static/js/main.951ab44f.js",
+    "main.js": "/static/js/main.bef10853.js",
     "static/js/496.945cc946.chunk.js": "/static/js/496.945cc946.chunk.js",
     "static/media/travolta.gif": "/static/media/travolta.25353442322ca9a66207.gif",
     "static/media/actors612.jpeg": "/static/media/actors612.0c0153a3a56b2b163700.jpeg",
@@ -9,11 +9,11 @@
     "static/media/chevron-down.svg": "/static/media/chevron-down.bdc5512bebaafee5cfb979d7683ecb5e.svg",
     "static/media/chevron-up.svg": "/static/media/chevron-up.0fab3e8c7e4f106fee079a2fdd13ffa2.svg",
     "main.0565a104.css.map": "/static/css/main.0565a104.css.map",
-    "main.951ab44f.js.map": "/static/js/main.951ab44f.js.map",
+    "main.bef10853.js.map": "/static/js/main.bef10853.js.map",
     "496.945cc946.chunk.js.map": "/static/js/496.945cc946.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0565a104.css",
-    "static/js/main.951ab44f.js"
+    "static/js/main.bef10853.js"
   ]
 }
