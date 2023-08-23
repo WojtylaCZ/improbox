@@ -1,4 +1,11 @@
-export type District = "Praha" | "Středočeský kraj" | "Brno" | "Ostrava" | "unknown";
+export type District =
+  | "Praha"
+  | "Středočeský kraj"
+  | "Brno"
+  | "Ostrava"
+  | "unknown"
+  | "Pardubice"
+  | "Nymburk";
 
 export type Organizer = {
   id: string;
@@ -262,7 +269,7 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://www.facebook.com/events/1678866019286817",
         organizer: organizers.find((o) => o.id === "divadlo301")!,
         playDate: "2023-09-02",
-        district: "Středočeský kraj",
+        district: "Nymburk",
       },
       {
         id: "1",
@@ -343,6 +350,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "cnid")!,
         playDate: "2023-09-16",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-19-paletaci",
+        name: "Improshow",
+        eventType: "play",
+        websiteUrl:
+          "https://www.smsticket.cz/vstupenky/37709-paletaci-improshow-divadlo-exil-machonova-pasaz-pardubice",
+        organizer: organizers.find((o) => o.id === "paletaci")!,
+        playDate: "2023-09-19",
+        district: "Pardubice",
       },
       {
         id: "1",
