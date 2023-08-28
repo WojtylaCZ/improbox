@@ -5,7 +5,9 @@ export type District =
   | "Ostrava"
   | "unknown"
   | "Pardubice"
-  | "Nymburk";
+  | "Nymburk"
+  | "Jihlava"
+  | "Hradec Králové";
 
 export type Organizer = {
   id: string;
@@ -79,9 +81,9 @@ export const organizers: Array<Organizer> = [
     websiteUrl: "www.improvariace.cz",
   },
   {
-    id: "improtresk",
-    name: "Improtřesk",
-    websiteUrl: "www.odvaz.eu/improtresk",
+    id: "divadloimprovizaceodvaz",
+    name: "Divadlo improvizace ODVAZ",
+    websiteUrl: "www.odvaz.eu",
   },
   {
     id: "blancinybileboty",
@@ -137,6 +139,11 @@ export const organizers: Array<Organizer> = [
     id: "divadlo301",
     name: "Divadlo 301",
     websiteUrl: "www.facebook.com/Divadlo301",
+  },
+  {
+    id: "bizoni",
+    name: "B.I.Z.O.N.I.",
+    websiteUrl: "www.improbizoni.cz",
   },
 ];
 
@@ -303,6 +310,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-06-divadloimprovizaceodvaz",
+        name: "Improshow: třídní sraz",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/improshow-tridni-sraz/sziuhiw/",
+        organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
+        playDate: "2023-09-06",
+        district: "Ostrava",
+      },
+      {
+        id: "1",
         slug: "2023-09-13-cnid",
         name: "Klasika vol. 2",
         eventType: "play",
@@ -323,6 +340,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-13-divadloimprovizaceodvaz",
+        name: "Maestro",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/maestro/szguhiw/",
+        organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
+        playDate: "2023-09-13",
+        district: "Ostrava",
+      },
+      {
+        id: "1",
         slug: "2023-09-15-standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
@@ -330,6 +357,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "standartnikabaret")!,
         playDate: "2023-09-15",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-15-bizoni",
+        name: "Improshow - Vyber si svůj příběh",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/180900268341467",
+        organizer: organizers.find((o) => o.id === "bizoni")!,
+        playDate: "2023-09-15",
+        district: "Hradec Králové",
       },
       {
         id: "1",
@@ -364,6 +401,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-20-divadloimprovizaceodvaz",
+        name: "Improshow: detektivka",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/improshow-detektivka/szkuhiw/",
+        organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
+        playDate: "2023-09-20",
+        district: "Ostrava",
+      },
+      {
+        id: "1",
         slug: "2023-09-25-justimpro",
         name: "321jedem!: David Matásek",
         eventType: "play",
@@ -371,6 +418,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "justimpro")!,
         playDate: "2023-09-25",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-27-divadloimprovizaceodvaz",
+        name: "Manželské etudy",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/manzelske-etudy/szduhiw/",
+        organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
+        playDate: "2023-09-27",
+        district: "Ostrava",
       },
     ],
   },
@@ -503,6 +560,17 @@ export const data: Array<MonthEventsCalendar> = [
       //     playDate: "2023-12-20",
       //     district: "Brno",
       //   },
+
+      {
+        id: "1",
+        slug: "2023-12-04-standartnikabaret",
+        name: "Vosto5: Stand'artní kabaret",
+        eventType: "play",
+        websiteUrl: "https://www.dko.cz/index.php?menu=1416",
+        organizer: organizers.find((o) => o.id === "standartnikabaret")!,
+        playDate: "2023-12-04",
+        district: "Jihlava",
+      },
     ],
   },
   {
@@ -653,11 +721,11 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-05-05-improtresk",
+        slug: "2023-05-05-divadloimprovizaceodvaz",
         name: "IMPROTŘESK 2023 | Festival improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/531202315642360",
-        organizer: organizers.find((o) => o.id === "improtresk")!,
+        organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
         playDate: "2023-05-05",
         district: "Praha",
       },
