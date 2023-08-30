@@ -63,7 +63,11 @@ export const MonthCalendarSection = ({
         {Boolean(events.length) && <Stack gap={4}>{events}</Stack>}
         {!Boolean(events.length) && (
           <>
-            Zatím o žádné akci v tomto měsíci nevíme.
+            {isFirst && <>O žádné akci do konce tohoto měsíce už nevíme. Koukni na další měsíc.</>}
+            {!isFirst && (
+              <>Zatím o žádné akci v tomto měsíci nevíme. Zkus to znova za nějakou dobu.</>
+            )}
+
             <Image
               src={Travolta}
               alt="No events. Confused Travolta meme."
