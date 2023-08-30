@@ -320,6 +320,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-12-alibiprochyby",
+        name: "Ozvěny léta",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1391961111535867",
+        organizer: organizers.find((o) => o.id === "alibiprochyby")!,
+        playDate: "2023-09-12",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-13-cnid",
         name: "Klasika vol. 2",
         eventType: "play",
