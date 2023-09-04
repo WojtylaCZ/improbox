@@ -328,7 +328,16 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-09-06",
         district: "Ostrava",
       },
-
+      {
+        id: "1",
+        slug: "2023-09-07-skolaimprovizace",
+        name: "Ukázková lekce",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/ukazkove-lekce",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-09-07",
+        district: "Praha",
+      },
       {
         id: "1",
         slug: "2023-09-07-paletaci",
@@ -429,6 +438,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "paletaci")!,
         playDate: "2023-09-19",
         district: "Pardubice",
+      },
+      {
+        id: "1",
+        slug: "2023-09-19-skolaimprovizace",
+        name: "Ukázková lekce",
+        eventType: "workshop",
+        websiteUrl: "https://www.skolaimprovizace.cz/ukazkove-lekce",
+        organizer: organizers.find((o) => o.id === "skolaimprovizace")!,
+        playDate: "2023-09-19",
+        district: "Praha",
       },
       {
         id: "1",
