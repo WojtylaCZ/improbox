@@ -5,6 +5,7 @@ import Actors from "../assets/img/actors612.jpeg";
 import MailIcon from "../assets/img/mail.png";
 
 import { data } from "../assets/data/data-improbox";
+
 import { useNavigate, useParams } from "react-router-dom";
 
 import { useTranslation, Trans } from "react-i18next";
@@ -30,7 +31,31 @@ export const Main = () => {
     }
   }, [navigate, eventSlug, locale]);
 
-  const upcomingMonthSections = data.map((monthSection, id) => (
+  const todayDate = Date.now();
+
+  const upcomingEvents = data.filter((district) => {
+    return (
+      Date.parse(district.monthDate) > todayDate ||
+      new Date(district.monthDate).getMonth() === new Date(todayDate).getMonth()
+    );
+  });
+
+  upcomingEvents.sort((a, b) => {
+    return Date.parse(a.monthDate) - Date.parse(b.monthDate);
+  });
+
+  const pastEvents = data.filter((district) => {
+    return (
+      Date.parse(district.monthDate) < todayDate ||
+      new Date(district.monthDate).getMonth() === new Date(todayDate).getMonth()
+    );
+  });
+
+  pastEvents.sort((a, b) => {
+    return Date.parse(b.monthDate) - Date.parse(a.monthDate);
+  });
+
+  const upcomingMonthSections = upcomingEvents.map((monthSection, id) => (
     <MonthCalendarSection
       key={id}
       monthSection={monthSection}
@@ -39,7 +64,7 @@ export const Main = () => {
     />
   ));
 
-  const pastMonthSections = data.map((monthSection, id) => (
+  const pastMonthSections = pastEvents.map((monthSection, id) => (
     <MonthCalendarSection
       key={id}
       monthSection={monthSection}
