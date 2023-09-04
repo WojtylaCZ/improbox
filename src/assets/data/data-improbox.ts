@@ -442,6 +442,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-22-bafni",
+        name: "Improvizační workshop pro začátečníky",
+        eventType: "workshop",
+        websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikendy-pro-zacatecniky-praha/",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-09-22",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-25-justimpro",
         name: "321jedem!: David Matásek",
         eventType: "play",
@@ -530,6 +540,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-27-bafni",
+        name: "Autentická improvizace",
+        eventType: "workshop",
+        websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikend-brno-zacatecnici/",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-10-27",
+        district: "Brno",
+      },
+      {
+        id: "1",
         slug: "2023-10-30-justimpro",
         name: "Just! Impro Show",
         eventType: "play",
@@ -544,6 +564,16 @@ export const data: Array<MonthEventsCalendar> = [
     monthName: "Listopad",
     monthDate: "2023-11",
     events: [
+      {
+        id: "1",
+        slug: "2023-11-05-bafni",
+        name: "Víkendový workshop pro pokročilé",
+        eventType: "workshop",
+        websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikendovy-workshop-praha-pokrocili/",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-11-05",
+        district: "Praha",
+      },
       {
         id: "1",
         slug: "2023-11-10-kecky",
