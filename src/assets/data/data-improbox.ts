@@ -310,6 +310,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-06-paletaci",
+        name: "Otevřená hodina improvizace",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1007349770286496",
+        organizer: organizers.find((o) => o.id === "paletaci")!,
+        playDate: "2023-09-06",
+        district: "Hradec Králové",
+      },
+      {
+        id: "1",
         slug: "2023-09-06-divadloimprovizaceodvaz",
         name: "Improshow: třídní sraz",
         eventType: "play",
@@ -317,6 +327,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "divadloimprovizaceodvaz")!,
         playDate: "2023-09-06",
         district: "Ostrava",
+      },
+
+      {
+        id: "1",
+        slug: "2023-09-07-paletaci",
+        name: "Otevřená hodina improvizace",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1377078153227429",
+        organizer: organizers.find((o) => o.id === "paletaci")!,
+        playDate: "2023-09-07",
+        district: "Pardubice",
       },
       {
         id: "1",
@@ -486,6 +507,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizer: organizers.find((o) => o.id === "cnid")!,
         playDate: "2023-10-18",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-18-paletaci",
+        name: "Jednorázový kurz improvizace pro páry",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/260559210145728",
+        organizer: organizers.find((o) => o.id === "paletaci")!,
+        playDate: "2023-10-18",
+        district: "Pardubice",
       },
       {
         id: "1",
