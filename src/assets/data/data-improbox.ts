@@ -451,6 +451,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-19-polocasnapadu",
+        name: "Motel Babí léto",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/149181438240378",
+        organizer: organizers.find((o) => o.id === "polocasnapadu")!,
+        playDate: "2023-09-19",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-20-divadloimprovizaceodvaz",
         name: "Improshow: detektivka",
         eventType: "play",
