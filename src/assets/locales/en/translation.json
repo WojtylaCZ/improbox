@@ -13,7 +13,8 @@
     "madeBy": "This non-profit web was created by <1>Vojtěch Uhlíř</1>, an improv actor and a software engineer."
   },
   "event": {
-    "groupWebsite": "Web of the group: "
+    "groupWebsite": "Web of the group: ",
+    "groupsWebsites": "Website of the groups: "
   },
   "dataLabels": {
     "workshop": "Workshop",

@@ -13,7 +13,8 @@
     "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor."
   },
   "event": {
-    "groupWebsite": "Web souboru: "
+    "groupWebsite": "Web souboru: ",
+    "groupsWebsites": "Weby souborů: "
   },
   "dataLabels": {
     "workshop": "Workshop",

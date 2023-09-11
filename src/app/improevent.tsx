@@ -43,17 +43,29 @@ export const ImproEventCard = ({
     }
   }, [eventSlug, improEvent.slug, setIsExpanded, isFirst]);
 
-  const handleClick = useCallback(() => {
+  const sendAnalyticsEvent = (eventName: string, eventParam: string) => {
+    ReactGA.event({
+      // action becomes the event name
+      action: eventName,
+      //  "event_category" becomes a custom parameter
+      category: eventParam,
+    });
+  };
+
+  const handleExpandClick = useCallback(() => {
     if (!isExpanded) {
-      ReactGA.event({
-        // action becomes the event name
-        action: `improevent-expanded-${improEvent.slug}`,
-        //  "event_category" becomes a custom parameter
-        category: `${improEvent.slug}`,
-      });
+      sendAnalyticsEvent(`improevent-expanded`, `${improEvent.slug}`);
     }
     setIsExpanded(!isExpanded);
   }, [improEvent.slug, isExpanded]);
+
+  const handleEventLinkClick = useCallback(() => {
+    sendAnalyticsEvent(`improevent-link-opened`, `${improEvent.slug}`);
+  }, [improEvent.slug]);
+
+  const handleOrganiseWebLinkClick = useCallback(() => {
+    sendAnalyticsEvent(`organiser-website-opened`, `${improEvent.organizers?.[0].id}`);
+  }, [improEvent.organizers]);
 
   const eventPlay = Date.parse(improEvent.playDate);
   const eventPlayDate = new Date(eventPlay);
@@ -99,58 +111,51 @@ export const ImproEventCard = ({
       aria-expanded={isExpanded}
       ref={ref}
     >
-      <style type="text/css">
-        {`
-          .eventHeader:hover {
-            background-color: #F8F8F8;
-            border-radius: 8px;
-
-          }
-        
-          `}
-      </style>
-      <div className="eventHeader" style={{ padding: "12px 8px" }}>
-        <Container
-          onClick={handleClick}
-          style={{
-            cursor: "pointer",
-          }}
-          fluid
-        >
+      <div style={{ padding: "12px 8px" }}>
+        <Container fluid>
           <Row>
             <Col xs={8} sm={3}>
               {/* DATE */}
-              <div style={{ display: "flex" }}>
-                <span
-                  style={{
-                    marginRight: "6px",
-                    marginTop: "12px",
-                    fontSize: "12px",
-                    color: isPastEvent ? "#aaa8a8" : undefined, //default color,
-                  }}
-                >
-                  {dayNames[eventPlayDate.getDay()]}
-                </span>
-                <div style={{ display: "flex", alignItems: "baseline" }}>
+
+              <a
+                href={improEvent.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                onClick={handleEventLinkClick}
+              >
+                <div style={{ display: "flex", cursor: "pointer" }}>
                   <span
                     style={{
-                      fontSize: "40px",
+                      marginRight: "6px",
+                      marginTop: "12px",
+                      fontSize: "12px",
                       color: isPastEvent ? "#aaa8a8" : undefined, //default color,
                     }}
                   >
-                    {eventPlayDate.getDate()}
+                    {dayNames[eventPlayDate.getDay()]}
                   </span>
-                  <span
-                    style={{
-                      marginLeft: "4px",
-                      fontSize: "12",
-                      color: isPastEvent ? "#aaa8a8" : undefined, //default color
-                    }}
-                  >
-                    {monthNames[eventPlayDate.getMonth()]}
-                  </span>
+                  <div style={{ display: "flex", alignItems: "baseline" }}>
+                    <span
+                      style={{
+                        fontSize: "40px",
+                        color: isPastEvent ? "#aaa8a8" : undefined, //default color,
+                      }}
+                    >
+                      {eventPlayDate.getDate()}
+                    </span>
+                    <span
+                      style={{
+                        marginLeft: "4px",
+                        fontSize: "12",
+                        color: isPastEvent ? "#aaa8a8" : undefined, //default color
+                      }}
+                    >
+                      {monthNames[eventPlayDate.getMonth()]}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </Col>
 
             <Col xs={4} sm={{ span: 3, order: 2 }}>
@@ -208,6 +213,7 @@ export const ImproEventCard = ({
                       fontSize: "20px",
                       color: isPastEvent ? "#878787" : "#000000",
                     }}
+                    onClick={handleEventLinkClick}
                   >
                     {improEvent.name}
                   </a>
@@ -218,9 +224,9 @@ export const ImproEventCard = ({
                     fontSize: "16px",
                   }}
                 >
-                  {improEvent.organizer.id === "unknown"
-                    ? improEvent.name
-                    : improEvent.organizer.name}
+                  {improEvent.organizers
+                    ? improEvent.organizers.map((org) => org.name).join(" + ")
+                    : improEvent.name}
                 </h3>
               </div>
             </Col>
@@ -229,11 +235,13 @@ export const ImproEventCard = ({
               {/* CHEVRON */}
 
               <div
+                onClick={handleExpandClick}
                 style={{
                   width: "100%",
                   height: "100%",
                   display: "grid",
                   marginRight: "8px",
+                  cursor: "pointer",
                 }}
               >
                 <div
@@ -256,16 +264,42 @@ export const ImproEventCard = ({
           <Container>
             <Row>
               <span style={{ margin: "12px", fontSize: "12px" }}>
-                {t("event.groupWebsite")}
+                {improEvent.organizers && improEvent.organizers.length > 1
+                  ? t("event.groupsWebsites")
+                  : t("event.groupWebsite")}
 
-                <a
-                  href={"http://" + improEvent.organizer.websiteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#000000" }}
-                >
-                  {improEvent.organizer.websiteUrl}
-                </a>
+                {improEvent.organizers && improEvent.organizers?.length === 1 && (
+                  <a
+                    href={"http://" + improEvent.organizers[0].websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#000000" }}
+                    onClick={handleOrganiseWebLinkClick}
+                  >
+                    {improEvent.organizers[0].websiteUrl}
+                  </a>
+                )}
+
+                {improEvent.organizers && improEvent.organizers?.length > 1 && (
+                  <>
+                    {improEvent.organizers.map((org, index) => {
+                      return (
+                        <>
+                          <a
+                            href={"http://" + org.websiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#000000" }}
+                            onClick={handleOrganiseWebLinkClick}
+                          >
+                            {org.websiteUrl}
+                          </a>
+                          {index < improEvent.organizers!.length - 1 && <>&nbsp; + &nbsp;</>}
+                        </>
+                      );
+                    })}
+                  </>
+                )}
               </span>
             </Row>
           </Container>
