@@ -7,7 +7,8 @@ export type District =
   | "Pardubice"
   | "Nymburk"
   | "Jihlava"
-  | "Hradec Králové";
+  | "Hradec Králové"
+  | "Benešov";
 
 export type Organizer = {
   id: string;
@@ -148,7 +149,12 @@ export const organizers: Array<Organizer> = [
   {
     id: "myklucicospoluchodime",
     name: "My kluci, co spolu chodíme",
-    websiteUrl: "www.facebook.com/mykluci/",
+    websiteUrl: "www.facebook.com/mykluci",
+  },
+  {
+    id: "divadlokellari",
+    name: "Divadlo Kellari",
+    websiteUrl: "www.divadlokellari.cz",
   },
 ];
 
@@ -395,6 +401,26 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-15-improvariace",
+        name: "Maestro! Festival ImVisible",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/212420504894469",
+        organizer: organizers.find((o) => o.id === "improvariace")!,
+        playDate: "2023-09-15",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-15-divadlokellari",
+        name: "Improvizační show",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/264589383185599",
+        organizer: organizers.find((o) => o.id === "divadlokellari")!,
+        playDate: "2023-09-15",
+        district: "Benešov",
+      },
+      {
+        id: "1",
         slug: "2023-09-15-standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
@@ -441,6 +467,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
         organizer: organizers.find((o) => o.id === "myklucicospoluchodime")!,
         playDate: "2023-09-16",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-17-bafni",
+        name: "Zápas v divadelní improvizaci MUŽI vs. ŽENY",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/294409953182405",
+        organizer: organizers.find((o) => o.id === "bafni")!,
+        playDate: "2023-09-17",
         district: "Praha",
       },
       {
@@ -496,6 +532,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-22-vip",
+        name: "Impro JAM",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3564104473845369",
+        organizer: organizers.find((o) => o.id === "vip")!,
+        playDate: "2023-09-22",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-25-justimpro",
         name: "321jedem!: David Matásek",
         eventType: "play",
@@ -540,7 +586,6 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-10-03",
         district: "Praha",
       },
-
       {
         id: "1",
         slug: "2023-10-10-kecky",
