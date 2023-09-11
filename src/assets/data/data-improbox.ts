@@ -145,6 +145,11 @@ export const organizers: Array<Organizer> = [
     name: "B.I.Z.O.N.I.",
     websiteUrl: "www.improbizoni.cz",
   },
+  {
+    id: "myklucicospoluchodime",
+    name: "My kluci, co spolu chodíme",
+    websiteUrl: "www.facebook.com/mykluci/",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -430,6 +435,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-16-myklucicospoluchodime",
+        name: "Svědomitě nepřipraveni",
+        eventType: "play",
+        websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
+        organizer: organizers.find((o) => o.id === "myklucicospoluchodime")!,
+        playDate: "2023-09-16",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-19-paletaci",
         name: "Improshow",
         eventType: "play",
@@ -487,6 +502,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://goout.net/cs/321jedem-david-matasek/szgdmvv",
         organizer: organizers.find((o) => o.id === "justimpro")!,
         playDate: "2023-09-25",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-26-myklucicospoluchodime",
+        name: "Kluci na lodi: Poslední věneček",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/posledni-venecek/szkdymv",
+        organizer: organizers.find((o) => o.id === "myklucicospoluchodime")!,
+        playDate: "2023-09-26",
         district: "Praha",
       },
       {
