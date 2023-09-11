@@ -328,6 +328,16 @@ export const Main = () => {
               after
             </Trans>
           </span>
+          <br />
+          <span>
+            <Trans i18nKey="text.alsoMade">
+              before
+              <a href={"https://www.prispevkynabezky.cz"} target="_blank" rel="noopener noreferrer">
+                Vojtěch Uhlíř
+              </a>
+              after
+            </Trans>
+          </span>
         </div>
       </Stack>
       <FooterBar />
