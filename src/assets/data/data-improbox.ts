@@ -156,6 +156,11 @@ export const organizers: Array<Organizer> = [
     name: "Divadlo Kellari",
     websiteUrl: "www.divadlokellari.cz",
   },
+  {
+    id: "kabinetimprovizace",
+    name: "Kabinet improvizace",
+    websiteUrl: "www.kabinetimprovizace.cz",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -515,6 +520,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-20-accioimpro",
+        name: "Accio Impro (work in progress)",
+        eventType: "play",
+        websiteUrl: " https://www.facebook.com/events/347284567727787",
+        organizers: [],
+        playDate: "2023-09-20",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-20-divadloimprovizaceodvaz",
         name: "Improshow: detektivka",
         eventType: "play",
@@ -579,6 +594,16 @@ export const data: Array<MonthEventsCalendar> = [
     monthName: "Říjen",
     monthDate: "2023-10",
     events: [
+      {
+        id: "1",
+        slug: "2023-10-01-kabinetimprovizace",
+        name: "Živelné impro",
+        eventType: "workshop",
+        websiteUrl: "https://www.kabinetimprovizace.cz/",
+        organizers: [organizers.find((o) => o.id === "kabinetimprovizace")!],
+        playDate: "2023-10-01",
+        district: "Praha",
+      },
       {
         id: "1",
         slug: "2023-10-03-improvariace",

@@ -224,7 +224,7 @@ export const ImproEventCard = ({
                     fontSize: "16px",
                   }}
                 >
-                  {improEvent.organizers
+                  {improEvent.organizers && improEvent.organizers.length > 0
                     ? improEvent.organizers.map((org) => org.name).join(" + ")
                     : improEvent.name}
                 </h3>
