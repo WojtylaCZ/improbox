@@ -617,16 +617,17 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-10-03",
         district: "Praha",
       },
-      {
-        id: "1",
-        slug: "2023-10-10-kecky",
-        name: "Impro Kecky a Lukáš Rumlena",
-        eventType: "play",
-        websiteUrl: "https://www.facebook.com/events/336407808735178",
-        organizers: [organizers.find((o) => o.id === "kecky")!],
-        playDate: "2023-10-10",
-        district: "Praha",
-      },
+      //   DELETED
+      //   {
+      //     id: "1",
+      //     slug: "2023-10-10-kecky",
+      //     name: "Impro Kecky a Lukáš Rumlena",
+      //     eventType: "play",
+      //     websiteUrl: "https://www.facebook.com/events/336407808735178",
+      //     organizers: [organizers.find((o) => o.id === "kecky")!],
+      //     playDate: "2023-10-10",
+      //     district: "Praha",
+      //   },
       {
         id: "1",
         slug: "2023-10-12-standartnikabaret",
@@ -707,7 +708,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-11-10-kecky",
-        name: "Impro Kecky a Adam Vošvrda",
+        name: "Impro Kecky a dva úžasňáci - Adam Vošvrda a Lukáš Rumlena",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1006931377020100",
         organizers: [organizers.find((o) => o.id === "kecky")!],
