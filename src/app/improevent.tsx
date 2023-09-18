@@ -7,8 +7,7 @@ import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { useTranslation } from "react-i18next";
 import { ImproEvent } from "../assets/data/data-improbox";
 import ReactGA from "react-ga4";
-
-ReactGA.initialize("G-0BFJTSYSSM");
+import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 
 export const ImproEventCard = ({
   improEvent,
@@ -43,28 +42,19 @@ export const ImproEventCard = ({
     }
   }, [eventSlug, improEvent.slug, setIsExpanded, isFirst]);
 
-  const sendAnalyticsEvent = (eventName: string, eventParam: string) => {
-    ReactGA.event({
-      // action becomes the event name
-      action: eventName,
-      //  "event_category" becomes a custom parameter
-      category: eventParam,
-    });
-  };
-
   const handleExpandClick = useCallback(() => {
     if (!isExpanded) {
-      sendAnalyticsEvent(`improevent-expanded`, `${improEvent.slug}`);
+      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, `${improEvent.slug}`);
     }
     setIsExpanded(!isExpanded);
   }, [improEvent.slug, isExpanded]);
 
   const handleEventLinkClick = useCallback(() => {
-    sendAnalyticsEvent(`improevent-link-opened`, `${improEvent.slug}`);
+    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, `${improEvent.slug}`);
   }, [improEvent.slug]);
 
   const handleOrganiseWebLinkClick = useCallback(() => {
-    sendAnalyticsEvent(`organiser-website-opened`, `${improEvent.organizers?.[0].id}`);
+    sendAnalyticsEvent(AnalyticsEvents.OrganiserWebsiteOpened, `${improEvent.organizers?.[0].id}`);
   }, [improEvent.organizers]);
 
   const eventPlay = Date.parse(improEvent.playDate);

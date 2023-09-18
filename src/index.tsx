@@ -8,6 +8,9 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./app/i18n";
 import { AppRouter } from "./app/app-router";
+import { initAnalytics } from "./app/analytics";
+
+initAnalytics();
 
 const index = (
   <React.StrictMode>

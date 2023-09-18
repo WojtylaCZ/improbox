@@ -14,6 +14,7 @@ import { supportedLocales } from "./i18n";
 import { FooterBar } from "./footer-bar";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
+import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -48,10 +49,22 @@ export const Main = () => {
 
   const handleShowPlaysFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
     setShowPlaysFilter(event.target.checked);
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.PlaysSwitchedOnFilter
+        : AnalyticsEvents.PlaysSwitchedOffFilter,
+      String(event.target.checked)
+    );
   };
 
   const handleShowWorkshopsFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
     setShowWorkshopsFilter(event.target.checked);
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.WorkshopsSwitchedOnFilter
+        : AnalyticsEvents.WorkshopsSwitchedOffFilter,
+      String(event.target.checked)
+    );
   };
 
   const todayDate = Date.now();
