@@ -39,7 +39,7 @@ export const ImproEventCard = ({
 
     if (!eventSlug) {
       setIsExpanded(isFirst);
-      window.scrollTo(0, 0);
+      // window.scrollTo(0, 0);
     }
   }, [eventSlug, improEvent.slug, setIsExpanded, isFirst]);
 
@@ -284,7 +284,7 @@ export const ImproEventCard = ({
                   <>
                     {improEvent.organizers.map((org, index) => {
                       return (
-                        <>
+                        <span key={index.toString()}>
                           <a
                             href={"http://" + org.websiteUrl}
                             target="_blank"
@@ -295,7 +295,7 @@ export const ImproEventCard = ({
                             {org.websiteUrl}
                           </a>
                           {index < improEvent.organizers!.length - 1 && <>&nbsp; + &nbsp;</>}
-                        </>
+                        </span>
                       );
                     })}
                   </>

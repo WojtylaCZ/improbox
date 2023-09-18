@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { Collapse, Container, Image, Stack } from "react-bootstrap";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { Col, Collapse, Container, Form, Image, Row, Stack } from "react-bootstrap";
 import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors612.jpeg";
 import MailIcon from "../assets/img/mail.png";
@@ -31,6 +31,29 @@ export const Main = () => {
     }
   }, [navigate, eventSlug, locale]);
 
+  const [isMailFormExpanded, setIsMailFormExpanded] = useState(false);
+
+  const handleMailFormClick = useCallback(() => {
+    setIsMailFormExpanded(!isMailFormExpanded);
+  }, [isMailFormExpanded]);
+
+  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(true);
+
+  const handlePastEventsSectionClick = useCallback(() => {
+    setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
+  }, [isPastEventsSectionExpanded]);
+
+  const [showPlaysFilter, setShowPlaysFilter] = useState(true);
+  const [showWorkshopsFilter, setShowWorkshopsFilter] = useState(true);
+
+  const handleShowPlaysFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowPlaysFilter(event.target.checked);
+  };
+
+  const handleShowWorkshopsFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowWorkshopsFilter(event.target.checked);
+  };
+
   const todayDate = Date.now();
 
   const upcomingEvents = data.filter((district) => {
@@ -57,33 +80,23 @@ export const Main = () => {
 
   const upcomingMonthSections = upcomingEvents.map((monthSection, id) => (
     <MonthCalendarSection
-      key={id}
+      key={monthSection.monthName}
       monthSection={monthSection}
       isFirst={id === 0}
       isForUpcomingEvents={true}
+      filters={{ showPlays: showPlaysFilter, showWorkshops: showWorkshopsFilter }}
     />
   ));
 
   const pastMonthSections = pastEvents.map((monthSection, id) => (
     <MonthCalendarSection
-      key={id}
+      key={monthSection.monthName}
       monthSection={monthSection}
       isFirst={false}
       isForUpcomingEvents={false}
+      filters={{ showPlays: showPlaysFilter, showWorkshops: showWorkshopsFilter }}
     />
   ));
-
-  const [isMailFormExpanded, setIsMailFormExpanded] = useState(false);
-
-  const handleMailFormClick = useCallback(() => {
-    setIsMailFormExpanded(!isMailFormExpanded);
-  }, [isMailFormExpanded]);
-
-  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(true);
-
-  const handlePastEventsSectionClick = useCallback(() => {
-    setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
-  }, [isPastEventsSectionExpanded]);
 
   return (
     <>
@@ -199,6 +212,32 @@ export const Main = () => {
             }}
           />
         </div>
+        <Container fluid>
+          <Row> {t("text.filters")}</Row>
+          <Row>
+            <Col xs={4}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {t("text.eventTypeFilters")}
+              </div>
+            </Col>
+            <Col xs={8}>
+              <Form.Switch
+                checked={showPlaysFilter}
+                inline
+                id="plays"
+                label={t("dataLabels.play")}
+                onChange={handleShowPlaysFilterChange}
+              />
+              <Form.Switch
+                checked={showWorkshopsFilter}
+                inline
+                id="workshops"
+                label={t("dataLabels.workshops")}
+                onChange={handleShowWorkshopsFilterChange}
+              />
+            </Col>
+          </Row>
+        </Container>
 
         <Stack gap={5}>{upcomingMonthSections}</Stack>
 

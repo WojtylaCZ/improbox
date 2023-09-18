@@ -8,12 +8,14 @@ import { Image } from "react-bootstrap";
 export type District = {
   monthSection: MonthEventsCalendar;
   isForUpcomingEvents: boolean;
+  filters: { showPlays: boolean; showWorkshops: boolean };
 };
 
 export const MonthCalendarSection = ({
   monthSection,
   isFirst,
   isForUpcomingEvents,
+  filters,
 }: District & { isFirst: boolean }) => {
   const todayDate = Date.now();
 
@@ -32,6 +34,11 @@ export const MonthCalendarSection = ({
 
   const events = monthSection.events
     .filter((improEvent) => {
+      if (!filters.showPlays && improEvent.eventType === "play") return false;
+      if (!filters.showWorkshops && improEvent.eventType === "workshop") return false;
+      return true;
+    })
+    .filter((improEvent) => {
       const eventDate = Date.parse(improEvent.playDate);
       // past event is 24 hours old
       return isForUpcomingEvents
@@ -39,7 +46,7 @@ export const MonthCalendarSection = ({
         : eventDate < todayDate - 86400000;
     })
     .map((improEvent, id) => (
-      <ImproEventCard key={id} improEvent={improEvent} isFirst={isFirst && id < 2} />
+      <ImproEventCard key={improEvent.slug} improEvent={improEvent} isFirst={isFirst && id < 2} />
     ));
 
   return (

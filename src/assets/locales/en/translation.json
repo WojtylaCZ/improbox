@@ -10,6 +10,8 @@
   "text": {
     "introLine1": "What, when, where in Czech world of improv comedy.",
     "introLine2": "I want to subscribe for new events and updates",
+    "filters": "Filters: ",
+    "eventTypeFilters": "By event type: ",
     "madeBy": "This web was created by <1>Vojtěch Uhlíř</1>, an improv actor and a software engineer.",
     "alsoMade": "Do you x-country ski during the winter? Check out <1>www.prispevkynabezky.cz</1>! Web that makes donation for x-country ski trails maintance easy I also made."
   },

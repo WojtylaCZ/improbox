@@ -979,7 +979,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-15-skolaimprovizace",
+        slug: "2023-04-15-skolaimprovizace2",
         name: "Impro Ambasadors - představení: NO EXIT",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1235463783774029",
