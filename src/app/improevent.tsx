@@ -6,7 +6,6 @@ import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { useTranslation } from "react-i18next";
 import { ImproEvent } from "../assets/data/data-improbox";
-import ReactGA from "react-ga4";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 
 export const ImproEventCard = ({
@@ -93,7 +92,9 @@ export const ImproEventCard = ({
     <div
       style={{
         backgroundColor: "#ffffff",
-        border: "1px solid #220101",
+        border: `${eventSlug === improEvent.slug ? "3px" : "1px"} solid ${
+          eventSlug === improEvent.slug ? "#dd2822" : "#220101"
+        }`,
         borderRadius: "8px",
         boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
       }}
