@@ -580,6 +580,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-26-fofrvzupanu",
+        name: "Fofr v Hollywoodu",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/2033706753675482",
+        organizers: [organizers.find((o) => o.id === "fofrvzupanu")!],
+        playDate: "2023-09-26",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-27-divadloimprovizaceodvaz",
         name: "Manželské etudy",
         eventType: "play",
