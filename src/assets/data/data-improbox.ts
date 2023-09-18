@@ -616,6 +616,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-03-divadlo301",
+        name: "Poprvé",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3747334172180968",
+        organizers: [organizers.find((o) => o.id === "divadlo301")!],
+        playDate: "2023-10-03",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-03-improvariace",
         name: "Gilty Pležr: Telenovela",
         eventType: "play",
