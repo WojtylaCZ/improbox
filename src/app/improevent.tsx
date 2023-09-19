@@ -7,6 +7,7 @@ import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { useTranslation } from "react-i18next";
 import { ImproEvent } from "../assets/data/data-improbox";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
+import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 
 export const ImproEventCard = ({
   improEvent,
@@ -166,14 +167,12 @@ export const ImproEventCard = ({
                     padding: "4px 8px",
                     alignSelf: "flex-end",
                     borderRadius: "4px",
-                    backgroundColor: `${improEvent.eventType === "play" ? "#FFF7D9" : "#FFD9E7"}`,
+                    backgroundColor: `${getEventTypeColor(improEvent.eventType)}`,
                     fontSize: "12px",
-                    maxWidth: "81px",
+                    // maxWidth: "81px",
                   }}
                 >
-                  {improEvent.eventType === "play"
-                    ? t("dataLabels.play")
-                    : t("dataLabels.workshop")}
+                  {useEventTypeLabel(improEvent.eventType)}
                 </div>
                 <div
                   style={{

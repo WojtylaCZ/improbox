@@ -24,7 +24,7 @@ export type Organizer = {
   websiteUrl: string;
 };
 
-export type EventType = "play" | "workshop" | "unknown";
+export type EventType = "play" | "workshop" | "coursework" | "unknown";
 
 export type ImproEvent = {
   id: string;
@@ -168,6 +168,11 @@ export const organizers: Array<Organizer> = [
     id: "kabinetimprovizace",
     name: "Kabinet improvizace",
     websiteUrl: "www.kabinetimprovizace.cz",
+  },
+  {
+    id: "zivapedagogika",
+    name: "Živá pedagogika",
+    websiteUrl: "www.zivapedagogika.cz",
   },
 ];
 
@@ -394,6 +399,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-13-zivapedagogika",
+        name: "Divadelní improvizace",
+        eventType: "workshop",
+        websiteUrl:
+          "https://zivapedagogika.cz/kurzy-new/23-divadelni-improvizace-pro-ucitele-a-nejen-pro-ne/",
+        organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
+        playDate: "2023-09-13",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-09-13-bafni",
         name: "Generál Torstenson Impro Cup",
         eventType: "play",
@@ -538,6 +554,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-09-20-paletaci",
+        name: "Kurz improvizace 1",
+        eventType: "coursework",
+        websiteUrl: "https://kurzy.paletaci.cz/kurz-impra-1/",
+        organizers: [organizers.find((o) => o.id === "paletaci")!],
+        playDate: "2023-09-20",
+        district: "Hradec Králové",
+      },
+      {
+        id: "1",
         slug: "2023-09-20-divadloimprovizaceodvaz",
         name: "Improshow: detektivka",
         eventType: "play",
@@ -545,6 +571,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-20",
         district: "Ostrava",
+      },
+      {
+        id: "1",
+        slug: "2023-09-21-paletaci",
+        name: "Kurz improvizace 1",
+        eventType: "coursework",
+        websiteUrl: "https://kurzy.paletaci.cz/kurz-impra-1/",
+        organizers: [organizers.find((o) => o.id === "paletaci")!],
+        playDate: "2023-09-21",
+        district: "Pardubice",
       },
       {
         id: "1",
@@ -585,6 +621,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "myklucicospoluchodime")!],
         playDate: "2023-09-26",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-26-paletaci",
+        name: "Kroužek pro děti",
+        eventType: "coursework",
+        websiteUrl: "https://kurzy.paletaci.cz/pro-deti/",
+        organizers: [organizers.find((o) => o.id === "paletaci")!],
+        playDate: "2023-09-26",
+        district: "Pardubice",
       },
       {
         id: "1",
@@ -656,6 +702,16 @@ export const data: Array<MonthEventsCalendar> = [
       //     playDate: "2023-10-10",
       //     district: "Praha",
       //   },
+      {
+        id: "1",
+        slug: "2023-10-04-zivapedagogika",
+        name: "Divadelní improvizace",
+        eventType: "coursework",
+        websiteUrl: "https://zivapedagogika.cz/kurzy-new/01-divadelni-improvizace/",
+        organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
+        playDate: "2023-10-04",
+        district: "Praha",
+      },
       {
         id: "1",
         slug: "2023-10-12-standartnikabaret",
@@ -761,6 +817,17 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: " https://www.svandovodivadlo.cz/inscenace/13/just-impro-just-impro-show/4873",
         organizers: [organizers.find((o) => o.id === "justimpro")!],
         playDate: "2023-11-22",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-11-23-zivapedagogika",
+        name: "Divadelní improvizace",
+        eventType: "workshop",
+        websiteUrl:
+          "https://zivapedagogika.cz/kurzy-new/23-divadelni-improvizace-pro-ucitele-a-nejen-pro-ne/",
+        organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
+        playDate: "2023-11-23",
         district: "Praha",
       },
       {

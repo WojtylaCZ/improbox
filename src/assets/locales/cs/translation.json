@@ -21,9 +21,12 @@
     "groupsWebsites": "Weby souborů: "
   },
   "dataLabels": {
+    "play": "Představení",
+    "plays": "Představení",
     "workshop": "Workshop",
     "workshops": "Workshopy",
-    "play": "Představení",
+    "coursework": "Dlouhodobý kurz",
+    "courseworks": "Dlouhodobé kurzy",
     "Prague": "Praha",
     "Bohemia": "Čechy bez Prahy",
     "MoraviaAndSilesia": "Morava a Slezsko",

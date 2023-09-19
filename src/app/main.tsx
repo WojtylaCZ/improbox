@@ -4,7 +4,7 @@ import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors612.jpeg";
 import MailIcon from "../assets/img/mail.png";
 
-import { LocationFilter, data } from "../assets/data/data-improbox";
+import { EventType, LocationFilter, data } from "../assets/data/data-improbox";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -21,6 +21,8 @@ export type LocationFilters = {
   [LocationFilter.CechyBezPrahy]: boolean;
   [LocationFilter.MoravaASlezsko]: boolean;
 };
+
+export type EventTypeFilters = Record<EventType, boolean>;
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -50,11 +52,15 @@ export const Main = () => {
     setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
   }, [isPastEventsSectionExpanded]);
 
-  const [showPlaysFilter, setShowPlaysFilter] = useState(true);
-  const [showWorkshopsFilter, setShowWorkshopsFilter] = useState(true);
+  const [showEventTypeFilters, setShowEventTypeFilters] = useState<EventTypeFilters>({
+    play: true,
+    workshop: true,
+    coursework: false,
+    unknown: true,
+  });
 
   const handleShowPlaysFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setShowPlaysFilter(event.target.checked);
+    setShowEventTypeFilters({ ...showEventTypeFilters, play: event.target.checked });
     sendAnalyticsEvent(
       Boolean(event.target.checked)
         ? AnalyticsEvents.PlaysSwitchedOnFilter
@@ -64,11 +70,21 @@ export const Main = () => {
   };
 
   const handleShowWorkshopsFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setShowWorkshopsFilter(event.target.checked);
+    setShowEventTypeFilters({ ...showEventTypeFilters, workshop: event.target.checked });
     sendAnalyticsEvent(
       Boolean(event.target.checked)
         ? AnalyticsEvents.WorkshopsSwitchedOnFilter
         : AnalyticsEvents.WorkshopsSwitchedOffFilter,
+      String(event.target.checked)
+    );
+  };
+
+  const handleShowCourseworkFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowEventTypeFilters({ ...showEventTypeFilters, coursework: event.target.checked });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.CourseworksSwitchedOnFilter
+        : AnalyticsEvents.CourseworksSwitchedOffFilter,
       String(event.target.checked)
     );
   };
@@ -149,8 +165,7 @@ export const Main = () => {
       isFirst={id === 0}
       isForUpcomingEvents={true}
       filters={{
-        showPlays: showPlaysFilter,
-        showWorkshops: showWorkshopsFilter,
+        showEventTypes: showEventTypeFilters,
         showLocations: showLocationFilters,
       }}
     />
@@ -163,8 +178,7 @@ export const Main = () => {
       isFirst={false}
       isForUpcomingEvents={false}
       filters={{
-        showPlays: showPlaysFilter,
-        showWorkshops: showWorkshopsFilter,
+        showEventTypes: showEventTypeFilters,
         showLocations: showLocationFilters,
       }}
     />
@@ -295,18 +309,25 @@ export const Main = () => {
               <Col xs={8} sm={9}>
                 <div style={{ display: "flex", justifyContent: "start", flexWrap: "wrap" }}>
                   <Form.Switch
-                    checked={showPlaysFilter}
+                    checked={showEventTypeFilters.play}
                     inline
                     id="plays"
-                    label={t("dataLabels.play")}
+                    label={t("dataLabels.plays")}
                     onChange={handleShowPlaysFilterChange}
                   />
                   <Form.Switch
-                    checked={showWorkshopsFilter}
+                    checked={showEventTypeFilters.workshop}
                     inline
                     id="workshops"
                     label={t("dataLabels.workshops")}
                     onChange={handleShowWorkshopsFilterChange}
+                  />
+                  <Form.Switch
+                    checked={showEventTypeFilters.coursework}
+                    inline
+                    id="courseworks"
+                    label={t("dataLabels.courseworks")}
+                    onChange={handleShowCourseworkFilterChange}
                   />
                 </div>
               </Col>

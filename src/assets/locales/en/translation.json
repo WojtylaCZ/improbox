@@ -21,9 +21,12 @@
     "groupsWebsites": "Websites of the groups: "
   },
   "dataLabels": {
+    "play": "Show",
+    "plays": "Shows",
     "workshop": "Workshop",
     "workshops": "Workshops",
-    "play": "Show",
+    "coursework": "Coursework",
+    "courseworks": "Courseworks",
     "Prague": "Prague",
     "Bohemia": "Bohemia without Prague",
     "MoraviaAndSilesia": "Moravia and Silesia",

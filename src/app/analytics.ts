@@ -11,6 +11,9 @@ export const enum AnalyticsEvents {
   WorkshopsSwitchedOnFilter = "WorkshopsSwitchedOnFilter",
   WorkshopsSwitchedOffFilter = "WorkshopsSwitchedOffFilter",
 
+  CourseworksSwitchedOnFilter = "CourseworksSwitchedOnFilter",
+  CourseworksSwitchedOffFilter = "CourseworksSwitchedOffFilter",
+
   PragueLocationSwitchedOnFilter = "PragueSwitchedOnFilter",
   PragueLocationSwitchedOffFilter = "PragueSwitchedOffFilter",
 

@@ -4,15 +4,14 @@ import { ImproEventCard } from "./improevent";
 import { Districts, LocationFilter, MonthEventsCalendar } from "../assets/data/data-improbox";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
-import { LocationFilters } from "./main";
+import { EventTypeFilters, LocationFilters } from "./main";
 
 type Props = {
   monthSection: MonthEventsCalendar;
   isFirst: boolean;
   isForUpcomingEvents: boolean;
   filters: {
-    showPlays: boolean;
-    showWorkshops: boolean;
+    showEventTypes: EventTypeFilters;
     showLocations: LocationFilters;
   };
 };
@@ -40,8 +39,10 @@ export const MonthCalendarSection = ({
 
   const events = monthSection.events
     .filter((improEvent) => {
-      if (!filters.showPlays && improEvent.eventType === "play") return false;
-      if (!filters.showWorkshops && improEvent.eventType === "workshop") return false;
+      if (!filters.showEventTypes.play && improEvent.eventType === "play") return false;
+      if (!filters.showEventTypes.workshop && improEvent.eventType === "workshop") return false;
+      if (!filters.showEventTypes.coursework && improEvent.eventType === "coursework") return false;
+
       if (!filters.showLocations.Praha && improEvent.district === LocationFilter.Praha)
         return false;
       if (
