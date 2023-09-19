@@ -11,6 +11,15 @@ export const enum AnalyticsEvents {
   WorkshopsSwitchedOnFilter = "WorkshopsSwitchedOnFilter",
   WorkshopsSwitchedOffFilter = "WorkshopsSwitchedOffFilter",
 
+  PragueLocationSwitchedOnFilter = "PragueSwitchedOnFilter",
+  PragueLocationSwitchedOffFilter = "PragueSwitchedOffFilter",
+
+  BohemiaLocationSwitchedOnFilter = "BohemiaLocationSwitchedOnFilter",
+  BohemiaLocationSwitchedOffFilter = "BohemiaLocationSwitchedOffFilter",
+
+  MoraviaAndSilesiaLocationSwitchedOnFilter = "MoraviaAndSilesiaLocationSwitchedOnFilter",
+  MoraviaAndSilesiaLocationSwitchedOffFilter = "MoraviaAndSilesiaLocationSwitchedOffFilter",
+
   ImproEventExpanded = "ImproEventExpanded",
   ImproEventLinkOpened = "ImproEventLinkOpened",
   OrganiserWebsiteOpened = "OrganiserWebsiteOpened",

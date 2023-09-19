@@ -12,6 +12,7 @@
     "introLine2": "Odebírat novinky do e-mailu",
     "filters": "Filtrovat: ",
     "eventTypeFilters": "Dle typu: ",
+    "eventLocationFilters": "Dle lokace: ",
     "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor.",
     "alsoMade": "Jezdíte v zimě na běžkách? Koukněte na <1>www.prispevkynabezky.cz</1>! Web, který usnadňuje příspěvky na úpravu běžeckých tratí, jehož jsem také autorem."
   },
@@ -23,6 +24,9 @@
     "workshop": "Workshop",
     "workshops": "Workshopy",
     "play": "Představení",
+    "Prague": "Praha",
+    "Bohemia": "Čechy bez Prahy",
+    "MoraviaAndSilesia": "Morava a Slezsko",
     "monday": "Po",
     "tuesday": "Út",
     "wednesday": "St",

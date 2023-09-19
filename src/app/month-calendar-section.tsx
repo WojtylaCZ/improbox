@@ -1,14 +1,20 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { ImproEventCard } from "./improevent";
-import { MonthEventsCalendar } from "../assets/data/data-improbox";
+import { Districts, LocationFilter, MonthEventsCalendar } from "../assets/data/data-improbox";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
+import { LocationFilters } from "./main";
 
-export type District = {
+type Props = {
   monthSection: MonthEventsCalendar;
+  isFirst: boolean;
   isForUpcomingEvents: boolean;
-  filters: { showPlays: boolean; showWorkshops: boolean };
+  filters: {
+    showPlays: boolean;
+    showWorkshops: boolean;
+    showLocations: LocationFilters;
+  };
 };
 
 export const MonthCalendarSection = ({
@@ -16,7 +22,7 @@ export const MonthCalendarSection = ({
   isFirst,
   isForUpcomingEvents,
   filters,
-}: District & { isFirst: boolean }) => {
+}: Props) => {
   const todayDate = Date.now();
 
   const monthDate = Date.parse(monthSection.monthDate);
@@ -36,6 +42,18 @@ export const MonthCalendarSection = ({
     .filter((improEvent) => {
       if (!filters.showPlays && improEvent.eventType === "play") return false;
       if (!filters.showWorkshops && improEvent.eventType === "workshop") return false;
+      if (!filters.showLocations.Praha && improEvent.district === LocationFilter.Praha)
+        return false;
+      if (
+        !filters.showLocations.CechyBezPrahy &&
+        Districts[improEvent.district] === LocationFilter.CechyBezPrahy
+      )
+        return false;
+      if (
+        !filters.showLocations.MoravaASlezsko &&
+        Districts[improEvent.district] === LocationFilter.MoravaASlezsko
+      )
+        return false;
       return true;
     })
     .filter((improEvent) => {

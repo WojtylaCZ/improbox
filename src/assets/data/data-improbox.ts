@@ -1,14 +1,22 @@
-export type District =
-  | "Praha"
-  | "Středočeský kraj"
-  | "Brno"
-  | "Ostrava"
-  | "unknown"
-  | "Pardubice"
-  | "Nymburk"
-  | "Jihlava"
-  | "Hradec Králové"
-  | "Benešov";
+export const enum LocationFilter {
+  "Praha" = "Praha",
+  "CechyBezPrahy" = "CechyBezPrahy",
+  "MoravaASlezsko" = "MoravaASlezsko",
+}
+
+export const Districts = {
+  Praha: LocationFilter.Praha,
+  "Středočeský kraj": LocationFilter.CechyBezPrahy,
+  Pardubice: LocationFilter.CechyBezPrahy,
+  Nymburk: LocationFilter.CechyBezPrahy,
+  Jihlava: LocationFilter.CechyBezPrahy,
+  "Hradec Králové": LocationFilter.CechyBezPrahy,
+  Benešov: LocationFilter.CechyBezPrahy,
+  Brno: LocationFilter.MoravaASlezsko,
+  Ostrava: LocationFilter.MoravaASlezsko,
+};
+
+type District = keyof typeof Districts;
 
 export type Organizer = {
   id: string;

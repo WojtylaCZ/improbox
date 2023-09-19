@@ -4,7 +4,7 @@ import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors612.jpeg";
 import MailIcon from "../assets/img/mail.png";
 
-import { data } from "../assets/data/data-improbox";
+import { LocationFilter, data } from "../assets/data/data-improbox";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -15,6 +15,12 @@ import { FooterBar } from "./footer-bar";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
+
+export type LocationFilters = {
+  [LocationFilter.Praha]: boolean;
+  [LocationFilter.CechyBezPrahy]: boolean;
+  [LocationFilter.MoravaASlezsko]: boolean;
+};
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -67,6 +73,51 @@ export const Main = () => {
     );
   };
 
+  const [showLocationFilters, setShowLocationFilters] = useState<LocationFilters>({
+    [LocationFilter.CechyBezPrahy]: true,
+    [LocationFilter.Praha]: true,
+    [LocationFilter.MoravaASlezsko]: true,
+  });
+
+  const handlePragueLocationFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowLocationFilters({
+      ...showLocationFilters,
+      [LocationFilter.Praha]: event.target.checked,
+    });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.PragueLocationSwitchedOnFilter
+        : AnalyticsEvents.PragueLocationSwitchedOffFilter,
+      String(event.target.checked)
+    );
+  };
+
+  const handleBohemiaLocationFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowLocationFilters({
+      ...showLocationFilters,
+      [LocationFilter.CechyBezPrahy]: event.target.checked,
+    });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.BohemiaLocationSwitchedOnFilter
+        : AnalyticsEvents.BohemiaLocationSwitchedOffFilter,
+      String(event.target.checked)
+    );
+  };
+
+  const handleMoraviaAndSilesiaLocationFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowLocationFilters({
+      ...showLocationFilters,
+      [LocationFilter.MoravaASlezsko]: event.target.checked,
+    });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.MoraviaAndSilesiaLocationSwitchedOnFilter
+        : AnalyticsEvents.MoraviaAndSilesiaLocationSwitchedOffFilter,
+      String(event.target.checked)
+    );
+  };
+
   const todayDate = Date.now();
 
   const upcomingEvents = data.filter((district) => {
@@ -97,7 +148,11 @@ export const Main = () => {
       monthSection={monthSection}
       isFirst={id === 0}
       isForUpcomingEvents={true}
-      filters={{ showPlays: showPlaysFilter, showWorkshops: showWorkshopsFilter }}
+      filters={{
+        showPlays: showPlaysFilter,
+        showWorkshops: showWorkshopsFilter,
+        showLocations: showLocationFilters,
+      }}
     />
   ));
 
@@ -107,7 +162,11 @@ export const Main = () => {
       monthSection={monthSection}
       isFirst={false}
       isForUpcomingEvents={false}
-      filters={{ showPlays: showPlaysFilter, showWorkshops: showWorkshopsFilter }}
+      filters={{
+        showPlays: showPlaysFilter,
+        showWorkshops: showWorkshopsFilter,
+        showLocations: showLocationFilters,
+      }}
     />
   ));
 
@@ -155,102 +214,144 @@ export const Main = () => {
           marginTop: "16px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <span
-            style={{
-              fontSize: "12px",
-              marginTop: "4px",
-              marginBottom: "12px",
-            }}
-          >
-            {t("text.introLine1")}
-          </span>
-
+        <div style={{ width: "100%" }}>
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "8px",
+              textAlign: "center",
             }}
-            onClick={handleMailFormClick}
-            aria-controls="email-subscription-collapse"
-            aria-expanded={isMailFormExpanded}
           >
-            <Image
-              src={MailIcon}
-              alt="Email icon."
-              style={{
-                maxWidth: "24px",
-                marginRight: "8px",
-              }}
-            />
             <span
               style={{
-                fontFamily: "Jockey One",
-                fontSize: "20px",
-                color: "#dd2822",
-                textDecoration: "underline",
+                fontSize: "12px",
+                marginTop: "4px",
+                marginBottom: "12px",
               }}
             >
-              {t("text.introLine2")}
+              {t("text.introLine1")}
             </span>
-          </div>
-          <Collapse in={isMailFormExpanded}>
-            <iframe
-              title="improbox"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?embedded=true"
-              width={400}
-              height={500}
-              id="email-subscription-collapse"
-            >
-              Načítání…
-            </iframe>
-          </Collapse>
 
-          <hr
-            style={{
-              width: "110px",
-              color: "#dd2822",
-              border: 0,
-              borderTop: "1px solid",
-              opacity: "90%",
-            }}
-          />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "8px",
+              }}
+              onClick={handleMailFormClick}
+              aria-controls="email-subscription-collapse"
+              aria-expanded={isMailFormExpanded}
+            >
+              <Image
+                src={MailIcon}
+                alt="Email icon."
+                style={{
+                  maxWidth: "24px",
+                  marginRight: "8px",
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "Jockey One",
+                  fontSize: "20px",
+                  color: "#dd2822",
+                  textDecoration: "underline",
+                }}
+              >
+                {t("text.introLine2")}
+              </span>
+            </div>
+            <Collapse in={isMailFormExpanded}>
+              <iframe
+                title="improbox"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?embedded=true"
+                width={400}
+                height={500}
+                id="email-subscription-collapse"
+              >
+                Načítání…
+              </iframe>
+            </Collapse>
+            <hr
+              style={{
+                width: "110px",
+                color: "#dd2822",
+                border: 0,
+                borderTop: "1px solid",
+                opacity: "90%",
+              }}
+            />
+          </div>
+          <Container fluid>
+            <Row> {t("text.filters")}</Row>
+            <Row>
+              <Col xs={4} sm={3}>
+                <div style={{ display: "flex", justifyContent: "start" }}>
+                  {t("text.eventTypeFilters")}
+                </div>
+              </Col>
+              <Col xs={8} sm={9}>
+                <div style={{ display: "flex", justifyContent: "start", flexWrap: "wrap" }}>
+                  <Form.Switch
+                    checked={showPlaysFilter}
+                    inline
+                    id="plays"
+                    label={t("dataLabels.play")}
+                    onChange={handleShowPlaysFilterChange}
+                  />
+                  <Form.Switch
+                    checked={showWorkshopsFilter}
+                    inline
+                    id="workshops"
+                    label={t("dataLabels.workshops")}
+                    onChange={handleShowWorkshopsFilterChange}
+                  />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={4} sm={3}>
+                <div style={{ display: "flex", justifyContent: "start", marginTop: "8px" }}>
+                  {t("text.eventLocationFilters")}
+                </div>
+              </Col>
+              <Col xs={8} sm={9}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "start",
+                    flexWrap: "wrap",
+                    marginTop: "8px",
+                  }}
+                >
+                  <Form.Switch
+                    checked={showLocationFilters.Praha}
+                    inline
+                    id="plays"
+                    label={t("dataLabels.Prague")}
+                    onChange={handlePragueLocationFilterChange}
+                  />
+                  <Form.Switch
+                    checked={showLocationFilters.CechyBezPrahy}
+                    inline
+                    id="workshops"
+                    label={t("dataLabels.Bohemia")}
+                    onChange={handleBohemiaLocationFilterChange}
+                  />
+                  <Form.Switch
+                    checked={showLocationFilters.MoravaASlezsko}
+                    inline
+                    id="workshops"
+                    label={t("dataLabels.MoraviaAndSilesia")}
+                    onChange={handleMoraviaAndSilesiaLocationFilterChange}
+                  />
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
-        <Container fluid>
-          <Row> {t("text.filters")}</Row>
-          <Row>
-            <Col xs={4}>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                {t("text.eventTypeFilters")}
-              </div>
-            </Col>
-            <Col xs={8}>
-              <Form.Switch
-                checked={showPlaysFilter}
-                inline
-                id="plays"
-                label={t("dataLabels.play")}
-                onChange={handleShowPlaysFilterChange}
-              />
-              <Form.Switch
-                checked={showWorkshopsFilter}
-                inline
-                id="workshops"
-                label={t("dataLabels.workshops")}
-                onChange={handleShowWorkshopsFilterChange}
-              />
-            </Col>
-          </Row>
-        </Container>
 
         <Stack gap={5}>{upcomingMonthSections}</Stack>
 
