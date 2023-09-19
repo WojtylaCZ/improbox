@@ -755,6 +755,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-19-zivapedagogika",
+        name: "Divadelní improvizace v dramatické výchově",
+        eventType: "workshop",
+        websiteUrl:
+          "https://zivapedagogika.cz/kurzy-new/22-divadelni-improvizace-v-dramaticke-vychove/",
+        organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
+        playDate: "2023-10-19",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-27-bafni",
         name: "Autentická improvizace",
         eventType: "workshop",
