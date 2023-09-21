@@ -174,6 +174,11 @@ export const organizers: Array<Organizer> = [
     name: "Živá pedagogika",
     websiteUrl: "www.zivapedagogika.cz",
   },
+  {
+    id: "321jedem",
+    name: "321jedem!",
+    websiteUrl: "www.321jedem.cz",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -604,11 +609,11 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-25-justimpro",
-        name: "321jedem!: David Matásek",
+        slug: "2023-09-25-321jedem",
+        name: "Impro Talk Show: David Matásek",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/321jedem-david-matasek/szgdmvv",
-        organizers: [organizers.find((o) => o.id === "justimpro")!],
+        organizers: [organizers.find((o) => o.id === "321jedem")!],
         playDate: "2023-09-25",
         district: "Praha",
       },
@@ -720,6 +725,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://vosto5.cz/repertoar/standartni-kabaret",
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-10-12",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-16-321jedem",
+        name: "Impro Talk Show: Ondřej Pšenička",
+        eventType: "play",
+        websiteUrl: "https://goout.net/cs/321jedem-ondrej-psenicka/szqrqnw/",
+        organizers: [organizers.find((o) => o.id === "321jedem")!],
+        playDate: "2023-10-16",
         district: "Praha",
       },
       {
