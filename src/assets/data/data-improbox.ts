@@ -14,6 +14,7 @@ export const Districts = {
   Benešov: LocationFilter.CechyBezPrahy,
   Brno: LocationFilter.MoravaASlezsko,
   Ostrava: LocationFilter.MoravaASlezsko,
+  Boskovice: LocationFilter.MoravaASlezsko,
 };
 
 type District = keyof typeof Districts;
@@ -178,6 +179,11 @@ export const organizers: Array<Organizer> = [
     id: "321jedem",
     name: "321jedem!",
     websiteUrl: "www.321jedem.cz",
+  },
+  {
+    id: "lisky",
+    name: "Lísky",
+    websiteUrl: "www.improlisky.cz",
   },
 ];
 
@@ -596,6 +602,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-09-22",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-22-lisky",
+        name: "Improshow",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1120142216038883",
+        organizers: [organizers.find((o) => o.id === "lisky")!],
+        playDate: "2023-09-22",
+        district: "Boskovice",
       },
       {
         id: "1",
