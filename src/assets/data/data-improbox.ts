@@ -791,6 +791,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-19-blancinybileboty",
+        name: "Improshow",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/334720042557433",
+        organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
+        playDate: "2023-10-19",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-18-bafni",
         name: "O nás dvou",
         eventType: "play",
