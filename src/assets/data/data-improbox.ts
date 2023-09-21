@@ -185,6 +185,11 @@ export const organizers: Array<Organizer> = [
     name: "Lísky",
     websiteUrl: "www.improlisky.cz",
   },
+  {
+    id: "meandry",
+    name: "Meandry",
+    websiteUrl: "www.facebook.com/meandrovani",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -732,6 +737,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-10-04",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-11-meandry",
+        name: "Improshow Meandrů",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/876910106754584",
+        organizers: [organizers.find((o) => o.id === "meandry")!],
+        playDate: "2023-10-11",
+        district: "Brno",
       },
       {
         id: "1",
