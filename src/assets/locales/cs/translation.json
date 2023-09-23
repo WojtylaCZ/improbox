@@ -7,6 +7,9 @@
     "showPastEvents": "Zobrazit uplynulé akce",
     "hidePastEvents": "Skrýt uplynulé akce"
   },
+  "alerts": {
+    "linkCopied": "Link zkopírován!"
+  },
   "text": {
     "introLine1": "Co, kdy, kde v českém světě improvizace.",
     "introLine2": "Odebírat novinky do e-mailu",
@@ -18,7 +21,8 @@
   },
   "event": {
     "groupWebsite": "Web souboru: ",
-    "groupsWebsites": "Weby souborů: "
+    "groupsWebsites": "Weby souborů: ",
+    "shareEvent": "Sdílet"
   },
   "dataLabels": {
     "play": "Představení",

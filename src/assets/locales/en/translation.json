@@ -7,6 +7,9 @@
     "showPastEvents": "Show past events",
     "hidePastEvents": "Hide past events"
   },
+  "alerts": {
+    "linkCopied": "Link copied!"
+  },
   "text": {
     "introLine1": "What, when, where in Czech world of improv comedy.",
     "introLine2": "I want to subscribe for new events and updates",
@@ -18,7 +21,8 @@
   },
   "event": {
     "groupWebsite": "Website of the group: ",
-    "groupsWebsites": "Websites of the groups: "
+    "groupsWebsites": "Websites of the groups: ",
+    "shareEvent": "Share"
   },
   "dataLabels": {
     "play": "Show",
