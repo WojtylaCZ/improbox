@@ -1,11 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Col, Collapse, Container, Row } from "react-bootstrap";
+import { Col, Collapse, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
+import { ImproEvent } from "../assets/data/data-improbox";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
-import { useTranslation } from "react-i18next";
-import { ImproEvent } from "../assets/data/data-improbox";
+import ExternalLink from "../assets/icons/external-link.png";
+
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 
@@ -150,7 +152,7 @@ export const ImproEventCard = ({
               </a>
             </Col>
 
-            <Col xs={4} sm={{ span: 3, order: 2 }}>
+            <Col xs={4} sm={{ span: 2, order: 2 }}>
               {/* MISC */}
 
               <div
@@ -169,6 +171,7 @@ export const ImproEventCard = ({
                     borderRadius: "4px",
                     backgroundColor: `${getEventTypeColor(improEvent.eventType)}`,
                     fontSize: "12px",
+                    textAlign: "right",
                     // maxWidth: "81px",
                   }}
                 >
@@ -177,12 +180,12 @@ export const ImproEventCard = ({
                 <div
                   style={{
                     marginTop: "6px",
-
                     display: "flex",
                     paddingRight: "8px",
                     alignSelf: "flex-end",
                     color: "#000000",
                     fontSize: "12px",
+                    textAlign: "right",
                   }}
                 >
                   <span>{improEvent.district}</span>
@@ -190,7 +193,7 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={11} sm={{ span: 5, order: 1 }}>
+            <Col xs={11} sm={{ span: 6, order: 1 }}>
               {/* EVENT NAME */}
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div>
@@ -206,6 +209,16 @@ export const ImproEventCard = ({
                     onClick={handleEventLinkClick}
                   >
                     {improEvent.name}
+                    <Image
+                      src={ExternalLink}
+                      alt="External link icon."
+                      style={{
+                        marginLeft: "8px",
+                        marginBottom: "4px",
+                        maxWidth: "12px",
+                        opacity: "0.4",
+                      }}
+                    />
                   </a>
                 </div>
                 <h3
