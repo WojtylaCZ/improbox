@@ -17,6 +17,7 @@ export const Districts = {
   Boskovice: LocationFilter.MoravaASlezsko,
   "Havlíčkův Brod": LocationFilter.CechyBezPrahy,
   Olomouc: LocationFilter.MoravaASlezsko,
+  "Frýdek-Místek": LocationFilter.MoravaASlezsko,
 };
 
 type District = keyof typeof Districts;
@@ -201,6 +202,11 @@ export const organizers: Array<Organizer> = [
     id: "impra",
     name: "Impra",
     websiteUrl: "www.hereckaimprovizace.cz",
+  },
+  {
+    id: "frmol",
+    name: "Frmol",
+    websiteUrl: "www.improfrmol.cz",
   },
 ];
 
@@ -679,6 +685,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "fofrvzupanu")!],
         playDate: "2023-09-26",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-26-frmol",
+        name: "Přijď mezi nás! Otevřený trénink",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/305816592033322/305821975366117",
+        organizers: [organizers.find((o) => o.id === "frmol")!],
+        playDate: "2023-09-26",
+        district: "Frýdek-Místek",
       },
       {
         id: "1",
