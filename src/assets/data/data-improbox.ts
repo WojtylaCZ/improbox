@@ -16,6 +16,7 @@ export const Districts = {
   Ostrava: LocationFilter.MoravaASlezsko,
   Boskovice: LocationFilter.MoravaASlezsko,
   "Havlíčkův Brod": LocationFilter.CechyBezPrahy,
+  Olomouc: LocationFilter.MoravaASlezsko,
 };
 
 type District = keyof typeof Districts;
@@ -195,6 +196,11 @@ export const organizers: Array<Organizer> = [
     id: "nepripraveni",
     name: "Nepřipravení",
     websiteUrl: "www.nepripraveni.cz",
+  },
+  {
+    id: "impra",
+    name: "Impra",
+    websiteUrl: "www.hereckaimprovizace.cz",
   },
 ];
 
@@ -699,6 +705,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kabinetimprovizace")!],
         playDate: "2023-10-01",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-01-impra",
+        name: "Nebezpečné vztahy (ProArt festival)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/666785172044916",
+        organizers: [organizers.find((o) => o.id === "impra")!],
+        playDate: "2023-10-01",
+        district: "Olomouc",
       },
       {
         id: "1",
