@@ -15,6 +15,7 @@ export const Districts = {
   Brno: LocationFilter.MoravaASlezsko,
   Ostrava: LocationFilter.MoravaASlezsko,
   Boskovice: LocationFilter.MoravaASlezsko,
+  "Havlíčkův Brod": LocationFilter.CechyBezPrahy,
 };
 
 type District = keyof typeof Districts;
@@ -189,6 +190,11 @@ export const organizers: Array<Organizer> = [
     id: "meandry",
     name: "Meandry",
     websiteUrl: "www.facebook.com/meandrovani",
+  },
+  {
+    id: "nepripraveni",
+    name: "Nepřipravení",
+    websiteUrl: "www.nepripraveni.cz",
   },
 ];
 
@@ -770,6 +776,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-15-nepripraveni",
+        name: "NO EXIT",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1355577885025511",
+        organizers: [organizers.find((o) => o.id === "nepripraveni")!],
+        playDate: "2023-10-15",
+        district: "Havlíčkův Brod",
+      },
+      {
+        id: "1",
         slug: "2023-10-16-321jedem",
         name: "Impro Talk Show: Ondřej Pšenička",
         eventType: "play",
@@ -874,6 +890,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://www.facebook.com/events/1006931377020100",
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-11-10",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-11-12-nepripraveni",
+        name: "NO EXIT",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/118087244720185",
+        organizers: [organizers.find((o) => o.id === "nepripraveni")!],
+        playDate: "2023-11-12",
         district: "Praha",
       },
       {
