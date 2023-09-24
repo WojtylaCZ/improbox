@@ -728,7 +728,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-03-improvariace",
+        slug: "2023-10-03-improvariace-cnid",
         name: "Gilty Pležr: Telenovela",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1737547963377081",
