@@ -833,6 +833,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-18-bafni",
+        name: "O nás dvou",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1341571186778253",
+        organizers: [organizers.find((o) => o.id === "bafni")!],
+        playDate: "2023-10-18",
+        district: "Brno",
+      },
+      {
+        id: "1",
         slug: "2023-10-19-blancinybileboty",
         name: "Improshow",
         eventType: "play",
@@ -840,16 +850,6 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-10-19",
         district: "Praha",
-      },
-      {
-        id: "1",
-        slug: "2023-10-18-bafni",
-        name: "O nás dvou",
-        eventType: "play",
-        websiteUrl: "http://bafni.cz/repertoar/o-nas-dvou.html",
-        organizers: [organizers.find((o) => o.id === "bafni")!],
-        playDate: "2023-10-18",
-        district: "Brno",
       },
       {
         id: "1",
