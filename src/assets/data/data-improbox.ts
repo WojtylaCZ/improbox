@@ -208,6 +208,11 @@ export const organizers: Array<Organizer> = [
     name: "Frmol",
     websiteUrl: "www.improfrmol.cz",
   },
+  {
+    id: "pragueimprovnetwork",
+    name: "Prague Improv Network",
+    websiteUrl: "www.facebook.com/pragueimprovnetwork",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -695,6 +700,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "frmol")!],
         playDate: "2023-09-26",
         district: "Frýdek-Místek",
+      },
+      {
+        id: "1",
+        slug: "2023-09-26-pragueimprovnetwork",
+        name: "Improv Mixer - workshop & show (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/973688560465584/973688570465583",
+        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-09-26",
+        district: "Praha",
       },
       {
         id: "1",
