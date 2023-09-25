@@ -713,16 +713,6 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-pragueimprovnetwork",
-        name: "Improv Mixer - workshop & open mic (EN)",
-        eventType: "workshop",
-        websiteUrl: "https://www.facebook.com/events/973688560465584/973688570465583",
-        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
-        playDate: "2023-09-26",
-        district: "Praha",
-      },
-      {
-        id: "1",
         slug: "2023-09-26-improvizacecz",
         name: "Improvizujeme s Petrem Budilem",
         eventType: "play",
@@ -731,6 +721,17 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-09-26",
         district: "Praha",
       },
+      {
+        id: "1",
+        slug: "2023-09-26-pragueimprovnetwork",
+        name: "Improv Mixer - workshop & open mic (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/973688560465584/973688570465583",
+        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-09-26",
+        district: "Praha",
+      },
+
       {
         id: "1",
         slug: "2023-09-27-divadloimprovizaceodvaz",
