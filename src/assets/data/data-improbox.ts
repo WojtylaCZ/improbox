@@ -213,6 +213,11 @@ export const organizers: Array<Organizer> = [
     name: "Prague Improv Network",
     websiteUrl: "www.facebook.com/pragueimprovnetwork",
   },
+  {
+    id: "improvizacecz",
+    name: "Improvizace.cz",
+    websiteUrl: "www.improvizace.cz",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -708,6 +713,16 @@ export const data: Array<MonthEventsCalendar> = [
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/973688560465584/973688570465583",
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-09-26",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-26-improvizacecz",
+        name: "Improvizujeme s Petrem Budilem",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/692599146058545",
+        organizers: [organizers.find((o) => o.id === "improvizacecz")!],
         playDate: "2023-09-26",
         district: "Praha",
       },
