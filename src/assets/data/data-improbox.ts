@@ -218,6 +218,11 @@ export const organizers: Array<Organizer> = [
     name: "Improvizace.cz",
     websiteUrl: "www.improvizace.cz",
   },
+  {
+    id: "imperfectionists",
+    name: "The Imperfectionists",
+    websiteUrl: "www.facebook.com/imperfectionists.prague",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -735,6 +740,26 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-27",
         district: "Ostrava",
+      },
+      {
+        id: "1",
+        slug: "2023-09-28-imperfectionists",
+        name: "Let's Get Personal (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1996941320666640",
+        organizers: [organizers.find((o) => o.id === "imperfectionists")!],
+        playDate: "2023-09-28",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-09-28-pragueimprovnetwork",
+        name: "Thursday Night Improv Comedy Show (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/621985480107410",
+        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-09-28",
+        district: "Praha",
       },
     ],
   },
