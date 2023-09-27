@@ -845,7 +845,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-10-12-standartnikabaret",
-        name: "Jatka78",
+        name: "Svědomitě nepřipravený kabaret",
         eventType: "play",
         websiteUrl: "https://vosto5.cz/repertoar/standartni-kabaret",
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
