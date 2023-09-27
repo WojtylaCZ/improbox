@@ -55,7 +55,7 @@ export const Main = () => {
   const [showEventTypeFilters, setShowEventTypeFilters] = useState<EventTypeFilters>({
     play: true,
     workshop: true,
-    coursework: false,
+    coursework: true,
     unknown: true,
   });
 
