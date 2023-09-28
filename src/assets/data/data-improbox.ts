@@ -752,16 +752,6 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-09-28",
         district: "Praha",
       },
-      {
-        id: "1",
-        slug: "2023-09-28-pragueimprovnetwork",
-        name: "Thursday Night Improv Comedy Show (EN)",
-        eventType: "play",
-        websiteUrl: "https://www.facebook.com/events/621985480107410",
-        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
-        playDate: "2023-09-28",
-        district: "Praha",
-      },
     ],
   },
   {
@@ -830,6 +820,16 @@ export const data: Array<MonthEventsCalendar> = [
         websiteUrl: "https://zivapedagogika.cz/kurzy-new/01-divadelni-improvizace/",
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-10-04",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-05-pragueimprovnetwork",
+        name: "Thursday Night Improv Comedy Show (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/621985480107410",
+        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-10-05",
         district: "Praha",
       },
       {
