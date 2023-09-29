@@ -26,6 +26,12 @@ export const enum AnalyticsEvents {
   ImproEventExpanded = "ImproEventExpanded",
   ImproEventLinkOpened = "ImproEventLinkOpened",
   OrganiserWebsiteOpened = "OrganiserWebsiteOpened",
+
+  EmailSubscribeFormExpanded = "EmailSubscribeFormExpanded",
+  EmailSubscribeFormCollapsed = "EmailSubscribeFormCollapsed",
+
+  PastEventsExpanded = "PastEventsExpanded",
+  PastEventsCollapsed = "PastEventsCollapsed",
 }
 
 export const sendAnalyticsEvent = (eventName: AnalyticsEvents, eventParam: string) => {
