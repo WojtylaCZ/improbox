@@ -292,7 +292,7 @@ export const Main = () => {
             <Collapse in={isMailFormExpanded}>
               <iframe
                 title="improbox"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?usp=pp_url&entry.1183490725=Praha&entry.1183490725=%C4%8Cechy+bez+Prahy&entry.1183490725=Morava+a+Slezsko&entry.1820203816=P%C5%99edstaven%C3%AD&entry.1820203816=Workshopy&entry.1820203816=Kurzy"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfTwRDWECT_qKbiv0jGmzSXw5QgXqIqK3P0blyFqOwLucoBEw/viewform?embedded=true&usp=pp_url&entry.1183490725=Praha&entry.1183490725=%C4%8Cechy+bez+Prahy&entry.1183490725=Morava+a+Slezsko&entry.1820203816=P%C5%99edstaven%C3%AD&entry.1820203816=Workshopy&entry.1820203816=Kurzy"
                 width={400}
                 height={750}
                 id="email-subscription-collapse"
