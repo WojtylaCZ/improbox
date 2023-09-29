@@ -134,7 +134,7 @@ export const Main = () => {
     );
   };
 
-  const todayDate = Date.now();
+  const todayDate = Date.now() + 2006400000;
 
   const upcomingEvents = data.filter((district) => {
     return (
