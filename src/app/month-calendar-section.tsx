@@ -22,7 +22,7 @@ export const MonthCalendarSection = ({
   isForUpcomingEvents,
   filters,
 }: Props) => {
-  const todayDate = Date.now() + 96400000;
+  const todayDate = Date.now();
 
   const monthDate = Date.parse(monthSection.monthDate);
 
