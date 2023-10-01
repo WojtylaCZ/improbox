@@ -894,6 +894,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-14-imperfectionists",
+        name: "Single Location Montageness",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1042042583472678",
+        organizers: [organizers.find((o) => o.id === "imperfectionists")!],
+        playDate: "2023-10-14",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-15-nepripraveni",
         name: "NO EXIT",
         eventType: "play",
