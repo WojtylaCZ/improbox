@@ -18,6 +18,7 @@ export const Districts = {
   "Havlíčkův Brod": LocationFilter.CechyBezPrahy,
   Olomouc: LocationFilter.MoravaASlezsko,
   "Frýdek-Místek": LocationFilter.MoravaASlezsko,
+  "Mnichovo Hradiště": LocationFilter.MoravaASlezsko,
 };
 
 type District = keyof typeof Districts;
@@ -222,6 +223,31 @@ export const organizers: Array<Organizer> = [
     id: "imperfectionists",
     name: "The Imperfectionists",
     websiteUrl: "www.facebook.com/imperfectionists.prague",
+  },
+  {
+    id: "therandoms",
+    name: "The Randoms",
+    websiteUrl: "www.therandoms.cz",
+  },
+  {
+    id: "saysomethingcz",
+    name: "saysomething.cz",
+    websiteUrl: "www.saysomething.cz",
+  },
+  {
+    id: "altf4",
+    name: "ALT + F4",
+    websiteUrl: "www.facebook.com/divadloaltf4",
+  },
+  {
+    id: "kis",
+    name: "KIŠ",
+    websiteUrl: "www.tyrkis.cz",
+  },
+  {
+    id: "creativedifferences",
+    name: "Creative Differences",
+    websiteUrl: "www.facebook.com/creativedifferencespragueimprov",
   },
 ];
 
@@ -844,12 +870,65 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-04-therandoms",
+        name: "The Randoms improvizují",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1290023418374461",
+        organizers: [organizers.find((o) => o.id === "therandoms")!],
+        playDate: "2023-10-04",
+        district: "Brno",
+      },
+      {
+        id: "1",
+        slug: "2023-10-04-saysomethingcz",
+        name: "Tajemství Vesmíru (Space sheep)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/2571374433019341",
+        organizers: [organizers.find((o) => o.id === "saysomethingcz")!],
+        playDate: "2023-10-04",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-05-altf4",
+        name: "ALT + F4: Setkání",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3399162263747880",
+        organizers: [organizers.find((o) => o.id === "altf4")!],
+        playDate: "2023-10-05",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-05-pragueimprovnetwork",
         name: "Thursday Night Improv Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/621985480107410",
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
         playDate: "2023-10-05",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-06-polocasnapadu-bizoni",
+        name: "Poločas nápadu vs B.I.Z.O.N.I.",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1658799717958012",
+        organizers: [
+          organizers.find((o) => o.id === "polocasnapadu")!,
+          organizers.find((o) => o.id === "bizoni")!,
+        ],
+        playDate: "2023-10-06",
+        district: "Mnichovo Hradiště",
+      },
+      {
+        id: "1",
+        slug: "2023-10-07-creativedifferences",
+        name: "October Improv Comedy Show (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1411115936112154",
+        organizers: [organizers.find((o) => o.id === "creativedifferences")!],
+        playDate: "2023-10-07",
         district: "Praha",
       },
       {
@@ -972,6 +1051,19 @@ export const data: Array<MonthEventsCalendar> = [
           "https://zivapedagogika.cz/kurzy-new/22-divadelni-improvizace-v-dramaticke-vychove/",
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-10-19",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-20-kis-polocasnapadu",
+        name: "KIŠ vs. Poločas nápadu",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/846348060407877",
+        organizers: [
+          organizers.find((o) => o.id === "kis")!,
+          organizers.find((o) => o.id === "polocasnapadu")!,
+        ],
+        playDate: "2023-10-20",
         district: "Praha",
       },
       {
