@@ -40,6 +40,7 @@ export type ImproEvent = {
   organizers: Array<Organizer> | undefined;
   playDate: string;
   district: District;
+  language: "cs" | "en";
 };
 
 export type MonthEventsCalendar = {
@@ -270,6 +271,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-08-07",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -280,6 +282,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvariace")!],
         playDate: "2023-08-08",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -290,6 +293,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-08-14",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -300,6 +304,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "fofrvzupanu")!],
         playDate: "2023-08-15",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -310,6 +315,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: undefined,
         playDate: "2023-08-16",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -320,6 +326,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-08-20",
         district: "Středočeský kraj",
+        language: "cs",
       },
       {
         id: "1",
@@ -330,6 +337,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-08-21",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -340,6 +348,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloodvaz")!],
         playDate: "2023-08-21",
         district: "Ostrava",
+        language: "cs",
       },
       {
         id: "1",
@@ -350,6 +359,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvariace")!],
         playDate: "2023-08-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -360,6 +370,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-08-28",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -370,6 +381,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-08-28",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -386,6 +398,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadlo301")!],
         playDate: "2023-09-02",
         district: "Nymburk",
+        language: "cs",
       },
       {
         id: "1",
@@ -396,6 +409,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-09-05",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -406,6 +420,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadlo301")!],
         playDate: "2023-09-05",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -416,6 +431,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-09-06",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -426,6 +442,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-06",
         district: "Hradec Králové",
+        language: "cs",
       },
       {
         id: "1",
@@ -436,6 +453,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-06",
         district: "Ostrava",
+        language: "cs",
       },
       {
         id: "1",
@@ -446,6 +464,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-09-07",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -456,6 +475,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-07",
         district: "Pardubice",
+        language: "cs",
       },
       {
         id: "1",
@@ -466,6 +486,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "alibiprochyby")!],
         playDate: "2023-09-12",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -476,6 +497,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-09-13",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -487,6 +509,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-09-13",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -497,6 +520,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-09-13",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -507,6 +531,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-13",
         district: "Ostrava",
+        language: "cs",
       },
       {
         id: "1",
@@ -520,6 +545,7 @@ export const data: Array<MonthEventsCalendar> = [
         ],
         playDate: "2023-09-15",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -530,6 +556,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadlokellari")!],
         playDate: "2023-09-15",
         district: "Benešov",
+        language: "cs",
       },
       {
         id: "1",
@@ -540,6 +567,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-09-15",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -550,6 +578,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bizoni")!],
         playDate: "2023-09-15",
         district: "Hradec Králové",
+        language: "cs",
       },
       {
         id: "1",
@@ -560,6 +589,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-09-16",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -570,6 +600,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-09-16",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -580,6 +611,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "myklucicospoluchodime")!],
         playDate: "2023-09-16",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -590,6 +622,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-09-17",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -601,6 +634,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-19",
         district: "Pardubice",
+        language: "cs",
       },
       {
         id: "1",
@@ -611,6 +645,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-09-19",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -621,6 +656,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "polocasnapadu")!],
         playDate: "2023-09-19",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -631,6 +667,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-09-20",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -641,6 +678,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-20",
         district: "Hradec Králové",
+        language: "cs",
       },
       {
         id: "1",
@@ -651,6 +689,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-20",
         district: "Ostrava",
+        language: "cs",
       },
       {
         id: "1",
@@ -661,6 +700,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-21",
         district: "Pardubice",
+        language: "cs",
       },
       {
         id: "1",
@@ -671,6 +711,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-09-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -681,6 +722,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "lisky")!],
         playDate: "2023-09-22",
         district: "Boskovice",
+        language: "cs",
       },
       {
         id: "1",
@@ -691,6 +733,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-09-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -701,6 +744,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "321jedem")!],
         playDate: "2023-09-25",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -711,6 +755,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "myklucicospoluchodime")!],
         playDate: "2023-09-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -721,6 +766,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-09-26",
         district: "Pardubice",
+        language: "cs",
       },
       {
         id: "1",
@@ -731,6 +777,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "fofrvzupanu")!],
         playDate: "2023-09-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -741,6 +788,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "frmol")!],
         playDate: "2023-09-26",
         district: "Frýdek-Místek",
+        language: "cs",
       },
       {
         id: "1",
@@ -751,6 +799,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvizacecz")!],
         playDate: "2023-09-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -761,6 +810,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
         playDate: "2023-09-26",
         district: "Praha",
+        language: "en",
       },
 
       {
@@ -772,6 +822,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-09-27",
         district: "Ostrava",
+        language: "cs",
       },
       {
         id: "1",
@@ -782,6 +833,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "imperfectionists")!],
         playDate: "2023-09-28",
         district: "Praha",
+        language: "en",
       },
     ],
   },
@@ -798,6 +850,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kabinetimprovizace")!],
         playDate: "2023-10-01",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -808,6 +861,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "impra")!],
         playDate: "2023-10-01",
         district: "Olomouc",
+        language: "cs",
       },
       {
         id: "1",
@@ -818,6 +872,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-01",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -828,6 +883,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-01",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -838,6 +894,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skola21")!],
         playDate: "2023-10-02",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -848,6 +905,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadlo301")!],
         playDate: "2023-10-03",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -861,6 +919,7 @@ export const data: Array<MonthEventsCalendar> = [
         ],
         playDate: "2023-10-03",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -871,6 +930,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
         playDate: "2023-10-03",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -881,6 +941,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-10-04",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -891,6 +952,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "therandoms")!],
         playDate: "2023-10-04",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -901,6 +963,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "saysomethingcz")!],
         playDate: "2023-10-04",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -911,6 +974,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "altf4")!],
         playDate: "2023-10-05",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -921,6 +985,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-05",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -931,6 +996,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
         playDate: "2023-10-05",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -944,6 +1010,7 @@ export const data: Array<MonthEventsCalendar> = [
         ],
         playDate: "2023-10-06",
         district: "Mnichovo Hradiště",
+        language: "cs",
       },
       {
         id: "1",
@@ -954,6 +1021,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "creativedifferences")!],
         playDate: "2023-10-07",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -964,6 +1032,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "meandry")!],
         playDate: "2023-10-11",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -974,6 +1043,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-11",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -984,6 +1054,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-10-12",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -994,6 +1065,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "alibiprochyby")!],
         playDate: "2023-10-13",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1004,16 +1076,18 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-13",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
         slug: "2023-10-14-imperfectionists",
-        name: "Single Location Montageness",
+        name: "Single Location Montageness (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1042042583472678",
         organizers: [organizers.find((o) => o.id === "imperfectionists")!],
         playDate: "2023-10-14",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -1024,6 +1098,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "nepripraveni")!],
         playDate: "2023-10-15",
         district: "Havlíčkův Brod",
+        language: "cs",
       },
       {
         id: "1",
@@ -1034,6 +1109,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-15",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -1044,6 +1120,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-10-15",
         district: "Praha",
+        language: "en",
       },
       {
         id: "1",
@@ -1054,6 +1131,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "321jedem")!],
         playDate: "2023-10-16",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1065,6 +1143,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-10-18",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1075,6 +1154,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-10-18",
         district: "Pardubice",
+        language: "cs",
       },
       {
         id: "1",
@@ -1085,6 +1165,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-10-18",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -1095,6 +1176,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-10-19",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1106,6 +1188,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-10-19",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1119,6 +1202,7 @@ export const data: Array<MonthEventsCalendar> = [
         ],
         playDate: "2023-10-20",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1129,6 +1213,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-10-27",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -1139,6 +1224,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "justimpro")!],
         playDate: "2023-10-30",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1155,6 +1241,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-11-05",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1165,6 +1252,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-11-10",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1175,6 +1263,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "nepripraveni")!],
         playDate: "2023-11-12",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1185,6 +1274,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-11-22",
         district: "Brno",
+        language: "cs",
       },
       {
         id: "1",
@@ -1195,6 +1285,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "justimpro")!],
         playDate: "2023-11-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1206,6 +1297,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "zivapedagogika")!],
         playDate: "2023-11-23",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1217,6 +1309,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-11-23",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1227,6 +1320,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-11-29",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1243,6 +1337,7 @@ export const data: Array<MonthEventsCalendar> = [
       //     organizer: organizers.find((o) => o.id === "bafni")!,
       //     playDate: "2023-12-20",
       //     district: "Brno",
+      //     language: "cs",
       //   },
 
       {
@@ -1254,6 +1349,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "standartnikabaret")!],
         playDate: "2023-12-04",
         district: "Jihlava",
+        language: "cs",
       },
     ],
   },
@@ -1270,6 +1366,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-07-24",
         district: "Středočeský kraj",
+        language: "cs",
       },
       {
         id: "1",
@@ -1280,6 +1377,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "polocasnapadu")!],
         playDate: "2023-07-29",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1296,6 +1394,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-06-07",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1306,6 +1405,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvariace")!],
         playDate: "2023-08-08",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1316,6 +1416,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-06-09",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1326,6 +1427,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "alibiprochyby")!],
         playDate: "2023-06-13",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1336,6 +1438,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "polocasnapadu")!],
         playDate: "2023-06-21",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1346,6 +1449,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-06-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1356,6 +1460,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-06-22",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1366,6 +1471,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "fofrvzupanu")!],
         playDate: "2023-06-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1376,6 +1482,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "paletaci")!],
         playDate: "2023-07-24",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1386,6 +1493,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: undefined,
         playDate: "2023-06-27",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1396,6 +1504,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-06-28",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1412,6 +1521,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadloimprovizaceodvaz")!],
         playDate: "2023-05-05",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1422,6 +1532,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "alibiprochyby")!],
         playDate: "2023-05-12",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1432,6 +1543,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-05-25",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1448,6 +1560,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-04-14",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1458,6 +1571,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-04-15",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1468,6 +1582,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
         playDate: "2023-04-15",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1478,6 +1593,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blr")!],
         playDate: "2023-04-20",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1488,6 +1604,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-04-21",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1498,6 +1615,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-04-21",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1508,6 +1626,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "nedivse")!],
         playDate: "2023-04-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1518,6 +1637,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "cnid")!],
         playDate: "2023-04-29",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1534,6 +1654,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-03-10",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1544,6 +1665,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-03-17",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1554,6 +1676,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-03-23",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1564,6 +1687,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "instantnigaucink")!],
         playDate: "2023-03-26",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1574,6 +1698,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-03-30",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1590,6 +1715,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "nedivse")!],
         playDate: "2023-02-04",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1600,6 +1726,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvariace")!],
         playDate: "2023-02-14",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1610,6 +1737,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-02-21",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1620,6 +1748,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-02-23",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1630,6 +1759,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-02-27",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
@@ -1646,6 +1776,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "improvariace")!],
         playDate: "2023-01-18",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1656,6 +1787,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "blancinybileboty")!],
         playDate: "2023-01-19",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1666,6 +1798,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-01-27",
         district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
@@ -1676,6 +1809,7 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-01-31",
         district: "Praha",
+        language: "cs",
       },
     ],
   },
