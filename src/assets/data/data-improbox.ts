@@ -987,6 +987,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-13-improzakusky",
+        name: "ImproZÁKUSKY",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/330475502809549",
+        organizers: [],
+        playDate: "2023-10-13",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-13-alibiprochyby",
         name: "Pátek třináctého",
         eventType: "play",
