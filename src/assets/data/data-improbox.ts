@@ -249,6 +249,11 @@ export const organizers: Array<Organizer> = [
     name: "Creative Differences",
     websiteUrl: "www.facebook.com/creativedifferencespragueimprov",
   },
+  {
+    id: "skola21",
+    name: "Škola 21",
+    websiteUrl: "www.skola21.com",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -826,6 +831,16 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-02-skola21",
+        name: "IMPROvizace k Osobnostnímu rozvoji",
+        eventType: "coursework",
+        websiteUrl: "https://www.skola21.com/udalosti/improvizace-k-osobnostnimu-rozvoji",
+        organizers: [organizers.find((o) => o.id === "skola21")!],
+        playDate: "2023-10-02",
+        district: "Praha",
+      },
+      {
+        id: "1",
         slug: "2023-10-03-divadlo301",
         name: "Poprvé",
         eventType: "play",
@@ -847,17 +862,16 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-10-03",
         district: "Praha",
       },
-      //   DELETED
-      //   {
-      //     id: "1",
-      //     slug: "2023-10-10-kecky",
-      //     name: "Impro Kecky a Lukáš Rumlena",
-      //     eventType: "play",
-      //     websiteUrl: "https://www.facebook.com/events/336407808735178",
-      //     organizers: [organizers.find((o) => o.id === "kecky")!],
-      //     playDate: "2023-10-10",
-      //     district: "Praha",
-      //   },
+      {
+        id: "1",
+        slug: "2023-10-03-pragueimprovnetwork",
+        name: "Improv Acting Workshop (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1081707506132401",
+        organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
+        playDate: "2023-10-03",
+        district: "Praha",
+      },
       {
         id: "1",
         slug: "2023-10-04-zivapedagogika",
@@ -897,6 +911,16 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "altf4")!],
         playDate: "2023-10-05",
         district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-05-rozlety",
+        name: "Dopolední Rozlety s Peťou",
+        eventType: "coursework",
+        websiteUrl: "https://www.facebook.com/events/170997519240343",
+        organizers: [],
+        playDate: "2023-10-05",
+        district: "Brno",
       },
       {
         id: "1",
@@ -990,6 +1014,26 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "nepripraveni")!],
         playDate: "2023-10-15",
         district: "Havlíčkův Brod",
+      },
+      {
+        id: "1",
+        slug: "2023-10-15-groupmind",
+        name: "Group Mind (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/297924842947532",
+        organizers: [],
+        playDate: "2023-10-15",
+        district: "Praha",
+      },
+      {
+        id: "1",
+        slug: "2023-10-15-jam",
+        name: "Jam! (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1078836386435775",
+        organizers: [],
+        playDate: "2023-10-15",
+        district: "Praha",
       },
       {
         id: "1",
