@@ -1206,6 +1206,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-22-padenapade",
+        name: "Improkabaret: Vepřo, knedlo, impro!",
+        eventType: "play",
+        websiteUrl: "https://www.padenapade.com/predstaveni",
+        organizers: [organizers.find((o) => o.id === "padenapade")!],
+        playDate: "2023-10-22",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-10-27-bafni",
         name: "Autentická improvizace",
         eventType: "workshop",
