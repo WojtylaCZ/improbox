@@ -2,7 +2,7 @@
  * Copyright (c) ProductBoard, Inc.
  * All rights reserved.
  */
-import { createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from "react";
 import { Toast, ToastContainer } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
@@ -23,7 +23,7 @@ export const useToast = () => {
   return context;
 };
 
-export const ImproeventLinkToastProvider = ({ children }: { children: any }) => {
+export const ImproeventLinkToastProvider = ({ children }: { children: ReactNode }) => {
   const { t } = useTranslation();
 
   const [showToast, setShowToast] = useState(false);

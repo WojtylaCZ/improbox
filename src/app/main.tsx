@@ -432,7 +432,6 @@ export const Main = () => {
             aria-expanded={isPastEventsSectionExpanded}
           >
             <div
-              className="detailDropdown"
               style={{
                 display: "flex",
                 justifyContent: "center",
