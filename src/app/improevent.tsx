@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Col, Collapse, Container, Row, Image, Button } from "react-bootstrap";
+import { Col, Collapse, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -7,11 +7,10 @@ import { ImproEvent } from "../assets/data/data-improbox";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import ExternalLink from "../assets/icons/external-link.png";
-import ShareIcon from "../assets/icons/share.png";
 
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
-import { useToast } from "./toast";
+import { ShareButton } from "./improevent/sharebutton";
 
 export const ImproEventCard = ({
   improEvent,
@@ -25,7 +24,6 @@ export const ImproEventCard = ({
   const { eventSlug } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
-  const { showToast } = useToast();
 
   const scrollToTarget = () => {
     if (ref && ref.current) {
@@ -271,31 +269,7 @@ export const ImproEventCard = ({
           <Container fluid style={{ padding: "0px 20px 12px 20px" }}>
             <Row>
               <Col xs={12} sm={{ order: 2, span: 3 }} style={{ paddingTop: "12px" }}>
-                <Button
-                  variant="outline-dark"
-                  size="sm"
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      `https://www.improbox.cz/event/${improEvent.slug}`
-                    );
-                    showToast();
-                  }}
-                  style={{
-                    width: "100%",
-                  }}
-                >
-                  {t("event.shareEvent")}
-                  <Image
-                    src={ShareIcon}
-                    alt="Share this event."
-                    style={{
-                      width: "12px",
-                      height: "12px",
-                      opacity: "0.4",
-                      marginLeft: "8px",
-                    }}
-                  />
-                </Button>
+                <ShareButton link={`https://improbox.cz/event/${improEvent.slug}`} />
               </Col>
               <Col
                 xs={12}
