@@ -54,19 +54,31 @@ export const Main = () => {
   const [isMailFormExpanded, setIsMailFormExpanded] = useState(false);
 
   const handleMailFormClick = useCallback(() => {
+    sendAnalyticsEvent(
+      isMailFormExpanded
+        ? AnalyticsEvents.EmailSubscribeFormCollapsed
+        : AnalyticsEvents.EmailSubscribeFormExpanded,
+      "click"
+    );
     setIsMailFormExpanded(!isMailFormExpanded);
   }, [isMailFormExpanded]);
 
   const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(true);
 
   const handlePastEventsSectionClick = useCallback(() => {
+    sendAnalyticsEvent(
+      isPastEventsSectionExpanded
+        ? AnalyticsEvents.PastEventsCollapsed
+        : AnalyticsEvents.PastEventsExpanded,
+      "click"
+    );
     setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
   }, [isPastEventsSectionExpanded]);
 
   const [showEventTypeFilters, setShowEventTypeFilters] = useState<EventTypeFilters>({
     play: true,
     workshop: true,
-    coursework: false,
+    coursework: true,
     unknown: true,
   });
 

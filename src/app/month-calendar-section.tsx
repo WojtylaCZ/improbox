@@ -68,6 +68,11 @@ export const MonthCalendarSection = ({
       <ImproEventCard key={improEvent.slug} improEvent={improEvent} isFirst={isFirst && id < 2} />
     ));
 
+  // for past events, reverse the order to show the most recent first
+  if (!isForUpcomingEvents) {
+    events.reverse();
+  }
+
   return (
     <div>
       <h2
