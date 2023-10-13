@@ -10,6 +10,7 @@ import ExternalLink from "../assets/icons/external-link.png";
 
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
+import { ShareButton } from "./improevent/sharebutton";
 
 export const ImproEventCard = ({
   improEvent,
@@ -193,7 +194,7 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={11} sm={{ span: 6, order: 1 }}>
+            <Col xs={10} sm={{ span: 6, order: 1 }}>
               {/* EVENT NAME */}
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div>
@@ -234,16 +235,16 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={1} sm={{ span: 1, order: 3 }}>
+            <Col xs={2} sm={{ span: 1, order: 3 }}>
               {/* CHEVRON */}
 
               <div
                 onClick={handleExpandClick}
                 style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
                   width: "100%",
                   height: "100%",
-                  display: "grid",
-                  marginRight: "8px",
                   cursor: "pointer",
                 }}
               >
@@ -251,6 +252,7 @@ export const ImproEventCard = ({
                   style={{
                     width: "10px",
                     alignSelf: "center",
+                    marginRight: "2px",
                   }}
                 >
                   {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
@@ -264,46 +266,55 @@ export const ImproEventCard = ({
         <div id="event-description-collapse">
           <hr style={{ marginTop: "0px", marginBottom: "0px" }} />
 
-          <Container>
+          <Container fluid style={{ padding: "0px 20px 12px 20px" }}>
             <Row>
-              <span style={{ margin: "12px", fontSize: "12px" }}>
-                {improEvent.organizers && improEvent.organizers.length > 1
-                  ? t("event.groupsWebsites")
-                  : t("event.groupWebsite")}
+              <Col xs={12} sm={{ order: 2, span: 3 }} style={{ paddingTop: "12px" }}>
+                <ShareButton link={`https://improbox.cz/event/${improEvent.slug}`} />
+              </Col>
+              <Col
+                xs={12}
+                sm={{ order: 1, span: 9 }}
+                style={{ paddingTop: "12px", display: "flex", alignItems: "center" }}
+              >
+                <span style={{ fontSize: "smaller" }}>
+                  {improEvent.organizers && improEvent.organizers.length > 1
+                    ? t("event.groupsWebsites")
+                    : t("event.groupWebsite")}
 
-                {improEvent.organizers && improEvent.organizers?.length === 1 && (
-                  <a
-                    href={"http://" + improEvent.organizers[0].websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#000000" }}
-                    onClick={handleOrganiseWebLinkClick}
-                  >
-                    {improEvent.organizers[0].websiteUrl}
-                  </a>
-                )}
+                  {improEvent.organizers && improEvent.organizers?.length === 1 && (
+                    <a
+                      href={"http://" + improEvent.organizers[0].websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#000000" }}
+                      onClick={handleOrganiseWebLinkClick}
+                    >
+                      {improEvent.organizers[0].websiteUrl}
+                    </a>
+                  )}
 
-                {improEvent.organizers && improEvent.organizers?.length > 1 && (
-                  <>
-                    {improEvent.organizers.map((org, index) => {
-                      return (
-                        <span key={index.toString()}>
-                          <a
-                            href={"http://" + org.websiteUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#000000" }}
-                            onClick={handleOrganiseWebLinkClick}
-                          >
-                            {org.websiteUrl}
-                          </a>
-                          {index < improEvent.organizers!.length - 1 && <>&nbsp; + &nbsp;</>}
-                        </span>
-                      );
-                    })}
-                  </>
-                )}
-              </span>
+                  {improEvent.organizers && improEvent.organizers?.length > 1 && (
+                    <>
+                      {improEvent.organizers.map((org, index) => {
+                        return (
+                          <span key={index.toString()}>
+                            <a
+                              href={"http://" + org.websiteUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ color: "#000000" }}
+                              onClick={handleOrganiseWebLinkClick}
+                            >
+                              {org.websiteUrl}
+                            </a>
+                            {index < improEvent.organizers!.length - 1 && <>&nbsp; + &nbsp;</>}
+                          </span>
+                        );
+                      })}
+                    </>
+                  )}
+                </span>
+              </Col>
             </Row>
           </Container>
         </div>

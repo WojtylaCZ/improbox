@@ -15,6 +15,7 @@ import { FooterBar } from "./footer-bar";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
+import { ImproeventLinkToastProvider } from "./improventlink-toast";
 
 export type LocationFilters = {
   [LocationFilter.Praha]: boolean;
@@ -386,81 +387,82 @@ export const Main = () => {
           </Container>
         </div>
 
-        <Stack gap={5}>{upcomingMonthSections}</Stack>
+        <ImproeventLinkToastProvider>
+          <Stack gap={5}>{upcomingMonthSections}</Stack>
 
-        <hr
-          style={{
-            width: "110px",
-            color: "#dd2822",
-            border: 0,
-            borderTop: "1px solid",
-            opacity: "90%",
-            marginTop: "32px",
-            marginBottom: "8px",
-          }}
-        />
-
-        <iframe
-          title="Feedback"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSejGG8NV6FbXSAO-sjIrWoqX29FY1CmNx2cuHbe-aMoSS2veg/viewform?embedded=true"
-          width={"100%"}
-          height={500}
-        >
-          Načítání…
-        </iframe>
-
-        <hr
-          style={{
-            width: "110px",
-            color: "#dd2822",
-            border: 0,
-            borderTop: "1px solid",
-            opacity: "90%",
-            marginTop: "1px",
-            marginBottom: "16px",
-          }}
-        />
-
-        <Container
-          onClick={handlePastEventsSectionClick}
-          style={{
-            cursor: "pointer",
-          }}
-          aria-controls="past-events-collapse"
-          aria-expanded={isPastEventsSectionExpanded}
-        >
-          <div
-            className="detailDropdown"
+          <hr
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              width: "110px",
+              color: "#dd2822",
+              border: 0,
+              borderTop: "1px solid",
+              opacity: "90%",
+              marginTop: "32px",
+              marginBottom: "8px",
             }}
+          />
+
+          <iframe
+            title="Feedback"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSejGG8NV6FbXSAO-sjIrWoqX29FY1CmNx2cuHbe-aMoSS2veg/viewform?embedded=true"
+            width={"100%"}
+            height={500}
           >
-            <h2
+            Načítání…
+          </iframe>
+
+          <hr
+            style={{
+              width: "110px",
+              color: "#dd2822",
+              border: 0,
+              borderTop: "1px solid",
+              opacity: "90%",
+              marginTop: "1px",
+              marginBottom: "16px",
+            }}
+          />
+
+          <Container
+            onClick={handlePastEventsSectionClick}
+            style={{
+              cursor: "pointer",
+            }}
+            aria-controls="past-events-collapse"
+            aria-expanded={isPastEventsSectionExpanded}
+          >
+            <div
               style={{
-                paddingRight: "0.6em",
-                fontFamily: "Jockey One",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              {isPastEventsSectionExpanded
-                ? t("titles.hidePastEvents")
-                : t("titles.showPastEvents")}
-            </h2>
+              <h2
+                style={{
+                  paddingRight: "0.6em",
+                  fontFamily: "Jockey One",
+                }}
+              >
+                {isPastEventsSectionExpanded
+                  ? t("titles.hidePastEvents")
+                  : t("titles.showPastEvents")}
+              </h2>
 
-            <div style={{ width: "10px", marginBottom: "8px" }}>
-              {isPastEventsSectionExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+              <div style={{ width: "10px", marginBottom: "8px" }}>
+                {isPastEventsSectionExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+              </div>
             </div>
-          </div>
-        </Container>
+          </Container>
 
-        <Collapse in={isPastEventsSectionExpanded}>
-          <div id="past-events-collapse">
-            <Container>
-              <Stack gap={5}>{pastMonthSections}</Stack>
-            </Container>
-          </div>
-        </Collapse>
+          <Collapse in={isPastEventsSectionExpanded}>
+            <div id="past-events-collapse">
+              <Container>
+                <Stack gap={5}>{pastMonthSections}</Stack>
+              </Container>
+            </div>
+          </Collapse>
+        </ImproeventLinkToastProvider>
 
         <hr
           style={{
