@@ -13,8 +13,6 @@ export const ShareButton = ({ slug }: { slug: string }) => {
   const link = `https://improbox.cz/event/${slug}`;
 
   const handleShareButtonClick = useCallback(async () => {
-    console.log("test");
-
     sendAnalyticsEvent(AnalyticsEvents.ShareButtonClicked, `${slug}`);
 
     if (window.isSecureContext) {
