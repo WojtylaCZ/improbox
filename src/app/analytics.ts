@@ -26,6 +26,7 @@ export const enum AnalyticsEvents {
   ImproEventExpanded = "ImproEventExpanded",
   ImproEventLinkOpened = "ImproEventLinkOpened",
   OrganiserWebsiteOpened = "OrganiserWebsiteOpened",
+  ShareButtonClicked = "ShareButtonClicked",
 
   EmailSubscribeFormExpanded = "EmailSubscribeFormExpanded",
   EmailSubscribeFormCollapsed = "EmailSubscribeFormCollapsed",

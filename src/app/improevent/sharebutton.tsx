@@ -4,12 +4,19 @@ import { useTranslation } from "react-i18next";
 
 import { useToast } from "../improventlink-toast";
 import ShareIcon from "../../assets/icons/share.png";
+import { AnalyticsEvents, sendAnalyticsEvent } from "../analytics";
 
-export const ShareButton = ({ link }: { link: string }) => {
+export const ShareButton = ({ slug }: { slug: string }) => {
   const { t } = useTranslation();
   const { showToast } = useToast();
 
+  const link = `https://improbox.cz/event/${slug}`;
+
   const handleShareButtonClick = useCallback(async () => {
+    console.log("test");
+
+    sendAnalyticsEvent(AnalyticsEvents.ShareButtonClicked, `${slug}`);
+
     if (window.isSecureContext) {
       await navigator.clipboard.writeText(link);
       showToast();
