@@ -1360,6 +1360,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-03-divadlo301",
+        name: "(U)Zavření",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1412043499375551",
+        organizers: [organizers.find((o) => o.id === "divadlo301")!],
+        playDate: "2023-11-03",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-04-imjoy",
         name: "Imjoy and shakespearek",
         eventType: "play",
