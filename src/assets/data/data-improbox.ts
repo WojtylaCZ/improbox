@@ -280,7 +280,7 @@ export const organizers: Array<Organizer> = [
   {
     id: "improsamevody",
     name: "IMPRO Samé vody",
-    websiteUrl: "www.facebook.com/samevody/",
+    websiteUrl: "www.facebook.com/samevody",
   },
   {
     id: "nevyzadanarada",
