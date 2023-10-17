@@ -20,6 +20,7 @@ export const Districts = {
   "Frýdek-Místek": LocationFilter.MoravaASlezsko,
   "Mnichovo Hradiště": LocationFilter.MoravaASlezsko,
   Liberec: LocationFilter.CechyBezPrahy,
+  "Karlovy Vary": LocationFilter.CechyBezPrahy,
 };
 
 type District = keyof typeof Districts;
@@ -275,6 +276,16 @@ export const organizers: Array<Organizer> = [
     id: "improdva",
     name: "Improdva",
     websiteUrl: "www.facebook.com/improdva",
+  },
+  {
+    id: "improsamevody",
+    name: "IMPRO Samé vody",
+    websiteUrl: "www.facebook.com/samevody/",
+  },
+  {
+    id: "nevyzadanarada",
+    name: "Nevyžádaná rada",
+    websiteUrl: "www.facebook.com/svahilec",
   },
 ];
 
@@ -1223,6 +1234,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-18-improsamevody",
+        name: "Lilie a karbanátky",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/698344405472296",
+        organizers: [organizers.find((o) => o.id === "improsamevody")!],
+        playDate: "2023-10-18",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-10-18-improdva",
         name: "Středeční otevřené impro",
         eventType: "workshop",
@@ -1333,6 +1355,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-10-22",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-10-23-vterinky",
+        name: "Improvystoupení: V.T.E.Ř.I.N.K.Y.",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1250468768912080",
+        organizers: [],
+        playDate: "2023-10-23",
+        district: "Brno",
         language: "cs",
       },
       {
@@ -1471,6 +1504,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "kecky")!],
         playDate: "2023-11-10",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-11-nevyzadanarada",
+        name: "Impro poradna - Kam se schovat před bouří",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/956026075471081",
+        organizers: [organizers.find((o) => o.id === "nevyzadanarada")!],
+        playDate: "2023-11-11",
+        district: "Karlovy Vary",
         language: "cs",
       },
       {
