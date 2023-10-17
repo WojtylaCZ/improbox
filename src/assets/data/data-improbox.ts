@@ -271,6 +271,11 @@ export const organizers: Array<Organizer> = [
     name: "Minimpromalismus",
     websiteUrl: "www.facebook.com/minimpromalismus",
   },
+  {
+    id: "improdva",
+    name: "Improdva",
+    websiteUrl: "www.facebook.com/improdva",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -1218,6 +1223,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-18-improdva",
+        name: "Středeční otevřené impro",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1112068606427676",
+        organizers: [organizers.find((o) => o.id === "improdva")!],
+        playDate: "2023-10-18",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-10-19-blancinybileboty",
         name: "Improshow",
         eventType: "play",
@@ -1249,6 +1265,17 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-10-19",
         district: "Praha",
         language: "en",
+      },
+      {
+        id: "1",
+        slug: "2023-10-19-improdva",
+        name: "Čtvrteční otevřené svobodné impro",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1061137141897142",
+        organizers: [organizers.find((o) => o.id === "improdva")!],
+        playDate: "2023-10-19",
+        district: "Praha",
+        language: "cs",
       },
       {
         id: "1",
