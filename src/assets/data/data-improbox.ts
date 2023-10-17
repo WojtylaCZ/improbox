@@ -1304,6 +1304,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-20-vip",
+        name: "Improshow jak z časáku",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/689964533186868",
+        organizers: [organizers.find((o) => o.id === "vip")!],
+        playDate: "2023-10-20",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-10-21-skola21",
         name: "Improvizace k Osobnostnímu rozvoji",
         eventType: "workshop",
