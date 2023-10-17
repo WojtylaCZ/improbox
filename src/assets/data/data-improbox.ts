@@ -552,7 +552,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-09-15-improvariace",
-        name: "Maestro! Festival ImVisible",
+        name: "Maestro! Festival ImVisible (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/212420504894469",
         organizers: [
@@ -882,7 +882,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-10-01-improvworkshop",
-        name: "Improv Workshop - Let's be evil",
+        name: "Improv Workshop - Let's be evil (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/2100863010255216",
         organizers: [],
@@ -893,7 +893,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-10-01-improvjam",
-        name: "Improv Jam",
+        name: "Improv Jam (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1073538563813633",
         organizers: [],
@@ -1329,6 +1329,28 @@ export const data: Array<MonthEventsCalendar> = [
         playDate: "2023-10-27",
         district: "Brno",
         language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-10-29-improvworkshop",
+        name: "Improv Workshop - The heart of storytelling (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1053922945621089",
+        organizers: [],
+        playDate: "2023-10-29",
+        district: "Praha",
+        language: "en",
+      },
+      {
+        id: "1",
+        slug: "2023-10-29-improvjam",
+        name: "Improv Jam (EN)",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/327282639930676",
+        organizers: [],
+        playDate: "2023-10-29",
+        district: "Praha",
+        language: "en",
       },
       {
         id: "1",
