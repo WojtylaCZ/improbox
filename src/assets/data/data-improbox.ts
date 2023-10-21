@@ -1403,6 +1403,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-26-imperfectionists",
+        name: "Thursday Night Armandoness (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3228920547402203/",
+        organizers: [organizers.find((o) => o.id === "imperfectionists")!],
+        playDate: "2023-10-26",
+        district: "Praha",
+        language: "en",
+      },
+      {
+        id: "1",
         slug: "2023-10-27-bafni",
         name: "Autentická improvizace",
         eventType: "workshop",
