@@ -363,21 +363,21 @@ export const Main = () => {
                   <Form.Switch
                     checked={showLocationFilters.Praha}
                     inline
-                    id="plays"
+                    id="prague"
                     label={t("dataLabels.Prague")}
                     onChange={handlePragueLocationFilterChange}
                   />
                   <Form.Switch
                     checked={showLocationFilters.CechyBezPrahy}
                     inline
-                    id="workshops"
+                    id="bohemia"
                     label={t("dataLabels.Bohemia")}
                     onChange={handleBohemiaLocationFilterChange}
                   />
                   <Form.Switch
                     checked={showLocationFilters.MoravaASlezsko}
                     inline
-                    id="workshops"
+                    id="moraviaAndSilesia"
                     label={t("dataLabels.MoraviaAndSilesia")}
                     onChange={handleMoraviaAndSilesiaLocationFilterChange}
                   />
