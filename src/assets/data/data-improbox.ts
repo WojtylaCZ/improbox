@@ -1370,6 +1370,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-10-23-nedivse",
+        name: "DOVOPRAVDY",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1248070365886922",
+        organizers: [organizers.find((o) => o.id === "nedivse")!],
+        playDate: "2023-10-23",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-10-25-improvariace",
         name: "Asterix a Obelix",
         eventType: "play",
