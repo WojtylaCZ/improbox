@@ -1496,6 +1496,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-03-skolaimprovizace",
+        name: "Theatropolis JAM vol.3",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1382233266059381",
+        organizers: [organizers.find((o) => o.id === "skolaimprovizace")!],
+        playDate: "2023-11-03",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-04-imjoy",
         name: "Imjoy and shakespearek",
         eventType: "play",
