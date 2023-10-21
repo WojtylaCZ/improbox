@@ -269,7 +269,7 @@ export const ImproEventCard = ({
           <Container fluid style={{ padding: "0px 20px 12px 20px" }}>
             <Row>
               <Col xs={12} sm={{ order: 2, span: 3 }} style={{ paddingTop: "12px" }}>
-                <ShareButton slug={improEvent.slug} />
+                <ShareButton eventLanguage={improEvent.language} slug={improEvent.slug} />
               </Col>
               <Col
                 xs={12}

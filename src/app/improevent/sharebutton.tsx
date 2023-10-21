@@ -6,11 +6,11 @@ import { useToast } from "../improventlink-toast";
 import ShareIcon from "../../assets/icons/share.png";
 import { AnalyticsEvents, sendAnalyticsEvent } from "../analytics";
 
-export const ShareButton = ({ slug }: { slug: string }) => {
+export const ShareButton = ({ eventLanguage, slug }: { eventLanguage: string; slug: string }) => {
   const { t } = useTranslation();
   const { showToast } = useToast();
 
-  const link = `https://improbox.cz/event/${slug}`;
+  const link = `https://improbox.cz/${eventLanguage === "en" ? "en/" : ""}event/${slug}`;
 
   const handleShareButtonClick = useCallback(async () => {
     sendAnalyticsEvent(AnalyticsEvents.ShareButtonClicked, `${slug}`);
