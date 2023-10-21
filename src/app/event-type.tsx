@@ -7,9 +7,13 @@ export const getEventTypeColor = (eventType: EventType) => {
       return "#FFF7D9";
     case "workshop":
       return "#FFD9E7";
+    case "jam":
+      return "#bdeac2";
     case "coursework":
       return "#d3eff0";
     case "unknown":
+      return "#FFFFFF";
+    default:
       return "#FFFFFF";
   }
 };
@@ -22,9 +26,13 @@ export const useEventTypeLabel = (eventType: EventType) => {
       return t("dataLabels.play");
     case "workshop":
       return t("dataLabels.workshop");
+    case "jam":
+      return t("dataLabels.jam");
     case "coursework":
       return t("dataLabels.coursework");
     case "unknown":
+      return "?";
+    default:
       return "?";
   }
 };

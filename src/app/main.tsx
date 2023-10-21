@@ -69,6 +69,7 @@ export const Main = () => {
     play: true,
     workshop: true,
     coursework: true,
+    jam: true,
     unknown: true,
   });
 
@@ -88,6 +89,16 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.WorkshopsSwitchedOnFilter
         : AnalyticsEvents.WorkshopsSwitchedOffFilter,
+      String(event.target.checked)
+    );
+  };
+
+  const handleShowJamsFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowEventTypeFilters({ ...showEventTypeFilters, jam: event.target.checked });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.JamsSwitchedOnFilter
+        : AnalyticsEvents.JamsSwitchedOffFilter,
       String(event.target.checked)
     );
   };
@@ -341,6 +352,13 @@ export const Main = () => {
                     id="courseworks"
                     label={t("dataLabels.courseworks")}
                     onChange={handleShowCourseworkFilterChange}
+                  />
+                  <Form.Switch
+                    checked={showEventTypeFilters.jam}
+                    inline
+                    id="jams"
+                    label={t("dataLabels.jams")}
+                    onChange={handleShowJamsFilterChange}
                   />
                 </div>
               </Col>

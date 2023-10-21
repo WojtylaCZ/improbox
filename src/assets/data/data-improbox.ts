@@ -32,7 +32,7 @@ export type Organizer = {
   websiteUrl: string;
 };
 
-export type EventType = "play" | "workshop" | "coursework" | "unknown";
+export type EventType = "play" | "workshop" | "coursework" | "jam" | "unknown";
 
 export type ImproEvent = {
   id: string;
@@ -781,7 +781,7 @@ export const data: Array<MonthEventsCalendar> = [
         id: "1",
         slug: "2023-09-22-vip",
         name: "Impro JAM",
-        eventType: "play",
+        eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/3564104473845369",
         organizers: [organizers.find((o) => o.id === "vip")!],
         playDate: "2023-09-22",
@@ -931,7 +931,7 @@ export const data: Array<MonthEventsCalendar> = [
         id: "1",
         slug: "2023-10-01-improvjam",
         name: "Improv Jam (EN)",
-        eventType: "play",
+        eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1073538563813633",
         organizers: [],
         playDate: "2023-10-01",
@@ -1179,7 +1179,7 @@ export const data: Array<MonthEventsCalendar> = [
         id: "1",
         slug: "2023-10-15-jam",
         name: "Jam! (EN)",
-        eventType: "play",
+        eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1078836386435775",
         organizers: [],
         playDate: "2023-10-15",
@@ -1459,7 +1459,7 @@ export const data: Array<MonthEventsCalendar> = [
         id: "1",
         slug: "2023-10-29-improvjam",
         name: "Improv Jam (EN)",
-        eventType: "workshop",
+        eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/327282639930676",
         organizers: [],
         playDate: "2023-10-29",

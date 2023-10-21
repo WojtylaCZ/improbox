@@ -41,6 +41,7 @@ export const MonthCalendarSection = ({
     .filter((improEvent) => {
       if (!filters.showEventTypes.play && improEvent.eventType === "play") return false;
       if (!filters.showEventTypes.workshop && improEvent.eventType === "workshop") return false;
+      if (!filters.showEventTypes.jam && improEvent.eventType === "jam") return false;
       if (!filters.showEventTypes.coursework && improEvent.eventType === "coursework") return false;
 
       if (!filters.showLocations.Praha && improEvent.district === LocationFilter.Praha)

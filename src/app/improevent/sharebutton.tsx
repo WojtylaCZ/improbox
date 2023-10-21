@@ -41,7 +41,7 @@ export const ShareButton = ({ slug }: { slug: string }) => {
         document.body.removeChild(textarea);
       }
     }
-  }, [link, showToast]);
+  }, [slug, link, showToast]);
 
   return (
     <Button
