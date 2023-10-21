@@ -865,7 +865,6 @@ export const data: Array<MonthEventsCalendar> = [
         district: "Praha",
         language: "en",
       },
-
       {
         id: "1",
         slug: "2023-09-27-divadloimprovizaceodvaz",
@@ -1414,9 +1413,9 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-10-26-pragueimprovnetwork",
-        name: "Thursday Night Improv Comedy Show (EN)",
+        name: "Czech + Expat Impro Show 🇨🇿🇺🇸🇨🇦 (EN)",
         eventType: "play",
-        websiteUrl: "https://www.facebook.com/events/621985480107410/629142106058414",
+        websiteUrl: "https://www.facebook.com/events/803969901527157",
         organizers: [organizers.find((o) => o.id === "pragueimprovnetwork")!],
         playDate: "2023-10-26",
         district: "Praha",
