@@ -22,6 +22,7 @@ export const Districts = {
   Liberec: LocationFilter.CechyBezPrahy,
   "Karlovy Vary": LocationFilter.CechyBezPrahy,
   "Valašské Meziříčí": LocationFilter.MoravaASlezsko,
+  Říčany: LocationFilter.CechyBezPrahy,
 };
 
 type District = keyof typeof Districts;
@@ -306,7 +307,12 @@ export const organizers: Array<Organizer> = [
   {
     id: "divadloprocity",
     name: "Divadlo Procity",
-    websiteUrl: "www.divadloprocity.cz/",
+    websiteUrl: "www.divadloprocity.cz",
+  },
+  {
+    id: "necijehneci",
+    name: "Něčí Jehněčí",
+    websiteUrl: "https://www.facebook.com/improbabice",
   },
 ];
 
@@ -1456,17 +1462,6 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-29-improvjam",
-        name: "Improv Jam (EN)",
-        eventType: "jam",
-        websiteUrl: "https://www.facebook.com/events/327282639930676",
-        organizers: [],
-        playDate: "2023-10-29",
-        district: "Praha",
-        language: "en",
-      },
-      {
-        id: "1",
         slug: "2023-10-30-justimpro",
         name: "Just! Impro Show",
         eventType: "play",
@@ -1491,6 +1486,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "minimpromalismus")!],
         playDate: "2023-11-02",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-02-necijehneci",
+        name: "Improvizační divadelní představení",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1069376197297414",
+        organizers: [organizers.find((o) => o.id === "necijehneci")!],
+        playDate: "2023-11-02",
+        district: "Říčany",
         language: "cs",
       },
       {
