@@ -312,7 +312,7 @@ export const organizers: Array<Organizer> = [
   {
     id: "necijehneci",
     name: "Něčí Jehněčí",
-    websiteUrl: "https://www.facebook.com/improbabice",
+    websiteUrl: "www.facebook.com/improbabice",
   },
 ];
 
