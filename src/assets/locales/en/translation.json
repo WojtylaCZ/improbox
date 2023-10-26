@@ -22,7 +22,7 @@
   "event": {
     "groupWebsite": "Website of the group: ",
     "groupsWebsites": "Websites of the groups: ",
-    "shareEvent": "Share"
+    "shareEvent": "Copy event link"
   },
   "dataLabels": {
     "play": "Show",

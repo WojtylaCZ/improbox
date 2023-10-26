@@ -32,19 +32,18 @@ export const ImproeventLinkToastProvider = ({ children }: { children: ReactNode 
 
   return (
     <ToastContext.Provider value={{ showToast: triggerShowToast }}>
-      <ToastContainer position="bottom-center" className="position-fixed">
+      <ToastContainer position="top-center" className="position-fixed">
         <Toast
           show={showToast}
           onClose={() => setShowToast(false)}
           onClick={() => setShowToast(false)}
-          bg="success"
+          bg="primary"
           delay={2500}
           autohide
-          style={{ width: "150px" }}
+          style={{ width: "200px" }}
         >
-          <Toast.Header>
-            <small> {t("alerts.linkCopied")} </small>
-          </Toast.Header>
+          {/* <Toast.Header>{t("alerts.linkCopied")}</Toast.Header> */}
+          <Toast.Body className="text-white">{t("alerts.linkCopied")}</Toast.Body>
         </Toast>
       </ToastContainer>
       {children}
