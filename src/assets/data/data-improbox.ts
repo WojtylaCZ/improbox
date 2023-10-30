@@ -23,6 +23,7 @@ export const Districts = {
   "Karlovy Vary": LocationFilter.CechyBezPrahy,
   "Valašské Meziříčí": LocationFilter.MoravaASlezsko,
   Říčany: LocationFilter.CechyBezPrahy,
+  "České Budějovice": LocationFilter.CechyBezPrahy,
 };
 
 type District = keyof typeof Districts;
@@ -313,6 +314,16 @@ export const organizers: Array<Organizer> = [
     id: "necijehneci",
     name: "Něčí Jehněčí",
     websiteUrl: "www.facebook.com/improbabice",
+  },
+  {
+    id: "longformy",
+    name: "Longformy",
+    websiteUrl: "www.facebook.com/longformy",
+  },
+  {
+    id: "veski",
+    name: "VE.ŠK.I.",
+    websiteUrl: "www.facebook.com/profile.php?id=100089439765100",
   },
 ];
 
@@ -1059,7 +1070,7 @@ export const data: Array<MonthEventsCalendar> = [
       {
         id: "1",
         slug: "2023-10-06-polocasnapadu-bizoni",
-        name: "Poločas nápadu vs B.I.Z.O.N.I.",
+        name: "Poločas nápadu vs. B.I.Z.O.N.I.",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1658799717958012",
         organizers: [
@@ -1501,6 +1512,28 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-02-longformy",
+        name: "Improvizované příběhy",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/306704408756710",
+        organizers: [organizers.find((o) => o.id === "longformy")!],
+        playDate: "2023-11-02",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-02-benefice",
+        name: "Benefiční improvizace pro Šanci",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/655885783002944",
+        organizers: [],
+        playDate: "2023-11-02",
+        district: "Olomouc",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-03-bafni",
         name: "Víkendový workshop pro pokročilé",
         eventType: "workshop",
@@ -1508,6 +1541,20 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "bafni")!],
         playDate: "2023-11-03",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-03-veski-meandry",
+        name: "Improvizační zápas VE.ŠK.I. vs. Meandry",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/715154160028830",
+        organizers: [
+          organizers.find((o) => o.id === "veski")!,
+          organizers.find((o) => o.id === "meandry")!,
+        ],
+        playDate: "2023-11-03",
+        district: "České Budějovice",
         language: "cs",
       },
       {
