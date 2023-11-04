@@ -53,7 +53,7 @@ export const Main = () => {
     setIsMailFormExpanded(!isMailFormExpanded);
   }, [isMailFormExpanded]);
 
-  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(true);
+  const [isPastEventsSectionExpanded, setIsPastEventsSectionExpanded] = useState(false);
 
   const handlePastEventsSectionClick = useCallback(() => {
     sendAnalyticsEvent(
