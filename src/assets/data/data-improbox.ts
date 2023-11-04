@@ -325,6 +325,11 @@ export const organizers: Array<Organizer> = [
     name: "VE.ŠK.I.",
     websiteUrl: "www.facebook.com/profile.php?id=100089439765100",
   },
+  {
+    id: "buresovakaterina",
+    name: "Burešová Kateřina",
+    websiteUrl: "www.buresovakaterina.cz",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -1690,6 +1695,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [],
         playDate: "2023-11-16",
         district: "Havlíčkův Brod",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-17-buresovakaterina",
+        name: "Jsem, tedy IMPROVIZUJI ... IMPROVIZUJI, tedy jsem",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/870911031070415",
+        organizers: [organizers.find((o) => o.id === "buresovakaterina")!],
+        playDate: "2023-11-17",
+        district: "Liberec",
         language: "cs",
       },
       {
