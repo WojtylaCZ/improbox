@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
-import { Col, Collapse, Container, Form, Image, Row, Stack } from "react-bootstrap";
+import { Button, Col, Collapse, Container, Form, Image, Row, Stack } from "react-bootstrap";
 import { MonthCalendarSection } from "./month-calendar-section";
-import Actors from "../assets/img/actors612.jpeg";
+import Actors from "../assets/img/actors.png";
 import MailIcon from "../assets/img/mail.png";
 
 import { EventType, LocationFilter, data } from "../assets/data/data-improbox";
@@ -222,6 +222,8 @@ export const Main = () => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
+          borderRadius: "0px 0px 12px 12px",
+          boxShadow: "0px 8px 8px 0px rgba(0, 0, 0, 0.10)",
         }}
       >
         <h1
@@ -263,7 +265,6 @@ export const Main = () => {
           >
             <span
               style={{
-                fontSize: "12px",
                 marginTop: "4px",
                 marginBottom: "12px",
               }}
@@ -271,12 +272,15 @@ export const Main = () => {
               {t("text.introLine1")}
             </span>
 
-            <div
+            <Button
+              variant="danger"
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: "8px",
+                fontFamily: "Jockey One",
+                fontSize: "calc(0.9rem + 0.3vw)",
               }}
               onClick={handleMailFormClick}
               aria-controls="email-subscription-collapse"
@@ -290,17 +294,8 @@ export const Main = () => {
                   marginRight: "8px",
                 }}
               />
-              <span
-                style={{
-                  fontFamily: "Jockey One",
-                  fontSize: "20px",
-                  color: "#dd2822",
-                  textDecoration: "underline",
-                }}
-              >
-                {t("text.introLine2")}
-              </span>
-            </div>
+              {t("text.mailButton")}
+            </Button>
             <Collapse in={isMailFormExpanded}>
               <iframe
                 title="improbox"
@@ -441,11 +436,9 @@ export const Main = () => {
             }}
           />
 
-          <Container
+          <Button
+            variant="danger"
             onClick={handlePastEventsSectionClick}
-            style={{
-              cursor: "pointer",
-            }}
             aria-controls="past-events-collapse"
             aria-expanded={isPastEventsSectionExpanded}
           >
@@ -454,24 +447,20 @@ export const Main = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                color: "#ffffff",
+                fontFamily: "Jockey One",
+                fontSize: "calc(0.9rem + 0.3vw)",
               }}
             >
-              <h2
-                style={{
-                  paddingRight: "0.6em",
-                  fontFamily: "Jockey One",
-                }}
-              >
-                {isPastEventsSectionExpanded
-                  ? t("titles.hidePastEvents")
-                  : t("titles.showPastEvents")}
-              </h2>
+              {isPastEventsSectionExpanded
+                ? t("titles.hidePastEvents")
+                : t("titles.showPastEvents")}
 
-              <div style={{ width: "10px", marginBottom: "8px" }}>
+              <div style={{ width: "10px", marginLeft: "8px", marginBottom: "8px" }}>
                 {isPastEventsSectionExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
               </div>
             </div>
-          </Container>
+          </Button>
 
           <Collapse in={isPastEventsSectionExpanded}>
             <div id="past-events-collapse">
@@ -489,17 +478,6 @@ export const Main = () => {
             border: 0,
             borderTop: "1px solid",
             opacity: "90%",
-            marginTop: "64px",
-            marginBottom: "16px",
-          }}
-        />
-
-        <Image
-          src={Actors}
-          alt="Theather actors siluetes."
-          style={{
-            maxWidth: "300px",
-            width: "100%",
           }}
         />
 
@@ -507,21 +485,20 @@ export const Main = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "start",
+            alignItems: "center",
             width: "100%",
           }}
         >
           <h2
             style={{
               fontFamily: "Jockey One",
-              color: "#dd2822",
               marginBottom: "24px",
               fontSize: "calc(1.775rem + 1.1vw)",
             }}
           >
             {t("titles.contactH2")}
           </h2>
-          <span>
+          <span style={{ textAlign: "center" }}>
             <Trans i18nKey="text.madeBy">
               before
               <a
@@ -535,7 +512,7 @@ export const Main = () => {
             </Trans>
           </span>
           <br />
-          <span>
+          <span style={{ textAlign: "center" }}>
             <Trans i18nKey="text.alsoMade">
               before
               <a href={"https://www.prispevkynabezky.cz"} target="_blank" rel="noopener noreferrer">
@@ -546,6 +523,21 @@ export const Main = () => {
           </span>
         </div>
       </Stack>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Image
+          src={Actors}
+          alt="Theather actors siluetes."
+          style={{
+            maxWidth: "300px",
+            width: "100%",
+          }}
+        />
+      </div>
       <FooterBar />
     </>
   );

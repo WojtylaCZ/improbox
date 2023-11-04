@@ -1,5 +1,5 @@
 import { Container, Image, Navbar, Stack } from "react-bootstrap";
-import Actors from "../assets/img/actors612.jpeg";
+import Actors from "../assets/img/actors.png";
 import { useTranslation } from "react-i18next";
 
 export const ErrorPage = () => {
