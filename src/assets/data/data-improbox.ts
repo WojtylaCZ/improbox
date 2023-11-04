@@ -1732,6 +1732,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-22-kis",
+        name: "(Listo)padá",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3632309460372695",
+        organizers: [organizers.find((o) => o.id === "kis")!],
+        playDate: "2023-11-22",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-22-bafni",
         name: "Palmaskán",
         eventType: "play",
