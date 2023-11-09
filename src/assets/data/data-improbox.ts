@@ -1943,6 +1943,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-12-12-divadlo301",
+        name: "Veselé Vánočky",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/353326120421278/",
+        organizers: [organizers.find((o) => o.id === "divadlo301")!],
+        playDate: "2023-12-12",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-15-scriptforbrains",
         name: "Live Improv Comedy (EN)",
         eventType: "play",
