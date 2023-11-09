@@ -1943,6 +1943,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-12-06-bafni",
+        name: "Zase v Praze",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/6947546271935307",
+        organizers: [organizers.find((o) => o.id === "bafni")!],
+        playDate: "2023-12-06",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-09-divadlokellari",
         name: "Velká improvizační show",
         eventType: "play",
