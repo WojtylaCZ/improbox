@@ -1748,6 +1748,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-20-padenapade",
+        name: "Z nuly na pade - z pade na sto",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/658283676286785/",
+        organizers: [organizers.find((o) => o.id === "padenapade")!],
+        playDate: "2023-11-20",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-22-kis",
         name: "(Listo)padá",
         eventType: "play",
