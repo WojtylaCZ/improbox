@@ -1943,6 +1943,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-12-06-impronadilka",
+        name: "Impronadílka aneb co čert (ne)chtěl",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1054991418876096",
+        organizers: [],
+        playDate: "2023-12-06",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-06-bafni",
         name: "Zase v Praze",
         eventType: "play",
