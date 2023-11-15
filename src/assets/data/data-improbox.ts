@@ -1865,6 +1865,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-24-lisky",
+        name: "Longformy #2",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1016693512954012",
+        organizers: [organizers.find((o) => o.id === "lisky")!],
+        playDate: "2023-11-24",
+        district: "Boskovice",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-25-nevyzadanarada",
         name: "Impro poradna - Kam se schovat před bouří",
         eventType: "play",
