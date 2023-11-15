@@ -346,6 +346,11 @@ export const organizers: Array<Organizer> = [
     name: "Instantní Gaučink",
     websiteUrl: "www.facebook.com/suroskard",
   },
+  {
+    id: "allimp",
+    name: "All Imp",
+    websiteUrl: "www.divadloallimp.cz",
+  },
 ];
 
 export const data: Array<MonthEventsCalendar> = [
@@ -1755,6 +1760,17 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "padenapade")!],
         playDate: "2023-11-20",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-11-21-allimp",
+        name: "Tarantino (18+)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1354575935142855",
+        organizers: [organizers.find((o) => o.id === "allimp")!],
+        playDate: "2023-11-21",
+        district: "Ostrava",
         language: "cs",
       },
       {
