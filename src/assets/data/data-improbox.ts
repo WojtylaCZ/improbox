@@ -1929,6 +1929,17 @@ export const data: Array<MonthEventsCalendar> = [
         district: "Praha",
         language: "cs",
       },
+      {
+        id: "1",
+        slug: "2023-11-30-imperfectionists",
+        name: "Let's Get Personal (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/753355769963109",
+        organizers: [organizers.find((o) => o.id === "imperfectionists")!],
+        playDate: "2023-11-30",
+        district: "Praha",
+        language: "en",
+      },
     ],
   },
   {
