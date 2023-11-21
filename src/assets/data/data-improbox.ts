@@ -1942,6 +1942,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-11-27-kabinetnici",
+        name: "Kabinetníci",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/868531091318522/",
+        organizers: [],
+        playDate: "2023-11-27",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-11-28-divadloprocity",
         name: "Minikurz improvizace",
         eventType: "workshop",
