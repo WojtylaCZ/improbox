@@ -2077,6 +2077,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-12-03-nepripraveni",
+        name: "Vánoční improshow",
+        eventType: "play",
+        websiteUrl: "https://nepripraveni.cz/akce/vanocni-improshow-skupiny-nepripraveni/",
+        organizers: [organizers.find((o) => o.id === "nepripraveni")!],
+        playDate: "2023-12-03",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-04-standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
@@ -2139,6 +2150,18 @@ export const data: Array<MonthEventsCalendar> = [
         organizers: [organizers.find((o) => o.id === "divadlokellari")!],
         playDate: "2023-12-09",
         district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
+        slug: "2023-12-10-nepripraveni",
+        name: "Vánoční improshow",
+        eventType: "play",
+        websiteUrl:
+          "https://nepripraveni.cz/akce/vanocni-improshow-skupiny-nepripraveni-a-hostu-l-o-s/",
+        organizers: [organizers.find((o) => o.id === "nepripraveni")!],
+        playDate: "2023-12-10",
+        district: "Havlíčkův Brod",
         language: "cs",
       },
       {
