@@ -2177,6 +2177,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2023-12-12-bizoni",
+        name: "Benefiční improshow pro Šťastný zvěřinec",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/726707852638566",
+        organizers: [organizers.find((o) => o.id === "bizoni")!],
+        playDate: "2023-12-12",
+        district: "Hradec Králové",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-12-divadlo301",
         name: "Veselé Vánočky",
         eventType: "play",
