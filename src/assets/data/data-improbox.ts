@@ -2041,6 +2041,17 @@ export const data: Array<MonthEventsCalendar> = [
       //   },
       {
         id: "1",
+        slug: "2023-12-01-alibiprochyby",
+        name: "Besídka s Alibi",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/361509152892169",
+        organizers: [organizers.find((o) => o.id === "alibiprochyby")!],
+        playDate: "2023-12-01",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2023-12-02-skolaimprovizace1",
         name: "Impro Ambasadors - How to do nothing with Ollie Rasini",
         eventType: "workshop",
