@@ -2472,6 +2472,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2024-01-09-divadlo301",
+        name: "Novoroční",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1455698238625930",
+        organizers: [organizers.find((o) => o.id === "divadlo301")!],
+        playDate: "2024-01-09",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2024-01-10-divadloimprovizaceodvaz",
         name: "Ostrov přežití",
         eventType: "workshop",
