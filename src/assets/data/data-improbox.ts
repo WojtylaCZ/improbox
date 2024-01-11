@@ -2499,6 +2499,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2024-01-13-imperfectionists",
+        name: "Single Location Montageness (EN)",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1073749913864837",
+        organizers: [organizers.find((o) => o.id === "imperfectionists")!],
+        playDate: "2024-01-13",
+        district: "Praha",
+        language: "en",
+      },
+      {
+        id: "1",
         slug: "2024-01-14-improvworkshop",
         name: "Improv Workshop - Following the Story (EN)",
         eventType: "workshop",
