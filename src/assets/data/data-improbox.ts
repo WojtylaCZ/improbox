@@ -2543,6 +2543,17 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
+        slug: "2024-01-19-improzakusky",
+        name: "ImproZÁKUSKY",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/1701264356949732/",
+        organizers: [organizers.find((o) => o.id === "improspace")!],
+        playDate: "2024-01-19",
+        district: "Praha",
+        language: "cs",
+      },
+      {
+        id: "1",
         slug: "2024-01-29-justimpro",
         name: "Just! Impro Show",
         eventType: "play",
