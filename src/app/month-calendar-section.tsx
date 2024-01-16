@@ -1,10 +1,11 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { ImproEventCard } from "./improevent";
-import { Districts, LocationFilter, MonthEventsCalendar } from "../assets/data/data-improbox";
+import { Districts, LocationFilter } from "../assets/data/data-improbox";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
 import { EventTypeFilters, LocationFilters } from "./main";
+import { MonthEventsCalendar } from "../assets/data/types";
 
 type Props = {
   monthSection: MonthEventsCalendar;

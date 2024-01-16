@@ -3,7 +3,6 @@ import { Col, Collapse, Container, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { ImproEvent } from "../assets/data/data-improbox";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import ExternalLink from "../assets/icons/external-link.png";
@@ -11,6 +10,7 @@ import ExternalLink from "../assets/icons/external-link.png";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 import { ShareButton } from "./improevent/sharebutton";
+import { ImproEvent } from "../assets/data/types";
 
 export const ImproEventCard = ({
   improEvent,

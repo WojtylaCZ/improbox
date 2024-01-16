@@ -1,3 +1,5 @@
+import { Organizer, MonthEventsCalendar } from "./types";
+
 export const enum LocationFilter {
   "Praha" = "Praha",
   "CechyBezPrahy" = "CechyBezPrahy",
@@ -27,33 +29,7 @@ export const Districts = {
   Šumperk: LocationFilter.MoravaASlezsko,
 };
 
-type District = keyof typeof Districts;
-
-export type Organizer = {
-  id: string;
-  name: string;
-  websiteUrl: string;
-};
-
 export type EventType = "play" | "workshop" | "coursework" | "jam" | "unknown";
-
-export type ImproEvent = {
-  id: string;
-  slugExtra: string;
-  name: string;
-  eventType: EventType;
-  websiteUrl: string;
-  organizers: Array<Organizer> | undefined;
-  playDate: string;
-  district: District;
-  language: "cs" | "en";
-};
-
-export type MonthEventsCalendar = {
-  monthName: string;
-  monthDate: string;
-  events: Array<ImproEvent>;
-};
 
 export const organizers: Array<Organizer> = [
   {
