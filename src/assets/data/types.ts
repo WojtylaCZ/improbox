@@ -14,7 +14,7 @@ export type ImproEvent = {
   name: string;
   eventType: EventType;
   websiteUrl: string;
-  organizers: Array<Organizer> | undefined;
+  organizers: Array<Organizer> | [];
   playDate: string;
   district: District;
   language: "cs" | "en";

@@ -16,6 +16,7 @@ import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { ImproeventLinkToastProvider } from "./improventlink-toast";
+import { getImproEventSlug } from "./improevent";
 
 export type LocationFilters = {
   [LocationFilter.Praha]: boolean;
@@ -37,7 +38,8 @@ export const Main = () => {
     }
     const slugs = data
       .flatMap((district) => district.events)
-      .map((event) => event.playDate.concat("-").concat(event.slugExtra));
+      .map((improEvent) => getImproEventSlug(improEvent));
+
     if (eventSlug && !slugs.includes(eventSlug)) {
       navigate("/", { replace: true });
     }

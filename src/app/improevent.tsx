@@ -12,6 +12,17 @@ import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 import { ShareButton } from "./improevent/sharebutton";
 import { ImproEvent } from "../assets/data/types";
 
+export const getImproEventSlug = (improEvent: ImproEvent) => {
+  return improEvent.playDate
+    .concat("-")
+    .concat(
+      improEvent.organizers.length
+        ? improEvent.organizers.map((org) => org.id).join("-")
+        : improEvent.eventType
+    )
+    .concat(improEvent.slugExtra ? `-${improEvent.slugExtra}` : "");
+};
+
 export const ImproEventCard = ({
   improEvent,
   isFirst,
@@ -25,7 +36,7 @@ export const ImproEventCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
 
-  const improEventSlug = improEvent.playDate.concat("-").concat(improEvent.slugExtra);
+  const improEventSlug = getImproEventSlug(improEvent);
 
   const scrollToTarget = () => {
     if (ref && ref.current) {

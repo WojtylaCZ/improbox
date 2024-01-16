@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
-import { ImproEventCard } from "./improevent";
+import { ImproEventCard, getImproEventSlug } from "./improevent";
 import { Districts, LocationFilter } from "../assets/data/data-improbox";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
@@ -68,7 +68,7 @@ export const MonthCalendarSection = ({
     })
     .map((improEvent, id) => (
       <ImproEventCard
-        key={improEvent.playDate.concat("-").concat(improEvent.slugExtra)}
+        key={getImproEventSlug(improEvent)}
         improEvent={improEvent}
         isFirst={isFirst && id < 2}
       />
