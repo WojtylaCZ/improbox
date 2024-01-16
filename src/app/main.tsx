@@ -35,7 +35,9 @@ export const Main = () => {
     if (locale && !supportedLocales.includes(locale)) {
       navigate("/", { replace: true });
     }
-    const slugs = data.flatMap((district) => district.events).map((t) => t.slug);
+    const slugs = data
+      .flatMap((district) => district.events)
+      .map((event) => event.playDate.concat("-").concat(event.slugExtra));
     if (eventSlug && !slugs.includes(eventSlug)) {
       navigate("/", { replace: true });
     }

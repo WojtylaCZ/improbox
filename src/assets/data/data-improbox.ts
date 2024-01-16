@@ -39,7 +39,7 @@ export type EventType = "play" | "workshop" | "coursework" | "jam" | "unknown";
 
 export type ImproEvent = {
   id: string;
-  slug: string;
+  slugExtra: string;
   name: string;
   eventType: EventType;
   websiteUrl: string;
@@ -370,7 +370,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-08-07-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Impro v parku",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
@@ -381,7 +381,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-08-improvariace",
+        slugExtra: "improvariace",
         name: "Letní IMPROshow na Terase Smíchov",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/245946518251331/245946521584664",
@@ -392,7 +392,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-14-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Impro v parku",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
@@ -403,7 +403,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-15-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Improshow: Best of Fofr v županu",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/9671342792940933",
@@ -414,7 +414,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-16-unknown",
+        slugExtra: "unknown",
         name: "Večerní degustace impra",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/308663351728541",
@@ -425,7 +425,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-20-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Letní intenzivní kurz 2023",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/letniskola",
@@ -436,7 +436,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-21-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Impro v parku",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
@@ -447,7 +447,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-21-divadloodvaz",
+        slugExtra: "divadloodvaz",
         name: "Vyletněná Improshow",
         eventType: "play",
         websiteUrl: "https://www.odvaz.eu/akce?&idA=1397",
@@ -458,7 +458,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-22-improvariace",
+        slugExtra: "improvariace",
         name: "Letní IMPROshow na Terase Smíchov",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/245946518251331/245946528251330",
@@ -469,7 +469,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-28-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Impro v parku",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/improvparku",
@@ -480,7 +480,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-08-28-standartnikabaret",
+        slugExtra: "standartnikabaret",
         name: "Letní Letná",
         eventType: "play",
         websiteUrl: "https://vosto5.cz/repertoar/standartni-kabaret",
@@ -497,7 +497,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-09-02-divadlo301",
+        slugExtra: "divadlo301",
         name: "Divadlo 301: Dřez v Nymburce",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1678866019286817",
@@ -508,7 +508,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-05-kecky",
+        slugExtra: "kecky",
         name: "Impro Kecky a Pája Sedláčková",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1026480205026852",
@@ -519,7 +519,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-05-divadlo301",
+        slugExtra: "divadlo301",
         name: "Divadlo 301: Dřez",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/203724492427888",
@@ -530,7 +530,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-06-standartnikabaret",
+        slugExtra: "standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1485737302229061",
@@ -541,7 +541,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-06-paletaci",
+        slugExtra: "paletaci",
         name: "Otevřená hodina improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1007349770286496",
@@ -552,7 +552,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-06-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "Improshow: třídní sraz",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/improshow-tridni-sraz/sziuhiw/",
@@ -563,7 +563,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-07-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Ukázková lekce",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/ukazkove-lekce",
@@ -574,7 +574,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-07-paletaci",
+        slugExtra: "paletaci",
         name: "Otevřená hodina improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1377078153227429",
@@ -585,7 +585,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-12-alibiprochyby",
+        slugExtra: "alibiprochyby",
         name: "Ozvěny léta",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1391961111535867",
@@ -596,7 +596,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-13-cnid",
+        slugExtra: "cnid",
         name: "Klasika vol. 2",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/962783754798105",
@@ -607,7 +607,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-13-zivapedagogika",
+        slugExtra: "zivapedagogika",
         name: "Divadelní improvizace",
         eventType: "workshop",
         websiteUrl:
@@ -619,7 +619,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-13-bafni",
+        slugExtra: "bafni",
         name: "Generál Torstenson Impro Cup",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/267767889369877",
@@ -630,7 +630,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-13-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "Maestro",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/maestro/szguhiw/",
@@ -641,7 +641,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-15-improvariace",
+        slugExtra: "improvariace",
         name: "Maestro! Festival ImVisible (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/212420504894469",
@@ -655,7 +655,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-15-divadlokellari",
+        slugExtra: "divadlokellari",
         name: "Improvizační show",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/264589383185599",
@@ -666,7 +666,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-15-standartnikabaret",
+        slugExtra: "standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
@@ -677,7 +677,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-15-bizoni",
+        slugExtra: "bizoni",
         name: "Improshow - Vyber si svůj příběh",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/180900268341467",
@@ -688,7 +688,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-16-padenapade",
+        slugExtra: "padenapade",
         name: "Z nuly na pade, z pade na sto",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
@@ -699,7 +699,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-16-cnid",
+        slugExtra: "cnid",
         name: "Klasika",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
@@ -710,7 +710,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-16-myklucicospoluchodime",
+        slugExtra: "myklucicospoluchodime",
         name: "Svědomitě nepřipraveni",
         eventType: "play",
         websiteUrl: "https://vzlet.cz/program/volna-jizda-vol-2-festival-ciste-improvizace",
@@ -721,7 +721,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-17-bafni",
+        slugExtra: "bafni",
         name: "Zápas v divadelní improvizaci MUŽI vs. ŽENY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/294409953182405",
@@ -732,7 +732,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-19-paletaci",
+        slugExtra: "paletaci",
         name: "Improshow",
         eventType: "play",
         websiteUrl:
@@ -744,7 +744,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-19-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Ukázková lekce",
         eventType: "workshop",
         websiteUrl: "https://www.skolaimprovizace.cz/ukazkove-lekce",
@@ -755,7 +755,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-19-polocasnapadu",
+        slugExtra: "polocasnapadu",
         name: "Motel Babí léto",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/149181438240378",
@@ -766,7 +766,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-20-accioimpro",
+        slugExtra: "accioimpro",
         name: "Accio Impro (work in progress)",
         eventType: "play",
         websiteUrl: " https://www.facebook.com/events/347284567727787",
@@ -777,7 +777,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-20-paletaci",
+        slugExtra: "paletaci",
         name: "Kurz improvizace 1",
         eventType: "coursework",
         websiteUrl: "https://kurzy.paletaci.cz/kurz-impra-1/",
@@ -788,7 +788,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-20-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "Improshow: detektivka",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/improshow-detektivka/szkuhiw/",
@@ -799,7 +799,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-21-paletaci",
+        slugExtra: "paletaci",
         name: "Kurz improvizace 1",
         eventType: "coursework",
         websiteUrl: "https://kurzy.paletaci.cz/kurz-impra-1/",
@@ -810,7 +810,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-22-bafni",
+        slugExtra: "bafni",
         name: "Improvizační workshop pro začátečníky",
         eventType: "workshop",
         websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikendy-pro-zacatecniky-praha/",
@@ -821,7 +821,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-22-lisky",
+        slugExtra: "lisky",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1120142216038883",
@@ -832,7 +832,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-22-vip",
+        slugExtra: "vip",
         name: "Impro JAM",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/3564104473845369",
@@ -843,7 +843,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-25-321jedem",
+        slugExtra: "321jedem",
         name: "Impro Talk Show: David Matásek",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/321jedem-david-matasek/szgdmvv",
@@ -854,7 +854,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-myklucicospoluchodime",
+        slugExtra: "myklucicospoluchodime",
         name: "Kluci na lodi: Poslední věneček",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/posledni-venecek/szkdymv",
@@ -865,7 +865,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-paletaci",
+        slugExtra: "paletaci",
         name: "Kroužek pro děti",
         eventType: "coursework",
         websiteUrl: "https://kurzy.paletaci.cz/pro-deti/",
@@ -876,7 +876,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Fofr v Hollywoodu",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/2033706753675482",
@@ -887,7 +887,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-frmol",
+        slugExtra: "frmol",
         name: "Přijď mezi nás! Otevřený trénink",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/305816592033322/305821975366117",
@@ -898,7 +898,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-improvizacecz",
+        slugExtra: "improvizacecz",
         name: "Improvizujeme s Petrem Budilem",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/692599146058545",
@@ -909,7 +909,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-26-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Improv Mixer - workshop & open mic (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/973688560465584/973688570465583",
@@ -920,7 +920,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-27-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "Manželské etudy",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/manzelske-etudy/szduhiw/",
@@ -931,7 +931,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-09-28-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Let's Get Personal (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1996941320666640",
@@ -948,7 +948,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-10-01-kabinetimprovizace",
+        slugExtra: "kabinetimprovizace",
         name: "Živelné impro",
         eventType: "workshop",
         websiteUrl: "https://www.kabinetimprovizace.cz/",
@@ -959,7 +959,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-01-impra",
+        slugExtra: "impra",
         name: "Nebezpečné vztahy (ProArt festival)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/666785172044916",
@@ -970,7 +970,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-01-improvworkshop",
+        slugExtra: "improvworkshop",
         name: "Improv Workshop - Let's be evil (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/2100863010255216",
@@ -981,7 +981,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-01-improvjam",
+        slugExtra: "improvjam",
         name: "Improv Jam (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1073538563813633",
@@ -992,7 +992,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-02-skola21",
+        slugExtra: "skola21",
         name: "IMPROvizace k Osobnostnímu rozvoji",
         eventType: "coursework",
         websiteUrl: "https://www.skola21.com/udalosti/improvizace-k-osobnostnimu-rozvoji",
@@ -1003,7 +1003,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-03-divadlo301",
+        slugExtra: "divadlo301",
         name: "Poprvé",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3747334172180968",
@@ -1014,7 +1014,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-03-improvariace-cnid",
+        slugExtra: "improvariace-cnid",
         name: "Gilty Pležr: Telenovela",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1737547963377081",
@@ -1028,7 +1028,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-03-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Improv Acting Workshop (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1081707506132401",
@@ -1039,7 +1039,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-04-zivapedagogika",
+        slugExtra: "zivapedagogika",
         name: "Divadelní improvizace",
         eventType: "coursework",
         websiteUrl: "https://zivapedagogika.cz/kurzy-new/01-divadelni-improvizace/",
@@ -1050,7 +1050,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-04-therandoms",
+        slugExtra: "therandoms",
         name: "The Randoms improvizují",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1290023418374461",
@@ -1061,7 +1061,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-04-saysomethingcz",
+        slugExtra: "saysomethingcz",
         name: "Tajemství Vesmíru (Space sheep)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/2571374433019341",
@@ -1072,7 +1072,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-05-altf4",
+        slugExtra: "altf4",
         name: "ALT + F4: Setkání",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3399162263747880",
@@ -1083,7 +1083,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-05-rozlety",
+        slugExtra: "rozlety",
         name: "Dopolední Rozlety s Peťou",
         eventType: "coursework",
         websiteUrl: "https://www.facebook.com/events/170997519240343",
@@ -1094,7 +1094,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-05-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Thursday Night Improv Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/621985480107410",
@@ -1105,7 +1105,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-06-polocasnapadu-bizoni",
+        slugExtra: "polocasnapadu-bizoni",
         name: "Poločas nápadu vs. B.I.Z.O.N.I.",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1658799717958012",
@@ -1119,7 +1119,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-07-creativedifferences",
+        slugExtra: "creativedifferences",
         name: "October Improv Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1411115936112154",
@@ -1130,7 +1130,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-11-meandry",
+        slugExtra: "meandry",
         name: "Improshow Meandrů",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/876910106754584",
@@ -1141,7 +1141,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-11-vimcochci",
+        slugExtra: "vimcochci",
         name: "Improkruháč - Otevřený trénink improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.vimcochci.cz/akce/improkruhac/2023-10-11/",
@@ -1152,7 +1152,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-12-standartnikabaret",
+        slugExtra: "standartnikabaret",
         name: "Svědomitě nepřipravený kabaret",
         eventType: "play",
         websiteUrl: "https://vosto5.cz/repertoar/standartni-kabaret",
@@ -1163,7 +1163,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-13-alibiprochyby",
+        slugExtra: "alibiprochyby",
         name: "Pátek třináctého",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/340711351723167",
@@ -1174,7 +1174,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-13-improzakusky",
+        slugExtra: "improzakusky",
         name: "ImproZÁKUSKY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/330475502809549",
@@ -1185,7 +1185,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-13-improprostarystromy",
+        slugExtra: "improprostarystromy",
         name: "Impro pro starý stromy",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1041026333589549 ",
@@ -1196,7 +1196,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-14-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Single Location Montageness (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1042042583472678",
@@ -1207,7 +1207,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-15-nepripraveni",
+        slugExtra: "nepripraveni",
         name: "NO EXIT",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1355577885025511",
@@ -1218,7 +1218,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-15-groupmind",
+        slugExtra: "groupmind",
         name: "Group Mind (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/297924842947532",
@@ -1229,7 +1229,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-15-jam",
+        slugExtra: "jam",
         name: "Jam! (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1078836386435775",
@@ -1240,7 +1240,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-16-321jedem",
+        slugExtra: "321jedem",
         name: "Impro Talk Show: Ondřej Pšenička",
         eventType: "play",
         websiteUrl: "https://goout.net/cs/321jedem-ondrej-psenicka/szqrqnw/",
@@ -1251,7 +1251,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-17-polocasnapadu",
+        slugExtra: "polocasnapadu",
         name: "Ale to jsem měl říct já!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1010308070211522",
@@ -1262,7 +1262,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-cnid",
+        slugExtra: "cnid",
         name: "Improvizovaný Shakepeare",
         eventType: "play",
         websiteUrl:
@@ -1274,7 +1274,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-paletaci",
+        slugExtra: "paletaci",
         name: "Jednorázový kurz improvizace pro páry",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/260559210145728",
@@ -1285,7 +1285,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-bafni",
+        slugExtra: "bafni",
         name: "O nás dvou",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1341571186778253",
@@ -1296,7 +1296,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-kopr",
+        slugExtra: "kopr",
         name: "Kolo štěstí",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1386143171937814",
@@ -1307,7 +1307,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-improsamevody",
+        slugExtra: "improsamevody",
         name: "Lilie a karbanátky",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/698344405472296",
@@ -1318,7 +1318,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-18-improdva",
+        slugExtra: "improdva",
         name: "Středeční otevřené impro",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1112068606427676",
@@ -1329,7 +1329,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-19-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/334720042557433",
@@ -1340,7 +1340,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-19-zivapedagogika",
+        slugExtra: "zivapedagogika",
         name: "Divadelní improvizace v dramatické výchově",
         eventType: "workshop",
         websiteUrl:
@@ -1352,7 +1352,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-19-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Thursday Night Improv Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/621985480107410/629142102725081/",
@@ -1363,7 +1363,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-19-improdva",
+        slugExtra: "improdva",
         name: "Čtvrteční otevřené svobodné impro",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1061137141897142",
@@ -1374,7 +1374,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-20-kis-polocasnapadu",
+        slugExtra: "kis-polocasnapadu",
         name: "KIŠ vs. Poločas nápadu",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/846348060407877",
@@ -1388,7 +1388,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-20-meisnerworkshop",
+        slugExtra: "meisnerworkshop",
         name: "Workshop improvizce a la Meisner",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/218368954029556",
@@ -1399,7 +1399,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-20-vip",
+        slugExtra: "vip",
         name: "Improshow jak z časáku",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/689964533186868",
@@ -1410,7 +1410,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-21-skola21",
+        slugExtra: "skola21",
         name: "Improvizace k Osobnostnímu rozvoji",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/287863290587422",
@@ -1421,7 +1421,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-22-padenapade",
+        slugExtra: "padenapade",
         name: "Improkabaret: Vepřo, knedlo, impro!",
         eventType: "play",
         websiteUrl: "https://www.padenapade.com/predstaveni",
@@ -1432,7 +1432,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-23-vterinky",
+        slugExtra: "vterinky",
         name: "Improvystoupení: V.T.E.Ř.I.N.K.Y.",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1250468768912080",
@@ -1443,7 +1443,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-23-nedivse",
+        slugExtra: "nedivse",
         name: "DOVOPRAVDY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1248070365886922",
@@ -1454,7 +1454,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-25-improvariace",
+        slugExtra: "improvariace",
         name: "Asterix a Obelix",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/150645018070349",
@@ -1465,7 +1465,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-26-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Czech + Expat Impro Show 🇨🇿🇺🇸🇨🇦 (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/803969901527157",
@@ -1476,7 +1476,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-26-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Thursday Night Armandoness (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3228920547402203/",
@@ -1487,7 +1487,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-27-bafni",
+        slugExtra: "bafni",
         name: "Autentická improvizace",
         eventType: "workshop",
         websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikend-brno-zacatecnici/",
@@ -1498,7 +1498,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-29-improvworkshop",
+        slugExtra: "improvworkshop",
         name: "Improv Workshop - The heart of storytelling (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1053922945621089",
@@ -1509,7 +1509,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-10-30-justimpro",
+        slugExtra: "justimpro",
         name: "Just! Impro Show",
         eventType: "play",
         websiteUrl: "https://www.svandovodivadlo.cz/inscenace/13/just-impro-just-impro-show/4802",
@@ -1526,7 +1526,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-11-02-minimpromalismus",
+        slugExtra: "minimpromalismus",
         name: "We're back baby",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/818762473264270",
@@ -1537,7 +1537,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-02-necijehneci",
+        slugExtra: "necijehneci",
         name: "Improvizační divadelní představení",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1069376197297414",
@@ -1548,7 +1548,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-02-longformy",
+        slugExtra: "longformy",
         name: "Improvizované příběhy",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/306704408756710",
@@ -1559,7 +1559,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-02-benefice",
+        slugExtra: "benefice",
         name: "Benefiční improvizace pro Šanci",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/655885783002944",
@@ -1570,7 +1570,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-03-bafni",
+        slugExtra: "bafni",
         name: "Víkendový workshop pro pokročilé",
         eventType: "workshop",
         websiteUrl: "https://improvizacnikurzy.cz/kurzy/vikendovy-workshop-praha-pokrocili/",
@@ -1581,7 +1581,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-03-veski-meandry",
+        slugExtra: "veski-meandry",
         name: "Improvizační zápas VE.ŠK.I. vs. Meandry",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/715154160028830",
@@ -1595,7 +1595,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-03-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Theatropolis JAM vol.3",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1382233266059381",
@@ -1606,7 +1606,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-04-imjoy",
+        slugExtra: "imjoy",
         name: "Imjoy and shakespearek",
         eventType: "play",
         websiteUrl: "https://www.naivnidivadlo.cz/cs/aktuality/vecer-v-naivnim-imjoy-shakespearek",
@@ -1617,7 +1617,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-04-valouny-lisky",
+        slugExtra: "valouny-lisky",
         name: "Valouny vs. Lísky",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1320182122035774",
@@ -1631,7 +1631,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-07-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Kostlivci v županu",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/702273835098455",
@@ -1642,7 +1642,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-07-improspace",
+        slugExtra: "improspace",
         name: "Jednohubky - jednorázový ochutnávkovo trénink",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/4150570501836301",
@@ -1653,7 +1653,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-07-divadlo301",
+        slugExtra: "divadlo301",
         name: "(U)Zavření",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1412043499375551",
@@ -1664,7 +1664,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-10-kecky",
+        slugExtra: "kecky",
         name: "Impro Kecky a dva úžasňáci - Adam Vošvrda a Lukáš Rumlena",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1006931377020100",
@@ -1675,7 +1675,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-10-improzakusky",
+        slugExtra: "improzakusky",
         name: "ImproZÁKUSKY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1462667047903268",
@@ -1686,7 +1686,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-11-improspace",
+        slugExtra: "improspace",
         name: "All you can eat",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/807007527776661",
@@ -1697,7 +1697,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-12-nepripraveni",
+        slugExtra: "nepripraveni",
         name: "NO EXIT",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/118087244720185",
@@ -1708,7 +1708,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-17-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "La Ronde (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3604539523096884",
@@ -1719,7 +1719,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-17-buresovakaterina",
+        slugExtra: "buresovakaterina",
         name: "Jsem, tedy IMPROVIZUJI ... IMPROVIZUJI, tedy jsem",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/870911031070415",
@@ -1730,7 +1730,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-17-scriptforbrains",
+        slugExtra: "scriptforbrains",
         name: "Live Improv Comedy (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/305148915558364/305148918891697",
@@ -1741,7 +1741,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-19-improvworkshop",
+        slugExtra: "improvworkshop",
         name: "Improv Workshop - We're telling a story (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1380396762552000",
@@ -1752,7 +1752,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-20-impra",
+        slugExtra: "impra",
         name: "Nebezpečné vztahy",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/971386207293374",
@@ -1763,7 +1763,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-20-padenapade",
+        slugExtra: "padenapade",
         name: "Z nuly na pade - z pade na sto",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/658283676286785/",
@@ -1774,7 +1774,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-21-allimp",
+        slugExtra: "allimp",
         name: "Tarantino (18+)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1354575935142855",
@@ -1785,7 +1785,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-22-kis",
+        slugExtra: "kis",
         name: "(Listo)padá",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3632309460372695",
@@ -1796,7 +1796,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-22-improvizujiciterapeut",
+        slugExtra: "improvizujiciterapeut",
         name: "Improvizující terapeut",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/665433372048184",
@@ -1807,7 +1807,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-22-bafni",
+        slugExtra: "bafni",
         name: "Palmaskán",
         eventType: "play",
         websiteUrl: "http://bafni.cz/repertoar/palmaskan.html",
@@ -1818,7 +1818,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-22-justimpro",
+        slugExtra: "justimpro",
         name: "Just! Impro Show",
         eventType: "play",
         websiteUrl: "https://www.svandovodivadlo.cz/inscenace/13/just-impro-just-impro-show/4873",
@@ -1829,7 +1829,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-22-paletaci",
+        slugExtra: "paletaci",
         name: "Afterparty - premiéra roku",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/6509509712494413",
@@ -1840,7 +1840,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-23-zivapedagogika",
+        slugExtra: "zivapedagogika",
         name: "Divadelní improvizace",
         eventType: "workshop",
         websiteUrl:
@@ -1852,7 +1852,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-23-cnid",
+        slugExtra: "cnid",
         name: "Nereality show",
         eventType: "play",
         websiteUrl:
@@ -1864,7 +1864,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-23-impracek",
+        slugExtra: "impracek",
         name: "Improvizace na vaše témata",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1005271764037105",
@@ -1875,7 +1875,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-24-improspace",
+        slugExtra: "improspace",
         name: "Improvizace pro rodiče a děti",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/224410933686595",
@@ -1886,7 +1886,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-24-olivy",
+        slugExtra: "olivy",
         name: "Olivy vs. olomoučtí herci",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/6751710264910913",
@@ -1897,7 +1897,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-24-lisky",
+        slugExtra: "lisky",
         name: "Longformy #2",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1016693512954012",
@@ -1908,7 +1908,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-25-nevyzadanarada",
+        slugExtra: "nevyzadanarada",
         name: "Impro poradna - Kam se schovat před bouří",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/956026075471081",
@@ -1919,7 +1919,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-26-instantnigaucink",
+        slugExtra: "instantnigaucink",
         name: "Gaučink na Zábradku",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1959293611121647",
@@ -1930,7 +1930,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-26-jam",
+        slugExtra: "jam",
         name: "Improv Jam! (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/694679005954663",
@@ -1941,7 +1941,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-26-storytime",
+        slugExtra: "storytime",
         name: "Storytime! (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/676263127980050",
@@ -1952,7 +1952,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-27-kabinetnici",
+        slugExtra: "kabinetnici",
         name: "Kabinetníci",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/868531091318522/",
@@ -1963,7 +1963,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-28-divadloprocity",
+        slugExtra: "divadloprocity",
         name: "Minikurz improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/250011041223745",
@@ -1974,7 +1974,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-29-improvariace",
+        slugExtra: "improvariace",
         name: "Beauty IMPROspeciál",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/314400424545084",
@@ -1985,7 +1985,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-29-vimcochci",
+        slugExtra: "vimcochci",
         name: "Improkruháč - Otevřený trénink improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.vimcochci.cz/akce/improkruhac/2023-11-29/",
@@ -1996,7 +1996,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-30-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Let's Get Personal (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/753355769963109",
@@ -2007,7 +2007,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-30-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/243756038675125",
@@ -2018,7 +2018,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-11-30-dortvkapse",
+        slugExtra: "dortvkapse",
         name: "Improshow a la gastrozážitek",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1391933095053356",
@@ -2035,7 +2035,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       //   {
       //     id: "1",
-      //     slug: "2023-12-20-bafni",
+      //     slugExtra: "bafni",
       //     name: "Vánoční improshow",
       //     eventType: "play",
       //     websiteUrl: "",
@@ -2043,10 +2043,11 @@ export const data: Array<MonthEventsCalendar> = [
       //     playDate: "2023-12-20",
       //     district: "Brno",
       //     language: "cs",
+
       //   },
       {
         id: "1",
-        slug: "2023-12-01-alibiprochyby",
+        slugExtra: "alibiprochyby",
         name: "Besídka s Alibi",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/361509152892169",
@@ -2057,7 +2058,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-02-skolaimprovizace1",
+        slugExtra: "skolaimprovizace1",
         name: "Impro Ambasadors - How to do nothing with Ollie Rasini",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/850816756761585",
@@ -2068,7 +2069,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-02-skolaimprovizace2",
+        slugExtra: "skolaimprovizace2",
         name: "Impro Ambasadors - Spotaneous Dialogues (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/697161792041837",
@@ -2079,7 +2080,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-02-valouny-olivy",
+        slugExtra: "valouny-olivy",
         name: "Valouny vs. Olivy",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/209953402142915",
@@ -2093,7 +2094,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-03-nepripraveni",
+        slugExtra: "nepripraveni",
         name: "Vánoční improshow",
         eventType: "play",
         websiteUrl: "https://nepripraveni.cz/akce/vanocni-improshow-skupiny-nepripraveni/",
@@ -2104,7 +2105,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-04-standartnikabaret",
+        slugExtra: "standartnikabaret",
         name: "Vosto5: Stand'artní kabaret",
         eventType: "play",
         websiteUrl: "https://www.dko.cz/index.php?menu=1416",
@@ -2115,7 +2116,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-05-podruhenascene",
+        slugExtra: "podruhenascene",
         name: "Podruhé na scéně!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1015680102932687",
@@ -2126,7 +2127,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-06-impronadilka",
+        slugExtra: "impronadilka",
         name: "Impronadílka aneb co čert (ne)chtěl",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1054991418876096",
@@ -2137,7 +2138,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-06-bafni",
+        slugExtra: "bafni",
         name: "Zase v Praze",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/6947546271935307",
@@ -2148,7 +2149,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-06-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Peklo v županu",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1569901460442386",
@@ -2159,7 +2160,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-O7-paletaci",
+        slugExtra: "paletaci",
         name: "Básně a jak na ně",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/706636494727538",
@@ -2170,7 +2171,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-07-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Workshop - Christmas open class (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1035389531077892",
@@ -2181,7 +2182,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-07-pragueimprovnetwork2",
+        slugExtra: "pragueimprovnetwork2",
         name: "Jam Show - Christmas edition (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/291489643303194",
@@ -2192,7 +2193,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-08-improzakusky",
+        slugExtra: "improzakusky",
         name: "ImproZÁKUSKY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3535680366650308",
@@ -2203,7 +2204,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-08-lisky-valouny",
+        slugExtra: "lisky-valouny",
         name: "Lísky vs. Valouny",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/2193212867537475",
@@ -2217,7 +2218,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-09-divadlokellari",
+        slugExtra: "divadlokellari",
         name: "Velká improvizační show",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/641380994827142",
@@ -2228,7 +2229,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-10-improvworkshop",
+        slugExtra: "improvworkshop",
         name: "Improv Workshop - Game of the Scene (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1063052484887632",
@@ -2239,7 +2240,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-10-nepripraveni",
+        slugExtra: "nepripraveni",
         name: "Vánoční improshow",
         eventType: "play",
         websiteUrl:
@@ -2251,7 +2252,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-11-divadloprocity",
+        slugExtra: "divadloprocity",
         name: "Minikurz improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/239821678966933",
@@ -2262,7 +2263,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-12-bizoni",
+        slugExtra: "bizoni",
         name: "Benefiční improshow pro Šťastný zvěřinec",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/726707852638566",
@@ -2273,7 +2274,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-12-divadlo301",
+        slugExtra: "divadlo301",
         name: "Veselé Vánočky",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/353326120421278/",
@@ -2284,7 +2285,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-13-paletaci",
+        slugExtra: "paletaci",
         name: "Mistr improvizace",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/687695440123821",
@@ -2295,7 +2296,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-13-altf4",
+        slugExtra: "altf4",
         name: "Konkurz",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/666002865648186",
@@ -2306,7 +2307,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-14-pragueimprovnetwork",
+        slugExtra: "pragueimprovnetwork",
         name: "Last open class (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/2462703523921508",
@@ -2317,7 +2318,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-14-pragueimprovnetwork2",
+        slugExtra: "pragueimprovnetwork2",
         name: "Jam Show (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/405061758511120",
@@ -2328,7 +2329,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-15-scriptforbrains",
+        slugExtra: "scriptforbrains",
         name: "Live Improv Comedy (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/305148915558364/305148918891697",
@@ -2339,7 +2340,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-15-improspace",
+        slugExtra: "improspace",
         name: "Improvizace pro rodiče a děti",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/705398584804019",
@@ -2350,7 +2351,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-15-vip",
+        slugExtra: "vip",
         name: "Vyšetřování inspektora Parkera - improvizovaná detektivka",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1065419444699949",
@@ -2361,7 +2362,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-16-improspace",
+        slugExtra: "improspace",
         name: "Workshop improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1208669466508636/1211616099547306",
@@ -2372,7 +2373,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-16-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "A Better Place: A Special Christmas (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1042767920254226",
@@ -2383,7 +2384,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-17-padenapade",
+        slugExtra: "padenapade",
         name: "Vánoční přání",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/3655282648130635",
@@ -2394,7 +2395,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-19-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Tři župani pro Popelku",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1365681944341029",
@@ -2405,7 +2406,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-20-improsamevody",
+        slugExtra: "improsamevody",
         name: "Gondoly a hausbóty",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/344673694582402",
@@ -2416,7 +2417,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-20-bafni",
+        slugExtra: "bafni",
         name: "Divoké Vánoce",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/649668413912672",
@@ -2427,7 +2428,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-20-improvariace",
+        slugExtra: "improvariace",
         name: "Vánoční IMPROspeciál",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1261187124474129",
@@ -2438,7 +2439,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-12-30-justimpro",
+        slugExtra: "justimpro",
         name: "Just! Impro Show",
         eventType: "play",
         websiteUrl: "https://www.svandovodivadlo.cz/inscenace/13/just-impro-just-impro-show/4998",
@@ -2455,7 +2456,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2024-01-06-kecky",
+        slugExtra: "kecky",
         name: "Improvizace pro rodiče a děti",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/626300096360534",
@@ -2466,7 +2467,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-06-divadloprocity",
+        slugExtra: "divadloprocity",
         name: "Víkend improv - víkendový impro seminář",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/987337512304757",
@@ -2477,7 +2478,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-09-divadlo301",
+        slugExtra: "divadlo301",
         name: "Novoroční",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1455698238625930",
@@ -2488,7 +2489,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-10-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "Ostrov přežití",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/364580192609311",
@@ -2499,7 +2500,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-13-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Single Location Montageness (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1073749913864837",
@@ -2510,7 +2511,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-14-improvworkshop",
+        slugExtra: "improvworkshop",
         name: "Improv Workshop - Following the Story (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1725537844581999",
@@ -2521,7 +2522,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-14-improvjam",
+        slugExtra: "improvjam",
         name: "Improv Jam (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1064318417938857",
@@ -2532,7 +2533,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-17-bafni",
+        slugExtra: "bafni",
         name: "Mrkev nebo Konina",
         eventType: "play",
         websiteUrl: "http://bafni.cz/index.php#row2",
@@ -2543,7 +2544,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-17-imjoy",
+        slugExtra: "imjoy",
         name: "Otevřený trénink improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1084664145998017",
@@ -2554,7 +2555,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-17-improvariace",
+        slugExtra: "improvariace",
         name: "Konspirační IMPROspeciál",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1220463342690257",
@@ -2565,7 +2566,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-17-improvizacecz",
+        slugExtra: "improvizacecz",
         name: "Improvizujeme!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/405383081826702",
@@ -2576,7 +2577,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-19-improzakusky",
+        slugExtra: "improzakusky",
         name: "ImproZÁKUSKY",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1701264356949732/",
@@ -2587,7 +2588,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-19-lisky",
+        slugExtra: "lisky",
         name: "Lísky vs. Lísky",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/342324032020192",
@@ -2598,7 +2599,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-24-therandoms",
+        slugExtra: "therandoms",
         name: "Hříšníci",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1542371933228940",
@@ -2609,7 +2610,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-25-imperfectionists",
+        slugExtra: "imperfectionists",
         name: "Let's Get Personal (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/690516519900338",
@@ -2620,7 +2621,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-25-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/390625939981914",
@@ -2631,7 +2632,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-29-justimpro",
+        slugExtra: "justimpro",
         name: "Just! Impro Show",
         eventType: "play",
         websiteUrl: "https://www.svandovodivadlo.cz/inscenace/13/just-impro-show/5061",
@@ -2642,7 +2643,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-01-31-meandry",
+        slugExtra: "meandry",
         name: "Improshow Meandrů",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1745371759265665",
@@ -2659,7 +2660,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2024-02-06-myklucicospoluchodime",
+        slugExtra: "myklucicospoluchodime",
         name: "Deus Ex Mikrofona",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1014133719677652",
@@ -2670,7 +2671,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-02-08-necijehneci-",
+        slugExtra: "necijehneci-bizoni",
         name: "Něčí Jehněčí vs. B.I.Z.O.N.I",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/904361677592658",
@@ -2684,7 +2685,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-02-15-karel",
+        slugExtra: "karel",
         name: "Karel poprvé",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1063120964894734/",
@@ -2695,7 +2696,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2024-02-20-justimpro",
+        slugExtra: "justimpro",
         name: "Just! Impro Show",
         eventType: "play",
         websiteUrl: "https://www.svandovodivadlo.cz/inscenace/13/just-impro-show/5150",
@@ -2712,7 +2713,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2024-02-30-paletaci",
+        slugExtra: "paletaci",
         name: "Camp improvizace s Martinem Vasquezem a Andreou Moličovou",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1734322570413622",
@@ -2729,7 +2730,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-07-24-paletaci",
+        slugExtra: "paletaci",
         name: "Camp improvizace s Martinem Vasquezem a Andreou Moličovou",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/256600993556480",
@@ -2740,7 +2741,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-07-29-polocasnapadu",
+        slugExtra: "polocasnapadu",
         name: "Živelné impro",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/272377468513550",
@@ -2757,7 +2758,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-06-07-kecky",
+        slugExtra: "kecky",
         name: "Kecky - improvizovaný večer. Host Láďa Karda",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/708266527438722",
@@ -2768,7 +2769,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-07-improvariace",
+        slugExtra: "improvariace",
         name: "Xena / celovečerní improvizovaná hra",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/708266527438722",
@@ -2779,7 +2780,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-09-vip",
+        slugExtra: "vip",
         name: "Vyšetřování inspektora Parkera - improvizovaná divadelní detektivka",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/189896543998939",
@@ -2790,7 +2791,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-13-alibiprochyby",
+        slugExtra: "alibiprochyby",
         name: "Nášup!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/954218659038417",
@@ -2801,7 +2802,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-21-polocasnapadu",
+        slugExtra: "polocasnapadu",
         name: "Ale to jsem měl říct já!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/267509755761424",
@@ -2812,7 +2813,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-22-padenapade",
+        slugExtra: "padenapade",
         name: "Jedničky a nuly | Pade na Pade s umělou inteligencí",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1397373071052582",
@@ -2823,7 +2824,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-22-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/829195705484892",
@@ -2834,7 +2835,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-26-fofrvzupanu",
+        slugExtra: "fofrvzupanu",
         name: "Fofr na moři",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/2554930714671059",
@@ -2845,7 +2846,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-07-24-paletaci",
+        slugExtra: "paletaci",
         name: "Camp improvizace s Martinem Vasquezem a Andreou Moličovou",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/256600993556480",
@@ -2856,7 +2857,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-27-unknown",
+        slugExtra: "unknown",
         name: "Adam & Pája /IMPRO/",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/2731074617034818",
@@ -2867,7 +2868,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-06-28-cnid",
+        slugExtra: "cnid",
         name: "Klasika",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/657371099056530",
@@ -2884,7 +2885,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-05-05-divadloimprovizaceodvaz",
+        slugExtra: "divadloimprovizaceodvaz",
         name: "IMPROTŘESK 2023 | Festival improvizace",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/531202315642360",
@@ -2895,7 +2896,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-05-12-alibiprochyby",
+        slugExtra: "alibiprochyby",
         name: "Dítě 19",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/177505508470079",
@@ -2906,7 +2907,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-05-25-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1413760719454916",
@@ -2923,7 +2924,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-04-14-kecky",
+        slugExtra: "kecky",
         name: "Kecky - improvizovaný večer. Host Ondřej Nečas",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/716910450033344",
@@ -2934,7 +2935,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-15-skolaimprovizace",
+        slugExtra: "skolaimprovizace",
         name: "Impro Ambasadors - workshop s Gerit (AUT)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/5553856491387154",
@@ -2945,7 +2946,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-15-skolaimprovizace2",
+        slugExtra: "skolaimprovizace2",
         name: "Impro Ambasadors - představení: NO EXIT",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1235463783774029",
@@ -2956,7 +2957,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-20-blr",
+        slugExtra: "blr",
         name: "The BLR Improv Comedy Brew!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/498524245699846",
@@ -2967,7 +2968,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-21-vip",
+        slugExtra: "vip",
         name: "Amorovy katastrofy - improshow o lásce",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/734131978403488",
@@ -2978,7 +2979,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-21-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/745594463834172",
@@ -2989,7 +2990,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-26-nedivse",
+        slugExtra: "nedivse",
         name: "improvizační show NeDivSe",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1261275181493337",
@@ -3000,7 +3001,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-04-29-cnid",
+        slugExtra: "cnid",
         name: "WORKSHOP s Českým Národním Improvizačním Divadlem",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/228312459568330 ",
@@ -3017,7 +3018,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-03-10-kecky",
+        slugExtra: "kecky",
         name: "Kecky - improvizační večer TAK TROCHU JINÝ MDŽ",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1160111454869033",
@@ -3028,7 +3029,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-03-17-vip",
+        slugExtra: "vip",
         name: "Čtenářský kroužek - improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1242644813273604",
@@ -3039,7 +3040,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-03-23-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/709375650921842",
@@ -3050,7 +3051,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-03-26-instantnigaucink",
+        slugExtra: "instantnigaucink",
         name: "Instantní Gaučink - 26. 3. 2023",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/511867941109287",
@@ -3061,7 +3062,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-03-30-padenapade",
+        slugExtra: "padenapade",
         name: "Improkabaret: Souboj pohlaví",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/124974393641876",
@@ -3078,7 +3079,7 @@ export const data: Array<MonthEventsCalendar> = [
     events: [
       {
         id: "1",
-        slug: "2023-02-04-nedivse",
+        slugExtra: "nedivse",
         name: "NeDivSe: Vyplouváme!",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/705524674490028",
@@ -3089,7 +3090,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-02-14-improvariace",
+        slugExtra: "improvariace",
         name: "Valentýnský IMPROspeciál",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1297172470851314",
@@ -3100,7 +3101,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-02-21-kecky",
+        slugExtra: "kecky",
         name: "Kecky - improvizační večer",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/861496178405714",
@@ -3111,7 +3112,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-02-23-blancinybileboty",
+        slugExtra: "blancinybileboty",
         name: "Improshow",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/536862931876454",
@@ -3122,7 +3123,7 @@ export const data: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slug: "2023-02-27-padenapade",
+        slugExtra: "padenapade",
         name: "Večer sedmi hříchů",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/968205434155676",
@@ -3139,7 +3140,7 @@ export const data: Array<MonthEventsCalendar> = [
   //   events: [
   //     {
   //       id: "1",
-  //       slug: "2023-01-18-improvariace",
+  //       slugExtra: "improvariace",
   //       name: "Prezidentský IMPROspeciál",
   //       eventType: "play",
   //       websiteUrl: "https://www.facebook.com/events/726550952421031",
@@ -3150,7 +3151,7 @@ export const data: Array<MonthEventsCalendar> = [
   //     },
   //     {
   //       id: "1",
-  //       slug: "2023-01-19-blancinybileboty",
+  //       slugExtra: "blancinybileboty",
   //       name: "Improshow",
   //       eventType: "play",
   //       websiteUrl: "https://www.facebook.com/events/491611799747111",
@@ -3161,7 +3162,7 @@ export const data: Array<MonthEventsCalendar> = [
   //     },
   //     {
   //       id: "1",
-  //       slug: "2023-01-27-vip",
+  //       slugExtra: "vip",
   //       name: "Vyšetřování inspektora Parkera - improvizovaná detektivní hra",
   //       eventType: "play",
   //       websiteUrl: "https://www.facebook.com/events/957439238557530",
@@ -3172,7 +3173,7 @@ export const data: Array<MonthEventsCalendar> = [
   //     },
   //     {
   //       id: "1",
-  //       slug: "2023-01-31-padenapade",
+  //       slugExtra: "padenapade",
   //       name: "Improsquatting",
   //       eventType: "play",
   //       websiteUrl: "https://www.facebook.com/events/1307133426796816",

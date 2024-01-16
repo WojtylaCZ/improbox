@@ -66,7 +66,11 @@ export const MonthCalendarSection = ({
         : eventDate < todayDate - 86400000;
     })
     .map((improEvent, id) => (
-      <ImproEventCard key={improEvent.slug} improEvent={improEvent} isFirst={isFirst && id < 2} />
+      <ImproEventCard
+        key={improEvent.playDate.concat("-").concat(improEvent.slugExtra)}
+        improEvent={improEvent}
+        isFirst={isFirst && id < 2}
+      />
     ));
 
   // for past events, reverse the order to show the most recent first

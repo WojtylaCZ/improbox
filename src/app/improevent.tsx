@@ -21,9 +21,11 @@ export const ImproEventCard = ({
 }) => {
   const { t } = useTranslation();
 
-  const { eventSlug } = useParams();
+  const { eventSlug: eventSlugParam } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
+
+  const improEventSlug = improEvent.playDate.concat("-").concat(improEvent.slugExtra);
 
   const scrollToTarget = () => {
     if (ref && ref.current) {
@@ -33,28 +35,28 @@ export const ImproEventCard = ({
   };
 
   useEffect(() => {
-    if (eventSlug === improEvent.slug) {
+    if (eventSlugParam === improEventSlug) {
       setIsExpanded(true);
       scrollToTarget();
       return;
     }
 
-    if (!eventSlug) {
+    if (!eventSlugParam) {
       setIsExpanded(isFirst);
       // window.scrollTo(0, 0);
     }
-  }, [eventSlug, improEvent.slug, setIsExpanded, isFirst]);
+  }, [eventSlugParam, improEventSlug, setIsExpanded, isFirst]);
 
   const handleExpandClick = useCallback(() => {
     if (!isExpanded) {
-      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, `${improEvent.slug}`);
+      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, `${improEventSlug}`);
     }
     setIsExpanded(!isExpanded);
-  }, [improEvent.slug, isExpanded]);
+  }, [improEventSlug, isExpanded]);
 
   const handleEventLinkClick = useCallback(() => {
-    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, `${improEvent.slug}`);
-  }, [improEvent.slug]);
+    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, `${improEventSlug}`);
+  }, [improEventSlug]);
 
   const handleOrganiseWebLinkClick = useCallback(() => {
     sendAnalyticsEvent(AnalyticsEvents.OrganiserWebsiteOpened, `${improEvent.organizers?.[0].id}`);
@@ -96,8 +98,8 @@ export const ImproEventCard = ({
     <div
       style={{
         backgroundColor: "#ffffff",
-        border: `${eventSlug === improEvent.slug ? "3px" : "1px"} solid ${
-          eventSlug === improEvent.slug ? "#dd2822" : "#220101"
+        border: `${eventSlugParam === improEventSlug ? "3px" : "1px"} solid ${
+          eventSlugParam === improEventSlug ? "#dd2822" : "#220101"
         }`,
         borderRadius: "8px",
         boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
@@ -269,7 +271,7 @@ export const ImproEventCard = ({
           <Container fluid style={{ padding: "0px 20px 12px 20px" }}>
             <Row>
               <Col xs={12} sm={{ order: 2, span: 3 }} style={{ paddingTop: "12px" }}>
-                <ShareButton eventLanguage={improEvent.language} slug={improEvent.slug} />
+                <ShareButton eventLanguage={improEvent.language} slug={improEventSlug} />
               </Col>
               <Col
                 xs={12}
