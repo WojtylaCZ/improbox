@@ -52,7 +52,7 @@ export const Main = () => {
       isMailFormExpanded
         ? AnalyticsEvents.EmailSubscribeFormCollapsed
         : AnalyticsEvents.EmailSubscribeFormExpanded,
-      "click"
+      {}
     );
     setIsMailFormExpanded(!isMailFormExpanded);
   }, [isMailFormExpanded]);
@@ -64,7 +64,7 @@ export const Main = () => {
       isPastEventsSectionExpanded
         ? AnalyticsEvents.PastEventsCollapsed
         : AnalyticsEvents.PastEventsExpanded,
-      "click"
+      {}
     );
     setIsPastEventsSectionExpanded(!isPastEventsSectionExpanded);
   }, [isPastEventsSectionExpanded]);
@@ -83,7 +83,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.PlaysSwitchedOnFilter
         : AnalyticsEvents.PlaysSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -93,7 +93,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.WorkshopsSwitchedOnFilter
         : AnalyticsEvents.WorkshopsSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -103,7 +103,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.JamsSwitchedOnFilter
         : AnalyticsEvents.JamsSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -113,7 +113,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.CourseworksSwitchedOnFilter
         : AnalyticsEvents.CourseworksSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -132,7 +132,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.PragueLocationSwitchedOnFilter
         : AnalyticsEvents.PragueLocationSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -145,7 +145,7 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.BohemiaLocationSwitchedOnFilter
         : AnalyticsEvents.BohemiaLocationSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
@@ -158,16 +158,17 @@ export const Main = () => {
       Boolean(event.target.checked)
         ? AnalyticsEvents.MoraviaAndSilesiaLocationSwitchedOnFilter
         : AnalyticsEvents.MoraviaAndSilesiaLocationSwitchedOffFilter,
-      String(event.target.checked)
+      { targetFilterChecked: String(event.target.checked) }
     );
   };
 
   const todayDate = Date.now();
 
-  const upcomingEvents = data.filter((district) => {
+  const upcomingEvents = data.filter((month) => {
     return (
-      Date.parse(district.monthDate) > todayDate ||
-      new Date(district.monthDate).getMonth() === new Date(todayDate).getMonth()
+      new Date(month.monthDate).getFullYear() >= new Date(todayDate).getFullYear() &&
+      (Date.parse(month.monthDate) > todayDate ||
+        new Date(month.monthDate).getMonth() === new Date(todayDate).getMonth())
     );
   });
 
@@ -175,10 +176,11 @@ export const Main = () => {
     return Date.parse(a.monthDate) - Date.parse(b.monthDate);
   });
 
-  const pastEvents = data.filter((district) => {
+  const pastEvents = data.filter((month) => {
     return (
-      Date.parse(district.monthDate) < todayDate ||
-      new Date(district.monthDate).getMonth() === new Date(todayDate).getMonth()
+      new Date(month.monthDate).getFullYear() < new Date(todayDate).getFullYear() &&
+      (Date.parse(month.monthDate) < todayDate ||
+        new Date(month.monthDate).getMonth() === new Date(todayDate).getMonth())
     );
   });
 

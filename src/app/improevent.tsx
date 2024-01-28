@@ -60,18 +60,20 @@ export const ImproEventCard = ({
 
   const handleExpandClick = useCallback(() => {
     if (!isExpanded) {
-      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, `${improEventSlug}`);
+      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, { improEventSlug: improEventSlug });
+    } else {
+      sendAnalyticsEvent(AnalyticsEvents.ImproEventCollapsed, { improEventSlug: improEventSlug });
     }
     setIsExpanded(!isExpanded);
   }, [improEventSlug, isExpanded]);
 
   const handleEventLinkClick = useCallback(() => {
-    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, `${improEventSlug}`);
+    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, { improEventSlug: improEventSlug });
   }, [improEventSlug]);
 
   const handleOrganiseWebLinkClick = useCallback(() => {
-    sendAnalyticsEvent(AnalyticsEvents.OrganiserWebsiteOpened, `${improEvent.organizers?.[0].id}`);
-  }, [improEvent.organizers]);
+    sendAnalyticsEvent(AnalyticsEvents.OrganiserWebsiteOpened, { improEventSlug: improEventSlug });
+  }, [improEventSlug]);
 
   const eventPlay = Date.parse(improEvent.playDate);
   const eventPlayDate = new Date(eventPlay);

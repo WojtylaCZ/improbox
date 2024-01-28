@@ -13,7 +13,7 @@ export const ShareButton = ({ eventLanguage, slug }: { eventLanguage: string; sl
   const link = `https://improbox.cz/${eventLanguage === "en" ? "en/" : ""}event/${slug}`;
 
   const handleShareButtonClick = useCallback(async () => {
-    sendAnalyticsEvent(AnalyticsEvents.ShareButtonClicked, `${slug}`);
+    sendAnalyticsEvent(AnalyticsEvents.ShareButtonClicked, { slug: slug });
 
     if (window.isSecureContext) {
       await navigator.clipboard.writeText(link);

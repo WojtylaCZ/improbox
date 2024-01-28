@@ -27,6 +27,8 @@ export const enum AnalyticsEvents {
   MoraviaAndSilesiaLocationSwitchedOffFilter = "MoraviaAndSilesiaLocationSwitchedOffFilter",
 
   ImproEventExpanded = "ImproEventExpanded",
+  ImproEventCollapsed = "ImproEventCollapsed",
+
   ImproEventLinkOpened = "ImproEventLinkOpened",
   OrganiserWebsiteOpened = "OrganiserWebsiteOpened",
   ShareButtonClicked = "ShareButtonClicked",
@@ -38,11 +40,11 @@ export const enum AnalyticsEvents {
   PastEventsCollapsed = "PastEventsCollapsed",
 }
 
-export const sendAnalyticsEvent = (eventName: AnalyticsEvents, eventParam: string) => {
-  ReactGA.event({
-    // action becomes the event name
-    action: eventName,
-    //  "event_category" becomes a custom parameter
-    category: eventParam,
+export const sendAnalyticsEvent = (
+  eventName: AnalyticsEvents,
+  eventPayload: { [eventParamName: string]: string | number }
+) => {
+  ReactGA.event(eventName, {
+    ...eventPayload,
   });
 };
