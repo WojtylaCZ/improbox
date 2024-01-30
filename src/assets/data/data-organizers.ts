@@ -338,7 +338,7 @@ export const organizersTable: Array<Organizer> = [
     language: "cs",
   },
   {
-    id: "improspace",
+    id: "michaelapuchalka",
     name: "Michaela Puchalka",
     websiteUrl: "www.improspace.com",
     facebookCalendarId: "Michaela Puchalka",
@@ -380,7 +380,7 @@ export const organizersTable: Array<Organizer> = [
     language: "cs",
   },
   {
-    id: "buresovakaterina",
+    id: "katerinaburesova",
     name: "Burešová Kateřina",
     websiteUrl: "www.buresovakaterina.cz",
     facebookCalendarId: "Kateřina Burešová",
