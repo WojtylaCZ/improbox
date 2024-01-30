@@ -44,7 +44,7 @@ const start = async () => {
       );
 
       if (!organizer) {
-        console.log(value);
+        console.log(value.organizer, value);
       }
 
       let eventName = value.summary;

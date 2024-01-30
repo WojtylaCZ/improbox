@@ -65,6 +65,8 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["PALÁC Liebieg", "Liberec"],
   ["DK Poklad", "Ostrava"],
   ["Praha", "Praha"],
+  ["Klub Klamovka DDM hl.m. Prahy", "Praha"],
+  ["Divadlo Na zábradlí", "Praha"],
 ]);
 
 export const organizersTable: Array<Organizer> = [
@@ -198,7 +200,7 @@ export const organizersTable: Array<Organizer> = [
     id: "bafni",
     name: "Bafni",
     websiteUrl: "www.bafni.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "Bafni - improvizační divadlo",
     language: "cs",
   },
   {
@@ -352,7 +354,7 @@ export const organizersTable: Array<Organizer> = [
     id: "skola21",
     name: "Škola 21",
     websiteUrl: "www.skola21.com",
-    facebookCalendarId: "",
+    facebookCalendarId: "Škola 21",
     language: "cs",
   },
   {
@@ -501,6 +503,13 @@ export const organizersTable: Array<Organizer> = [
     websiteUrl: "",
     facebookCalendarId: "Nick Ford",
     language: "en",
+  },
+  {
+    id: "plamenaci",
+    name: "Plameňáci",
+    websiteUrl: "www.plamenaci.cz",
+    facebookCalendarId: "Plameňáci",
+    language: "cs",
   },
 ];
 
@@ -2813,6 +2822,17 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         district: "Brno",
         language: "cs",
       },
+      {
+        id: "e294666156398900@facebook.com",
+        slugExtra: "",
+        name: "IMPROVIZACE k Osobnostnímu rozvoji",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/294666156398900/",
+        organizerIds: ["skola21"],
+        playDate: "2024-01-31",
+        district: "Praha",
+        language: "cs",
+      },
     ],
   },
   {
@@ -3048,9 +3068,37 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
     ],
   },
   {
+    monthName: "Květen",
+    monthDate: "2024-05",
+    events: [
+      {
+        id: "e1662837327580688@facebook.com",
+        slugExtra: "",
+        name: "Improvizační workshop pro začátečníky v Praze",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/1662837327580688/",
+        organizerIds: ["bafni"],
+        playDate: "2024-05-03",
+        district: "Praha",
+        language: "cs",
+      },
+    ],
+  },
+  {
     monthName: "Červenec",
     monthDate: "2024-07",
     events: [
+      {
+        id: "e369217108793362@facebook.com",
+        slugExtra: "",
+        name: "Letní improvizační tábor 2024",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/369217108793362/",
+        organizerIds: ["plamenaci"],
+        playDate: "2024-07-14",
+        district: "Středočeský kraj",
+        language: "cs",
+      },
       {
         id: "e1734322570413622@facebook.com",
         slugExtra: "",
