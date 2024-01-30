@@ -381,7 +381,7 @@ export const organizersTable: Array<Organizer> = [
   },
   {
     id: "katerinaburesova",
-    name: "Burešová Kateřina",
+    name: "Kateřina Burešová",
     websiteUrl: "www.buresovakaterina.cz",
     facebookCalendarId: "Kateřina Burešová",
     language: "cs",
