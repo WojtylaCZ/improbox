@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { EventType } from "../assets/data/data-improbox";
+import { EventType } from "../assets/data/types";
 
 export const getEventTypeColor = (eventType: EventType) => {
   switch (eventType) {

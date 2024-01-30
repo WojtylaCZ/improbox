@@ -4,7 +4,8 @@ import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors.png";
 import MailIcon from "../assets/img/mail.png";
 
-import { EventType, LocationFilter, data } from "../assets/data/data-improbox";
+import { LocationFilter, improEventsTable } from "../assets/data/data-improbox";
+import { EventType } from "../assets/data/types";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -36,7 +37,7 @@ export const Main = () => {
     if (locale && !supportedLocales.includes(locale)) {
       navigate("/", { replace: true });
     }
-    const slugs = data
+    const slugs = improEventsTable
       .flatMap((district) => district.events)
       .map((improEvent) => getImproEventSlug(improEvent));
 
@@ -164,7 +165,7 @@ export const Main = () => {
 
   const todayDate = Date.now();
 
-  const upcomingEvents = data.filter((month) => {
+  const upcomingEvents = improEventsTable.filter((month) => {
     return (
       new Date(month.monthDate).getFullYear() >= new Date(todayDate).getFullYear() &&
       (Date.parse(month.monthDate) > todayDate ||
@@ -176,7 +177,7 @@ export const Main = () => {
     return Date.parse(a.monthDate) - Date.parse(b.monthDate);
   });
 
-  const pastEvents = data.filter((month) => {
+  const pastEvents = improEventsTable.filter((month) => {
     return (
       new Date(month.monthDate).getFullYear() < new Date(todayDate).getFullYear() &&
       (Date.parse(month.monthDate) < todayDate ||

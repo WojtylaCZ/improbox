@@ -11,14 +11,13 @@ import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 import { ShareButton } from "./improevent/sharebutton";
 import { ImproEvent } from "../assets/data/types";
+import { organizersTable } from "../assets/data/data-improbox";
 
 export const getImproEventSlug = (improEvent: ImproEvent) => {
   return improEvent.playDate
     .concat("-")
     .concat(
-      improEvent.organizers.length
-        ? improEvent.organizers.map((org) => org.id).join("-")
-        : improEvent.eventType
+      improEvent.organizerIds.length ? improEvent.organizerIds.join("-") : improEvent.eventType
     )
     .concat(improEvent.slugExtra ? `-${improEvent.slugExtra}` : "");
 };
@@ -37,6 +36,9 @@ export const ImproEventCard = ({
   const ref = React.useRef<HTMLInputElement>(null);
 
   const improEventSlug = getImproEventSlug(improEvent);
+  const improEventOrganizers = improEvent.organizerIds.map((oId) => {
+    return organizersTable.find((o) => o.id === oId)!;
+  });
 
   const scrollToTarget = () => {
     if (ref && ref.current) {
@@ -243,9 +245,8 @@ export const ImproEventCard = ({
                     fontSize: "16px",
                   }}
                 >
-                  {improEvent.organizers && improEvent.organizers.length > 0
-                    ? improEvent.organizers.map((org) => org.name).join(" + ")
-                    : improEvent.name}
+                  {improEventOrganizers.length > 0 &&
+                    improEventOrganizers.map((org) => org.name).join(" + ")}
                 </h3>
               </div>
             </Col>
@@ -292,25 +293,25 @@ export const ImproEventCard = ({
                 style={{ paddingTop: "12px", display: "flex", alignItems: "center" }}
               >
                 <span style={{ fontSize: "smaller" }}>
-                  {improEvent.organizers && improEvent.organizers.length > 1
+                  {improEventOrganizers.length > 1
                     ? t("event.groupsWebsites")
                     : t("event.groupWebsite")}
 
-                  {improEvent.organizers && improEvent.organizers?.length === 1 && (
+                  {improEventOrganizers.length > 0 && improEventOrganizers.length === 1 && (
                     <a
-                      href={"http://" + improEvent.organizers[0].websiteUrl}
+                      href={"http://" + improEventOrganizers[0].websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#000000" }}
                       onClick={handleOrganiseWebLinkClick}
                     >
-                      {improEvent.organizers[0].websiteUrl}
+                      {improEventOrganizers[0].websiteUrl}
                     </a>
                   )}
 
-                  {improEvent.organizers && improEvent.organizers?.length > 1 && (
+                  {improEventOrganizers.length > 0 && improEventOrganizers.length > 1 && (
                     <>
-                      {improEvent.organizers.map((org, index) => {
+                      {improEventOrganizers.map((org, index) => {
                         return (
                           <span key={index.toString()}>
                             <a
@@ -322,7 +323,7 @@ export const ImproEventCard = ({
                             >
                               {org.websiteUrl}
                             </a>
-                            {index < improEvent.organizers!.length - 1 && <>&nbsp; + &nbsp;</>}
+                            {index < improEventOrganizers.length - 1 && <>&nbsp; + &nbsp;</>}
                           </span>
                         );
                       })}
