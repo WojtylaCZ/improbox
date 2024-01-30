@@ -27,7 +27,8 @@
     "deploy": "gh-pages -d build",
     "postbuild": "react-snap",
     "qr:generate": "ts-node src/tooling/qrcode-generator.ts",
-    "qr:validate": "ts-node src/tooling/qrcode-validator.ts"
+    "qr:validate": "ts-node src/tooling/qrcode-validator.ts",
+    "cal:generate": "ts-node src/tooling/ical-reader.ts"
   },
   "reactSnap": {
     "include": [
@@ -63,6 +64,7 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "jimp": "^0.22.10",
+    "node-ical": "^0.17.2",
     "qrcode": "^1.5.3",
     "qrcode-reader": "^1.0.4",
     "qrcode.react": "^3.1.0",
