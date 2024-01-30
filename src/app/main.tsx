@@ -223,10 +223,10 @@ export const Main = () => {
         style={{
           margin: "auto",
           maxWidth: "1400px",
-          height: "500px",
+          height: "400px",
           position: "relative",
           width: "100%",
-          backgroundImage: `url("https://uploads-ssl.webflow.com/6449ba271e8d58c3c47c1dce/64764a32d875dac6c84b98f6_desktop-hero-img.webp")`,
+          backgroundImage: `url("improbox2048.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
