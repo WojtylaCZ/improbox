@@ -4,8 +4,9 @@ import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors.png";
 import MailIcon from "../assets/img/mail.png";
 
-import { LocationFilter, improEventsTable } from "../assets/data/data-improbox";
+import { LocationFilter } from "../assets/data/data-improbox";
 import { EventType } from "../assets/data/types";
+import { improEventsTable } from "../assets/data/data-improevents";
 
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -179,7 +180,7 @@ export const Main = () => {
 
   const pastEvents = improEventsTable.filter((month) => {
     return (
-      new Date(month.monthDate).getFullYear() < new Date(todayDate).getFullYear() &&
+      new Date(month.monthDate).getFullYear() <= new Date(todayDate).getFullYear() &&
       (Date.parse(month.monthDate) < todayDate ||
         new Date(month.monthDate).getMonth() === new Date(todayDate).getMonth())
     );

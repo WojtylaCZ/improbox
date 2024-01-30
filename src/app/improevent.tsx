@@ -6,12 +6,12 @@ import { useTranslation } from "react-i18next";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import ExternalLink from "../assets/icons/external-link.png";
+import { ImproEvent } from "../assets/data/types";
+import { organizersTable } from "../assets/data/data-organizers";
 
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { getEventTypeColor, useEventTypeLabel } from "./event-type";
 import { ShareButton } from "./improevent/sharebutton";
-import { ImproEvent } from "../assets/data/types";
-import { organizersTable } from "../assets/data/data-improbox";
 
 export const getImproEventSlug = (improEvent: ImproEvent) => {
   return improEvent.playDate

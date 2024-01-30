@@ -1,7 +1,9 @@
 import ical, { CalendarComponent } from "node-ical";
 import { VEvent } from "node-ical";
+
 import { EventType, ImproEvent } from "../assets/data/types";
-import { LocationDistrictMapping, organizersTable } from "../assets/data/data-improbox";
+import { LocationDistrictMapping } from "../assets/data/data-improbox";
+import { organizersTable } from "../assets/data/data-organizers";
 
 function instanceOfVEvent(object: CalendarComponent): object is VEvent {
   return object.type === "VEVENT";
