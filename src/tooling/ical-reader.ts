@@ -11,16 +11,16 @@ function instanceOfVEvent(object: CalendarComponent): object is VEvent {
 
 function getEventType(name: string, description: string): EventType {
   if (
-    name.toLowerCase().indexOf("workshop") > 0 ||
-    name.toLowerCase().indexOf("seminář") > 0 ||
-    description.toLowerCase().indexOf("workshop") > 0 ||
-    description.toLowerCase().indexOf("seminář") > 0 ||
-    description.toLowerCase().indexOf("trénink") > 0
+    name.toLowerCase().indexOf("workshop") >= 0 ||
+    name.toLowerCase().indexOf("seminář") >= 0 ||
+    description.toLowerCase().indexOf("workshop") >= 0 ||
+    description.toLowerCase().indexOf("seminář") >= 0 ||
+    description.toLowerCase().indexOf("trénink") >= 0
   ) {
     return "workshop";
   }
 
-  if (name.toLowerCase().indexOf("jam") > 0 || description.toLowerCase().indexOf("jam") > 0) {
+  if (name.toLowerCase().indexOf("jam") >= 0 || description.toLowerCase().indexOf("jam") >= 0) {
     return "jam";
   }
 
