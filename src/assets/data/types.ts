@@ -1,4 +1,4 @@
-import { Districts } from "./data-improbox";
+import { Districts } from "./data-locations";
 
 export type District = keyof typeof Districts;
 

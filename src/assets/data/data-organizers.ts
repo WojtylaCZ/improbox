@@ -292,7 +292,7 @@ export const organizersTable: Array<Organizer> = [
     id: "kopr",
     name: "K.Op.R",
     websiteUrl: "www.facebook.com/improkopr",
-    facebookCalendarId: "",
+    facebookCalendarId: "KOPR",
     language: "cs",
   },
   {
@@ -447,6 +447,13 @@ export const organizersTable: Array<Organizer> = [
     name: "Mariana Zacharová",
     websiteUrl: "",
     facebookCalendarId: "Mariana Zacharová",
+    language: "cs",
+  },
+  {
+    id: "petraandrasik",
+    name: "Petra Andrášik",
+    websiteUrl: "www.zazemi.org",
+    facebookCalendarId: "Petra Andrášik",
     language: "cs",
   },
 ];

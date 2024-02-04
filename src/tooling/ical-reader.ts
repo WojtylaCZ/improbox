@@ -2,8 +2,9 @@ import ical, { CalendarComponent } from "node-ical";
 import { VEvent } from "node-ical";
 
 import { EventType, ImproEvent } from "../assets/data/types";
-import { LocationDistrictMapping } from "../assets/data/data-improbox";
+import { LocationDistrictMapping } from "../assets/data/data-locations";
 import { organizersTable } from "../assets/data/data-organizers";
+import { improEventsTable } from "../assets/data/data-improevents";
 
 function instanceOfVEvent(object: CalendarComponent): object is VEvent {
   return object.type === "VEVENT";
@@ -28,16 +29,18 @@ function getEventType(name: string, description: string): EventType {
 }
 
 const start = async () => {
-  const webEvents = await ical.async.fromURL(
+  const fbCalendarEvents = await ical.async.fromURL(
     "https://www.facebook.com/events/ical/upcoming/?uid=61550443238678&key=3hQqHGCWAxbX2nBh"
   );
 
-  const events: Array<ImproEvent> = [];
+  const newImproboxEvents: Array<ImproEvent> = [];
 
-  Object.entries(webEvents).forEach(([key, value]) => {
+  const unknownDataEventIds: Set<string> = new Set();
+
+  Object.entries(fbCalendarEvents).forEach(([key, value]) => {
     if (instanceOfVEvent(value)) {
       if (!LocationDistrictMapping.get(value.location)) {
-        console.log(value.location, value);
+        unknownDataEventIds.add(key);
       }
 
       const organizer = organizersTable.find(
@@ -46,7 +49,7 @@ const start = async () => {
       );
 
       if (!organizer) {
-        console.log(value.organizer, value);
+        unknownDataEventIds.add(key);
       }
 
       let eventName = value.summary;
@@ -61,7 +64,7 @@ const start = async () => {
         eventName = eventName.concat(" (EN)");
       }
 
-      events.push({
+      newImproboxEvents.push({
         id: value.uid,
         slugExtra: "",
         name: eventName,
@@ -76,10 +79,28 @@ const start = async () => {
     }
   });
 
-  events.sort((a, b) => Date.parse(a.playDate) - Date.parse(b.playDate));
-  console.log(events);
+  newImproboxEvents.sort((a, b) => Date.parse(a.playDate) - Date.parse(b.playDate));
 
-  const value = webEvents["e1326994691323483@facebook.com"];
+  const alreadyTrackedEventIds = new Set(
+    improEventsTable.flatMap((month) => month.events).flatMap((event) => event.id)
+  );
+
+  console.log("New events:");
+  const newEvents = newImproboxEvents.filter((event) => !alreadyTrackedEventIds.has(event.id));
+  console.log(newEvents);
+
+  const unknownDataNewEvents = newEvents.filter((event) => unknownDataEventIds.has(event.id));
+
+  const unknownDataOriginalCalendarEvents = unknownDataNewEvents.map((event) => {
+    return fbCalendarEvents[event.id];
+  });
+
+  if (unknownDataOriginalCalendarEvents.length > 0) {
+    console.log("Unknown location or organizer:");
+    console.log(unknownDataOriginalCalendarEvents.forEach((e) => console.log(e)));
+  }
+
+  const value = fbCalendarEvents["e1326994691323483@facebook.com"];
   if (instanceOfVEvent(value)) {
     const event = {
       id: value.uid,

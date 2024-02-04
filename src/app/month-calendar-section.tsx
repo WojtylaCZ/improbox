@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { ImproEventCard, getImproEventSlug } from "./improevent";
-import { Districts, LocationFilter } from "../assets/data/data-improbox";
+import { Districts, LocationFilter } from "../assets/data/data-locations";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
 import { EventTypeFilters, LocationFilters } from "./main";

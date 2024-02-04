@@ -4,7 +4,7 @@ import { MonthCalendarSection } from "./month-calendar-section";
 import Actors from "../assets/img/actors.png";
 import MailIcon from "../assets/img/mail.png";
 
-import { LocationFilter } from "../assets/data/data-improbox";
+import { LocationFilter } from "../assets/data/data-locations";
 import { EventType } from "../assets/data/types";
 import { improEventsTable } from "../assets/data/data-improevents";
 
