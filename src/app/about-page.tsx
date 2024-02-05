@@ -45,8 +45,20 @@ export const AboutPage = () => {
               after
             </Trans>
           </span>
-
           <br />
+
+          <span>
+            <Trans i18nKey="text.introLineKosile">
+              before
+              <a href={"https://www.kosileoduhlire.cz"} target="_blank" rel="noopener noreferrer">
+                wwww.kosileoduhlire.cz
+              </a>
+              after
+            </Trans>
+          </span>
+          <br />
+          <LineSeparator />
+
           <span>
             <Trans i18nKey="text.alsoMade">
               before
