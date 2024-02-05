@@ -1,7 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { Button, Col, Collapse, Container, Form, Image, Row, Stack } from "react-bootstrap";
 import { MonthCalendarSection } from "./month-calendar-section";
-import Actors from "../assets/img/actors.png";
 import MailIcon from "../assets/img/mail.png";
 
 import { LocationFilter } from "../assets/data/data-locations";
@@ -10,7 +9,7 @@ import { improEventsTable } from "../assets/data/data-improevents";
 
 import { useNavigate, useParams } from "react-router-dom";
 
-import { useTranslation, Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { HeaderBar } from "./header-bar";
 import { supportedLocales } from "./i18n";
 import { FooterBar } from "./footer-bar";
@@ -19,6 +18,9 @@ import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { ImproeventLinkToastProvider } from "./improventlink-toast";
 import { getImproEventSlug } from "./improevent";
+import { PageContent } from "./page-content";
+import { PageHeaderImage } from "./page-header-image";
+import { LineSeparator } from "./line-separator";
 
 export type LocationFilters = {
   [LocationFilter.Praha]: boolean;
@@ -219,49 +221,9 @@ export const Main = () => {
   return (
     <>
       <HeaderBar />
-      <div
-        style={{
-          margin: "auto",
-          maxWidth: "1400px",
-          height: "400px",
-          position: "relative",
-          width: "100%",
-          backgroundImage: `url("improbox2048.jpg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-          borderRadius: "0px 0px 12px 12px",
-          boxShadow: "0px 8px 8px 0px rgba(0, 0, 0, 0.10)",
-        }}
-      >
-        <h1
-          style={{
-            color: "#ffffff",
-            textAlign: "center",
-            fontFamily: "Jockey One",
-            zIndex: "10",
-            position: "absolute",
-            left: "0px",
-            bottom: "8%",
-            right: "0px",
-            fontSize: "calc(0.975rem + 1.2vw)",
-          }}
-        >
-          {t("titles.mainH1")}
-        </h1>
-      </div>
+      <PageHeaderImage />
 
-      <Stack
-        gap={4}
-        style={{
-          alignItems: "center",
-          width: "95%",
-          margin: "auto",
-          maxWidth: "690px",
-          marginBottom: "44px",
-          marginTop: "16px",
-        }}
-      >
+      <PageContent>
         <div style={{ width: "100%" }}>
           <div
             style={{
@@ -315,15 +277,7 @@ export const Main = () => {
                 Načítání…
               </iframe>
             </Collapse>
-            <hr
-              style={{
-                width: "110px",
-                color: "#dd2822",
-                border: 0,
-                borderTop: "1px solid",
-                opacity: "90%",
-              }}
-            />
+            <LineSeparator />
           </div>
           <Container fluid>
             <Row> {t("text.filters")}</Row>
@@ -479,73 +433,8 @@ export const Main = () => {
           </Collapse>
         </ImproeventLinkToastProvider>
 
-        <hr
-          style={{
-            width: "110px",
-            color: "#dd2822",
-            border: 0,
-            borderTop: "1px solid",
-            opacity: "90%",
-          }}
-        />
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <h2
-            style={{
-              fontFamily: "Jockey One",
-              marginBottom: "24px",
-              fontSize: "calc(1.775rem + 1.1vw)",
-            }}
-          >
-            {t("titles.contactH2")}
-          </h2>
-          <span style={{ textAlign: "center" }}>
-            <Trans i18nKey="text.madeBy">
-              before
-              <a
-                href={"https://www.facebook.com/WojtylaCZ/"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Vojtěch Uhlíř
-              </a>
-              after
-            </Trans>
-          </span>
-          <br />
-          <span style={{ textAlign: "center" }}>
-            <Trans i18nKey="text.alsoMade">
-              before
-              <a href={"https://www.prispevkynabezky.cz"} target="_blank" rel="noopener noreferrer">
-                Vojtěch Uhlíř
-              </a>
-              after
-            </Trans>
-          </span>
-        </div>
-      </Stack>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Image
-          src={Actors}
-          alt="Theather actors siluetes."
-          style={{
-            maxWidth: "300px",
-            width: "100%",
-          }}
-        />
-      </div>
+        <LineSeparator />
+      </PageContent>
       <FooterBar />
     </>
   );

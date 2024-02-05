@@ -1,7 +1,12 @@
 {
+  "menu": {
+    "events": "Events lineup",
+    "about": "About"
+  },
   "titles": {
     "mainH1": "Summary board of improv events in Czechia",
-    "contactH2": "Contact",
+    "aboutH2": "Contact",
+
     "error": "Too much impro here.",
     "jumpHome": "Go to homepage",
     "showPastEvents": "Show past events",
@@ -17,7 +22,10 @@
     "eventTypeFilters": "By event type: ",
     "eventLocationFilters": "By event location: ",
     "madeBy": "This web was created by <1>Vojtěch Uhlíř</1>, an improv actor and a software engineer.",
-    "alsoMade": "Do you x-country ski during the winter? Check out <1>www.prispevkynabezky.cz</1>! Web that makes donation for x-country ski trails maintance easy I also made."
+    "alsoMade": "Do you x-country ski during the winter? Check out <1>www.prispevkynabezky.cz</1>! Web that makes donation for x-country ski trails maintance easy I also made.",
+
+    "footerLine2": "Is there something wrong or missing?",
+    "footerLine3": "Write us and get in touch! ✍️"
   },
   "event": {
     "groupWebsite": "Website of the group: ",

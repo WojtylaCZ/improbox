@@ -2584,7 +2584,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e1725537844581999@facebook.com",
-        slugExtra: "",
+        slugExtra: "1",
         name: "Improv Workshop - Following the Story! (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1725537844581999/",
@@ -2595,7 +2595,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "1",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Improv Jam (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/1064318417938857",
@@ -2624,17 +2624,6 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         organizerIds: ["imjoy"],
         playDate: "2024-01-17",
         district: "Liberec",
-        language: "cs",
-      },
-      {
-        id: "e1983885348679611@facebook.com",
-        slugExtra: "",
-        name: "VYPRODÁNO: Studio Pade na Pade: Tři",
-        eventType: "play",
-        websiteUrl: "https://www.facebook.com/events/1983885348679611/",
-        organizerIds: ["padenapade"],
-        playDate: "2024-01-19",
-        district: "Praha",
         language: "cs",
       },
       {

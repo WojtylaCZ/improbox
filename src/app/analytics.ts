@@ -5,6 +5,12 @@ export const initAnalytics = () => {
 };
 
 export const enum AnalyticsEvents {
+  MenuBrandClicked = "MenuBrandClicked",
+  MenuEventsClicked = "MenuEventsClicked",
+  MenuAboutClicked = "MenuAboutClicked",
+
+  LanguageChanged = "LanguageChanged",
+
   PlaysSwitchedOnFilter = "PlaysSwitchedOnFilter",
   PlaysSwitchedOffFilter = "PlaysSwitchedOffFilter",
 

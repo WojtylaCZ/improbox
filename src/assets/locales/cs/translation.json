@@ -1,7 +1,12 @@
 {
+  "menu": {
+    "events": "Program akcí",
+    "about": "O webu"
+  },
   "titles": {
     "mainH1": "Přehled impro akcí v Česku",
-    "contactH2": "Kontakt",
+    "aboutH2": "Kontakt",
+
     "error": "Tady se improvizavalo až moc.",
     "jumpHome": "Přejít na začátek",
     "showPastEvents": "Zobrazit uplynulé akce",
@@ -17,7 +22,10 @@
     "eventTypeFilters": "Dle typu: ",
     "eventLocationFilters": "Dle lokace: ",
     "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor.",
-    "alsoMade": "Jezdíte v zimě na běžkách? Koukněte na <1>www.prispevkynabezky.cz</1>! Web, který usnadňuje příspěvky na úpravu běžeckých tratí, jehož jsem také autorem."
+    "alsoMade": "Jezdíte v zimě na běžkách? Koukněte na <1>www.prispevkynabezky.cz</1>! Web, který usnadňuje příspěvky na úpravu běžeckých tratí, jehož jsem také autorem.",
+
+    "footerLine2": "Je něco špatně nebo něco chybí?",
+    "footerLine3": "Napište a dejte vědet! ✍️"
   },
   "event": {
     "groupWebsite": "Web souboru: ",
