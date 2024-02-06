@@ -31,6 +31,7 @@
     "cal:generate": "ts-node src/tooling/ical-reader.ts"
   },
   "reactSnap": {
+    "skipThirdPartyRequests": true,
     "include": [
       "/en",
       "/cs"
