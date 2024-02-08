@@ -1,9 +1,12 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 
 import { sendAnalyticsEvent, AnalyticsEvents } from "./analytics";
 import { SelectLocaleDropdown } from "./select-locale-dropdown";
+
+import FbIcon from "../assets/img/fb.png";
+import IgIcon from "../assets/img/ig.png";
 
 export const HeaderBar = () => {
   const { t } = useTranslation();
@@ -62,8 +65,32 @@ export const HeaderBar = () => {
             >
               {t("menu.about")}
             </Nav.Link>
-            <Nav.Item style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <SelectLocaleDropdown />
+            <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
+              <div
+                className="d-flex justify-content-center align-items-center"
+                style={{ height: "40px" }}
+              >
+                <SelectLocaleDropdown />
+              </div>
+            </Nav.Item>
+            <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
+              <div
+                className="d-flex justify-content-center align-items-center pb-1"
+                style={{ height: "40px" }}
+              >
+                <a href={"https://www.facebook.com/improbox.cz"}>
+                  <Image
+                    src={FbIcon}
+                    alt="Facebook"
+                    width="20px"
+                    height="22px"
+                    style={{ marginRight: "10px" }}
+                  />
+                </a>
+                <a href={"https://www.instagram.com/improbox.cz"}>
+                  <Image src={IgIcon} alt="Instagram" width="20px" height="22px" />
+                </a>
+              </div>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

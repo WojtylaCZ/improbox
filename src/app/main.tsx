@@ -279,7 +279,7 @@ export const Main = () => {
             </Collapse>
             <LineSeparator />
           </div>
-          <Container fluid>
+          <Container id="akce" fluid>
             <Row> {t("text.filters")}</Row>
             <Row>
               <Col xs={4} sm={3}>
