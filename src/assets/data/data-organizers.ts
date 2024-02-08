@@ -47,7 +47,7 @@ export const organizersTable: Array<Organizer> = [
     id: "polocasnapadu",
     name: "Poločas nápadu",
     websiteUrl: "www.polocas-napadu.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "Poločas nápadu",
     language: "cs",
   },
   {
@@ -306,7 +306,7 @@ export const organizersTable: Array<Organizer> = [
     id: "minimpromalismus",
     name: "Minimpromalismus",
     websiteUrl: "www.facebook.com/minimpromalismus",
-    facebookCalendarId: "",
+    facebookCalendarId: "Minimpromalismus",
     language: "cs",
   },
   {
