@@ -456,4 +456,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Petra Andrášik",
     language: "cs",
   },
+  {
+    id: "monikanevolova",
+    name: "Monika Nevolová ",
+    websiteUrl: "umenivpraci.cz",
+    facebookCalendarId: "Monika Mondieu Nevolová",
+    language: "cs",
+  },
 ];

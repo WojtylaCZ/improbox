@@ -32,7 +32,7 @@ export const ImproEventCard = ({
   const { t } = useTranslation();
 
   const { eventSlug: eventSlugParam } = useParams();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const ref = React.useRef<HTMLInputElement>(null);
 
   const improEventSlug = getImproEventSlug(improEvent);
@@ -55,7 +55,7 @@ export const ImproEventCard = ({
     }
 
     if (!eventSlugParam) {
-      setIsExpanded(isFirst);
+      // setIsExpanded(isFirst);
       // window.scrollTo(0, 0);
     }
   }, [eventSlugParam, improEventSlug, setIsExpanded, isFirst]);
