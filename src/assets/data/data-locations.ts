@@ -80,4 +80,5 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["A studio Rubín", "Praha"],
   ["Ekocentrum PALETA", "Pardubice"],
   ["DDM spirala", "Praha"],
+  ["Kaštan - Scéna Unijazzu", "Praha"],
 ]);

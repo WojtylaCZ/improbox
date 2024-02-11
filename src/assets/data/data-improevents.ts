@@ -3255,6 +3255,17 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         language: "cs",
       },
       {
+        id: "e3710991679118838@facebook.com",
+        slugExtra: "",
+        name: "Dort v Kapse - Láska imprem začíná",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/3710991679118838/",
+        organizerIds: ["dortvkapse"],
+        playDate: "2024-03-02",
+        district: "Praha",
+        language: "cs",
+      },
+      {
         id: "e754120499941421@facebook.com",
         slugExtra: "",
         name: "reprízy 🌟 𝘿𝙀𝙐𝙎 𝙀𝙓 𝙈𝙄𝙆𝙍𝙊𝙁𝙊𝙉𝘼 🌟",
