@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 
-import Actors from "../assets/img/actors.png";
+import Actors from "./../../assets/img/actors.png";
 
 export const FooterBar = () => {
   return (

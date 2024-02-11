@@ -17,7 +17,7 @@ import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
 import { ImproeventLinkToastProvider } from "./improventlink-toast";
 import { getImproEventSlug } from "./improevent";
 import { LineSeparator } from "./line-separator";
-import { PageLayout } from "./page-layout";
+import { PageLayout } from "./page-structure/page-layout";
 
 export type LocationFilters = {
   [LocationFilter.Praha]: boolean;

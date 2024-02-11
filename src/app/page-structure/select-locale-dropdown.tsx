@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { fallbackLocale, supportedLocales } from "./i18n";
-import { sendAnalyticsEvent, AnalyticsEvents } from "./analytics";
+import { fallbackLocale, supportedLocales } from "../i18n";
+import { sendAnalyticsEvent, AnalyticsEvents } from "../analytics";
 
 export const SelectLocaleDropdown = () => {
   const { i18n } = useTranslation();

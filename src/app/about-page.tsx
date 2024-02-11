@@ -1,7 +1,7 @@
 import { Trans, useTranslation } from "react-i18next";
 
 import { LineSeparator } from "./line-separator";
-import { PageLayout } from "./page-layout";
+import { PageLayout } from "./page-structure/page-layout";
 
 export const AboutPage = () => {
   const { t } = useTranslation();

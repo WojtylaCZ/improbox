@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { PageLayout } from "./page-layout";
+import { PageLayout } from "./page-structure/page-layout";
 import { Stack } from "react-bootstrap";
 
 export const ForOrganisersPage = () => {

@@ -2,11 +2,11 @@ import { Navbar, Container, Nav, Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 
-import { sendAnalyticsEvent, AnalyticsEvents } from "./analytics";
+import { sendAnalyticsEvent, AnalyticsEvents } from "../analytics";
 import { SelectLocaleDropdown } from "./select-locale-dropdown";
 
-import FbIcon from "../assets/img/fb.png";
-import IgIcon from "../assets/img/ig.png";
+import FbIcon from "./../../assets/img/fb.png";
+import IgIcon from "./../../assets/img/ig.png";
 
 export const HeaderBar = () => {
   const { t } = useTranslation();
