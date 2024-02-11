@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Col, Collapse, Container, Row, Image } from "react-bootstrap";
+import { Col, Collapse, Container, Row, Image, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -32,7 +32,7 @@ export const ImproEventCard = ({
   const { t } = useTranslation();
 
   const { eventSlug: eventSlugParam } = useParams();
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
 
   const improEventSlug = getImproEventSlug(improEvent);
@@ -84,31 +84,6 @@ export const ImproEventCard = ({
   // past event is 24 hours old
   const isPastEvent = eventPlay < todayDate - 86400000;
 
-  const dayNames = [
-    t("dataLabels.sunday"),
-    t("dataLabels.monday"),
-    t("dataLabels.tuesday"),
-    t("dataLabels.wednesday"),
-    t("dataLabels.thursday"),
-    t("dataLabels.friday"),
-    t("dataLabels.saturday"),
-  ];
-
-  const monthNames = [
-    t("dataLabels.januaryShort"),
-    t("dataLabels.februaryShort"),
-    t("dataLabels.marchShort"),
-    t("dataLabels.aprilShort"),
-    t("dataLabels.mayShort"),
-    t("dataLabels.juneShort"),
-    t("dataLabels.julyShort"),
-    t("dataLabels.augustShort"),
-    t("dataLabels.septemberShort"),
-    t("dataLabels.octoberShort"),
-    t("dataLabels.novemberShort"),
-    t("dataLabels.decemberShort"),
-  ];
-
   return (
     <div
       style={{
@@ -126,48 +101,40 @@ export const ImproEventCard = ({
       <div style={{ padding: "12px 8px" }}>
         <Container fluid>
           <Row>
-            <Col xs={8} sm={3}>
+            <Col xs={8} sm={3} md={2}>
               {/* DATE */}
 
-              <a
-                href={improEvent.websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-                onClick={handleEventLinkClick}
-              >
-                <div style={{ display: "flex", cursor: "pointer" }}>
+              <div style={{ display: "flex" }}>
+                <span
+                  style={{
+                    marginRight: "6px",
+                    marginTop: "12px",
+                    fontSize: "12px",
+                    color: isPastEvent ? "#aaa8a8" : undefined, //default color,
+                  }}
+                >
+                  {t(`dataLabels.weekDays.${new Date(eventPlayDate).getDay()}.shortName`)}
+                </span>
+                <div style={{ display: "flex", alignItems: "baseline" }}>
                   <span
                     style={{
-                      marginRight: "6px",
-                      marginTop: "12px",
-                      fontSize: "12px",
+                      fontSize: "40px",
                       color: isPastEvent ? "#aaa8a8" : undefined, //default color,
                     }}
                   >
-                    {dayNames[eventPlayDate.getDay()]}
+                    {eventPlayDate.getDate()}
                   </span>
-                  <div style={{ display: "flex", alignItems: "baseline" }}>
-                    <span
-                      style={{
-                        fontSize: "40px",
-                        color: isPastEvent ? "#aaa8a8" : undefined, //default color,
-                      }}
-                    >
-                      {eventPlayDate.getDate()}
-                    </span>
-                    <span
-                      style={{
-                        marginLeft: "4px",
-                        fontSize: "12",
-                        color: isPastEvent ? "#aaa8a8" : undefined, //default color
-                      }}
-                    >
-                      {monthNames[eventPlayDate.getMonth()]}
-                    </span>
-                  </div>
+                  <span
+                    style={{
+                      marginLeft: "4px",
+                      fontSize: "12",
+                      color: isPastEvent ? "#aaa8a8" : undefined, //default color
+                    }}
+                  >
+                    {t(`dataLabels.months.${eventPlayDate.getMonth() + 1}.shortName`)}
+                  </span>
                 </div>
-              </a>
+              </div>
             </Col>
 
             <Col xs={4} sm={{ span: 2, order: 2 }}>
@@ -185,7 +152,7 @@ export const ImproEventCard = ({
                   style={{
                     display: "flex",
                     padding: "4px 8px",
-                    alignSelf: "flex-end",
+                    alignSelf: "center",
                     borderRadius: "4px",
                     backgroundColor: `${getEventTypeColor(improEvent.eventType)}`,
                     fontSize: "12px",
@@ -200,7 +167,7 @@ export const ImproEventCard = ({
                     marginTop: "6px",
                     display: "flex",
                     paddingRight: "8px",
-                    alignSelf: "flex-end",
+                    alignSelf: "center",
                     color: "#000000",
                     fontSize: "12px",
                     textAlign: "right",
@@ -211,9 +178,16 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={10} sm={{ span: 6, order: 1 }}>
+            <Col xs={8} sm={{ span: 4, order: 1 }} md={{ span: 5, order: 1 }}>
               {/* EVENT NAME */}
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
                 <div>
                   <a
                     href={improEvent.websiteUrl}
@@ -227,16 +201,6 @@ export const ImproEventCard = ({
                     onClick={handleEventLinkClick}
                   >
                     {improEvent.name}
-                    <Image
-                      src={ExternalLink}
-                      alt="External link icon."
-                      style={{
-                        marginLeft: "8px",
-                        marginBottom: "4px",
-                        maxWidth: "12px",
-                        opacity: "0.4",
-                      }}
-                    />
                   </a>
                 </div>
                 <h3
@@ -251,27 +215,61 @@ export const ImproEventCard = ({
               </div>
             </Col>
 
-            <Col xs={2} sm={{ span: 1, order: 3 }}>
+            <Col xs={4} sm={{ span: 3, order: 3 }}>
               {/* CHEVRON */}
-
               <div
-                onClick={handleExpandClick}
                 style={{
                   display: "flex",
                   justifyContent: "flex-end",
-                  width: "100%",
-                  height: "100%",
-                  cursor: "pointer",
                 }}
               >
                 <div
                   style={{
-                    width: "10px",
-                    alignSelf: "center",
-                    marginRight: "2px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                  <Button
+                    variant="outline-dark"
+                    size="sm"
+                    href={improEvent.websiteUrl}
+                    onClick={handleEventLinkClick}
+                  >
+                    {t("event.openEventLink")}
+                    <Image
+                      src={ExternalLink}
+                      alt="External link icon."
+                      style={{
+                        marginLeft: "8px",
+                        marginBottom: "4px",
+                        maxWidth: "12px",
+                        opacity: "0.4",
+                      }}
+                    />
+                  </Button>
+                  <div
+                    onClick={handleExpandClick}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginTop: "8px",
+                    }}
+                  >
+                    <span style={{ fontSize: "small" }}> {t("event.more")}</span>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        width: "10px",
+                        marginLeft: "8px",
+                      }}
+                    >
+                      {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                    </div>
+                  </div>
                 </div>
               </div>
             </Col>
@@ -284,12 +282,11 @@ export const ImproEventCard = ({
 
           <Container fluid style={{ padding: "0px 20px 12px 20px" }}>
             <Row>
-              <Col xs={12} sm={{ order: 2, span: 3 }} style={{ paddingTop: "12px" }}>
-                <ShareButton eventLanguage={improEvent.language} slug={improEventSlug} />
-              </Col>
+              <Col xs={0} sm={{ order: 1, span: 3 }} md={{ order: 1, span: 2 }}></Col>
               <Col
                 xs={12}
-                sm={{ order: 1, span: 9 }}
+                sm={{ order: 2, span: 6 }}
+                md={{ order: 2, span: 7 }}
                 style={{ paddingTop: "12px", display: "flex", alignItems: "center" }}
               >
                 <span style={{ fontSize: "smaller" }}>
@@ -330,6 +327,16 @@ export const ImproEventCard = ({
                     </>
                   )}
                 </span>
+              </Col>
+              <Col xs={12} sm={{ order: 3, span: 3 }} style={{ paddingTop: "12px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  <ShareButton eventLanguage={improEvent.language} slug={improEventSlug} />
+                </div>
               </Col>
             </Row>
           </Container>

@@ -32,7 +32,7 @@
     "mailButton": "I want to subscribe for new events and updates",
     "filters": "Filters: ",
     "eventTypeFilters": "By event type: ",
-    "eventLocationFilters": "By event location: ",
+    "eventLocationFilters": "By location: ",
     "madeBy": "This web was created by <1>Vojtěch Uhlíř</1>, an improv actor and a software engineer.",
     "alsoMade": "Do you x-country ski during the winter? Check out <1>www.prispevkynabezky.cz</1>! Web that makes donation for x-country ski trails maintance easy I also made.",
 
@@ -40,6 +40,8 @@
     "footerLine3": "Write us and get in touch! ✍️"
   },
   "event": {
+    "openEventLink": "Go to the event",
+    "more": "More...",
     "groupWebsite": "Website of the group: ",
     "groupsWebsites": "Websites of the groups: ",
     "shareEvent": "Copy event link"
@@ -56,36 +58,30 @@
     "Prague": "Prague",
     "Bohemia": "Bohemia without Prague",
     "MoraviaAndSilesia": "Moravia and Silesia",
-    "monday": "Mo",
-    "tuesday": "Tu",
-    "wednesday": "We",
-    "thursday": "Th",
-    "friday": "Fr",
-    "saturday": "Sa",
-    "sunday": "Su",
-    "januaryShort": "Jan",
-    "februaryShort": "Feb",
-    "marchShort": "Mar",
-    "aprilShort": "Apr",
-    "mayShort": "May",
-    "juneShort": "Jun",
-    "julyShort": "Jul",
-    "augustShort": "Aug",
-    "septemberShort": "Sep",
-    "octoberShort": "Oct",
-    "novemberShort": "Nov",
-    "decemberShort": "Dec",
-    "january": "January",
-    "february": "February",
-    "march": "March",
-    "april": "April",
-    "may": "May",
-    "june": "June",
-    "july": "July",
-    "august": "August",
-    "september": "September",
-    "october": "October",
-    "november": "November",
-    "december": "December"
+
+    "weekDays": {
+      "0": { "shortName": "Su" },
+      "1": { "shortName": "Mo" },
+      "2": { "shortName": "Tu" },
+      "3": { "shortName": "We" },
+      "4": { "shortName": "Th" },
+      "5": { "shortName": "Fr" },
+      "6": { "shortName": "Sa" }
+    },
+
+    "months": {
+      "1": { "longName": "January", "shortName": "Jan" },
+      "2": { "longName": "February", "shortName": "Feb" },
+      "3": { "longName": "March", "shortName": "Mar" },
+      "4": { "longName": "April", "shortName": "Apr" },
+      "5": { "longName": "May", "shortName": "May" },
+      "6": { "longName": "June", "shortName": "Jun" },
+      "7": { "longName": "July", "shortName": "Jul" },
+      "8": { "longName": "August", "shortName": "Aug" },
+      "9": { "longName": "September", "shortName": "Sep" },
+      "10": { "longName": "October", "shortName": "Oct" },
+      "11": { "longName": "November", "shortName": "Nov" },
+      "12": { "longName": "December", "shortName": "Dec" }
+    }
   }
 }

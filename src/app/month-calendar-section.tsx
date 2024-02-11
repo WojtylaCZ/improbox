@@ -6,6 +6,7 @@ import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
 import { EventTypeFilters, LocationFilters } from "./main";
 import { MonthEventsCalendar } from "../assets/data/types";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   monthSection: MonthEventsCalendar;
@@ -23,6 +24,8 @@ export const MonthCalendarSection = ({
   isForUpcomingEvents,
   filters,
 }: Props) => {
+  const { t } = useTranslation();
+
   const todayDate = Date.now();
 
   const monthDate = Date.parse(monthSection.monthDate);
@@ -87,7 +90,7 @@ export const MonthCalendarSection = ({
           fontSize: "calc(1.075rem + 1.1vw)",
         }}
       >
-        {monthSection.monthName}
+        {t(`dataLabels.months.${new Date(monthDate).getMonth() + 1}.longName`)}
       </h2>
       <div
         style={{

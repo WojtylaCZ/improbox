@@ -21,7 +21,7 @@ export const HeaderBar = () => {
       collapseOnSelect
       style={{ backgroundColor: "#000000" }}
     >
-      <Container style={{ maxWidth: "850px" }}>
+      <Container style={{ maxWidth: "1080px" }}>
         <Navbar.Brand
           className="pt-3"
           href={`/${localeParam ? localeParam : ""}`}

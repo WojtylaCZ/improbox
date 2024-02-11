@@ -39,6 +39,8 @@
     "footerLine3": "Napište a dejte vědet! ✍️"
   },
   "event": {
+    "openEventLink": "Zobrazit událost",
+    "more": "Více...",
     "groupWebsite": "Web souboru: ",
     "groupsWebsites": "Weby souborů: ",
     "shareEvent": "Získat odkaz"
@@ -55,36 +57,30 @@
     "Prague": "Praha",
     "Bohemia": "Čechy bez Prahy",
     "MoraviaAndSilesia": "Morava a Slezsko",
-    "monday": "Po",
-    "tuesday": "Út",
-    "wednesday": "St",
-    "thursday": "Čt",
-    "friday": "Pá",
-    "saturday": "So",
-    "sunday": "Ne",
-    "januaryShort": "Led.",
-    "februaryShort": "Úno.",
-    "marchShort": "Bře.",
-    "aprilShort": "Dub.",
-    "mayShort": "Kvě.",
-    "juneShort": "Čvn.",
-    "julyShort": "Čvc.",
-    "augustShort": "Srp.",
-    "septemberShort": "Zář.",
-    "octoberShort": "Říj.",
-    "novemberShort": "Lis.",
-    "decemberShort": "Pro.",
-    "january": "Leden",
-    "february": "Únor",
-    "march": "Březen",
-    "april": "Duben",
-    "may": "Květen",
-    "june": "Červen",
-    "july": "Červenec",
-    "august": "Srpen",
-    "september": "Září",
-    "october": "Říjen",
-    "november": "Listopad",
-    "december": "Prosinec"
+
+    "weekDays": {
+      "0": { "shortName": "Ne" },
+      "1": { "shortName": "Po" },
+      "2": { "shortName": "Út" },
+      "3": { "shortName": "St" },
+      "4": { "shortName": "Čt" },
+      "5": { "shortName": "Pá" },
+      "6": { "shortName": "So" }
+    },
+
+    "months": {
+      "1": { "longName": "Leden", "shortName": "Led." },
+      "2": { "longName": "Únor", "shortName": "Úno." },
+      "3": { "longName": "Březen", "shortName": "Bře." },
+      "4": { "longName": "Duben", "shortName": "Dub." },
+      "5": { "longName": "Květen", "shortName": "Kvě." },
+      "6": { "longName": "Červen", "shortName": "Čvn." },
+      "7": { "longName": "Červenec", "shortName": "Čvc." },
+      "8": { "longName": "Srpen", "shortName": "Srp." },
+      "9": { "longName": "Září", "shortName": "Zář." },
+      "10": { "longName": "Říjen", "shortName": "Říj." },
+      "11": { "longName": "Listopad", "shortName": "Lis." },
+      "12": { "longName": "Prosinec", "shortName": "Pro." }
+    }
   }
 }

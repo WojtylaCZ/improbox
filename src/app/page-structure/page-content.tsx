@@ -9,7 +9,7 @@ export const PageContent = ({ children }: { children: ReactNode }) => {
         alignItems: "center",
         width: "95%",
         margin: "auto",
-        maxWidth: "690px",
+        maxWidth: "880px",
         marginBottom: "0px",
         marginTop: "16px",
       }}

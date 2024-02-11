@@ -274,52 +274,13 @@ export const Main = () => {
         </div>
         <Container id="akce" fluid>
           <Row> {t("text.filters")}</Row>
-          <Row>
-            <Col xs={4} sm={3}>
-              <div style={{ display: "flex", justifyContent: "start" }}>
-                {t("text.eventTypeFilters")}
-              </div>
-            </Col>
-            <Col xs={8} sm={9}>
-              <div style={{ display: "flex", justifyContent: "start", flexWrap: "wrap" }}>
-                <Form.Switch
-                  checked={showEventTypeFilters.play}
-                  inline
-                  id="plays"
-                  label={t("dataLabels.plays")}
-                  onChange={handleShowPlaysFilterChange}
-                />
-                <Form.Switch
-                  checked={showEventTypeFilters.workshop}
-                  inline
-                  id="workshops"
-                  label={t("dataLabels.workshops")}
-                  onChange={handleShowWorkshopsFilterChange}
-                />
-                <Form.Switch
-                  checked={showEventTypeFilters.coursework}
-                  inline
-                  id="courseworks"
-                  label={t("dataLabels.courseworks")}
-                  onChange={handleShowCourseworkFilterChange}
-                />
-                <Form.Switch
-                  checked={showEventTypeFilters.jam}
-                  inline
-                  id="jams"
-                  label={t("dataLabels.jams")}
-                  onChange={handleShowJamsFilterChange}
-                />
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={4} sm={3}>
+          <Row style={{ marginBottom: "12px" }}>
+            <Col xs={4} sm={2}>
               <div style={{ display: "flex", justifyContent: "start", marginTop: "8px" }}>
                 {t("text.eventLocationFilters")}
               </div>
             </Col>
-            <Col xs={8} sm={9}>
+            <Col xs={8} sm={10}>
               <div
                 style={{
                   display: "flex",
@@ -348,6 +309,45 @@ export const Main = () => {
                   id="moraviaAndSilesia"
                   label={t("dataLabels.MoraviaAndSilesia")}
                   onChange={handleMoraviaAndSilesiaLocationFilterChange}
+                />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={4} sm={2}>
+              <div style={{ display: "flex", justifyContent: "start" }}>
+                {t("text.eventTypeFilters")}
+              </div>
+            </Col>
+            <Col xs={8} sm={10}>
+              <div style={{ display: "flex", justifyContent: "start", flexWrap: "wrap" }}>
+                <Form.Switch
+                  checked={showEventTypeFilters.play}
+                  inline
+                  id="plays"
+                  label={t("dataLabels.plays")}
+                  onChange={handleShowPlaysFilterChange}
+                />
+                <Form.Switch
+                  checked={showEventTypeFilters.workshop}
+                  inline
+                  id="workshops"
+                  label={t("dataLabels.workshops")}
+                  onChange={handleShowWorkshopsFilterChange}
+                />
+                <Form.Switch
+                  checked={showEventTypeFilters.coursework}
+                  inline
+                  id="courseworks"
+                  label={t("dataLabels.courseworks")}
+                  onChange={handleShowCourseworkFilterChange}
+                />
+                <Form.Switch
+                  checked={showEventTypeFilters.jam}
+                  inline
+                  id="jams"
+                  label={t("dataLabels.jams")}
+                  onChange={handleShowJamsFilterChange}
                 />
               </div>
             </Col>
