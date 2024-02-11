@@ -33,6 +33,12 @@ export const enum AnalyticsEvents {
   MoraviaAndSilesiaLocationSwitchedOnFilter = "MoraviaAndSilesiaLocationSwitchedOnFilter",
   MoraviaAndSilesiaLocationSwitchedOffFilter = "MoraviaAndSilesiaLocationSwitchedOffFilter",
 
+  CsLocaleSwitchedOnFilter = "CsLocaleSwitchedOnFilter",
+  CsLocaleSwitchedOffFilter = "CsLocaleSwitchedOffFilter",
+
+  EnLocaleSwitchedOnFilter = "EnLocaleSwitchedOnFilter",
+  EnLocaleSwitchedOffFilter = "EnLocaleSwitchedOffFilter",
+
   ImproEventExpanded = "ImproEventExpanded",
   ImproEventCollapsed = "ImproEventCollapsed",
 

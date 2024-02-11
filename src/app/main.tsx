@@ -10,7 +10,7 @@ import { improEventsTable } from "../assets/data/data-improevents";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
-import { supportedLocales } from "./i18n";
+import { SupportedLocales, supportedLocales } from "./i18n";
 import { ChevronUpIcon } from "../assets/icons/chevronUp";
 import { ChevronDownIcon } from "../assets/icons/chevronDown";
 import { AnalyticsEvents, sendAnalyticsEvent } from "./analytics";
@@ -26,6 +26,11 @@ export type LocationFilters = {
 };
 
 export type EventTypeFilters = Record<EventType, boolean>;
+
+export type LanguageEventFilters = {
+  [SupportedLocales.cs]: boolean;
+  [SupportedLocales.en]: boolean;
+};
 
 export const Main = () => {
   const navigate = useNavigate();
@@ -163,6 +168,37 @@ export const Main = () => {
     );
   };
 
+  const [showLanguageFilters, setShowLanguageFilters] = useState<LanguageEventFilters>({
+    [SupportedLocales.cs]: true,
+    [SupportedLocales.en]: true,
+  });
+
+  const handleCsLanguageFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowLanguageFilters({
+      ...showLanguageFilters,
+      [SupportedLocales.cs]: event.target.checked,
+    });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.CsLocaleSwitchedOnFilter
+        : AnalyticsEvents.CsLocaleSwitchedOffFilter,
+      { targetFilterChecked: String(event.target.checked) }
+    );
+  };
+
+  const handleEnLanguageFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowLanguageFilters({
+      ...showLanguageFilters,
+      [SupportedLocales.en]: event.target.checked,
+    });
+    sendAnalyticsEvent(
+      Boolean(event.target.checked)
+        ? AnalyticsEvents.EnLocaleSwitchedOnFilter
+        : AnalyticsEvents.EnLocaleSwitchedOffFilter,
+      { targetFilterChecked: String(event.target.checked) }
+    );
+  };
+
   const todayDate = Date.now();
 
   const upcomingEvents = improEventsTable.filter((month) => {
@@ -198,6 +234,7 @@ export const Main = () => {
       filters={{
         showEventTypes: showEventTypeFilters,
         showLocations: showLocationFilters,
+        showLanguages: showLanguageFilters,
       }}
     />
   ));
@@ -211,6 +248,7 @@ export const Main = () => {
       filters={{
         showEventTypes: showEventTypeFilters,
         showLocations: showLocationFilters,
+        showLanguages: showLanguageFilters,
       }}
     />
   ));
@@ -273,11 +311,11 @@ export const Main = () => {
           <LineSeparator />
         </div>
         <Container id="akce" fluid>
-          <Row> {t("text.filters")}</Row>
+          <Row> {t("filters.title")}</Row>
           <Row style={{ marginBottom: "12px" }}>
             <Col xs={4} sm={2}>
               <div style={{ display: "flex", justifyContent: "start", marginTop: "8px" }}>
-                {t("text.eventLocationFilters")}
+                {t("filters.eventLocationFilters")}
               </div>
             </Col>
             <Col xs={8} sm={10}>
@@ -313,10 +351,10 @@ export const Main = () => {
               </div>
             </Col>
           </Row>
-          <Row>
+          <Row style={{ marginBottom: "12px" }}>
             <Col xs={4} sm={2}>
               <div style={{ display: "flex", justifyContent: "start" }}>
-                {t("text.eventTypeFilters")}
+                {t("filters.eventTypeFilters")}
               </div>
             </Col>
             <Col xs={8} sm={10}>
@@ -348,6 +386,31 @@ export const Main = () => {
                   id="jams"
                   label={t("dataLabels.jams")}
                   onChange={handleShowJamsFilterChange}
+                />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={4} sm={2}>
+              <div style={{ display: "flex", justifyContent: "start" }}>
+                {t("filters.eventLanguageFilters")}
+              </div>
+            </Col>
+            <Col xs={8} sm={10}>
+              <div style={{ display: "flex", justifyContent: "start", flexWrap: "wrap" }}>
+                <Form.Switch
+                  checked={showLanguageFilters.cs}
+                  inline
+                  id="csEventLanguage"
+                  label={t("dataLabels.CsEventLanguage")}
+                  onChange={handleCsLanguageFilterChange}
+                />
+                <Form.Switch
+                  checked={showLanguageFilters.en}
+                  inline
+                  id="enEventLanguage"
+                  label={t("dataLabels.EnEventLanguage")}
+                  onChange={handleEnLanguageFilterChange}
                 />
               </div>
             </Col>

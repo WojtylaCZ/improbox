@@ -10,7 +10,10 @@
     "error": "Tady se improvizavalo až moc.",
     "jumpHome": "Přejít na začátek",
     "showPastEvents": "Zobrazit uplynulé akce",
-    "hidePastEvents": "Skrýt uplynulé akce"
+    "hidePastEvents": "Skrýt uplynulé akce",
+
+    "noMoreEvents": "O žádné akci do konce tohoto měsíce už nevíme. Koukni na další měsíc nebo uprav filtry.",
+    "noEventsThisMonth": "Zatím o žádné akci v tomto měsíci nevíme. Zkus to někdy znova. Případně uprav filtry."
   },
   "pages": {
     "forOrganisers": {
@@ -24,14 +27,18 @@
   "alerts": {
     "linkCopied": "Link zkopírován!"
   },
+  "filters": {
+    "title": "Filtrovat: ",
+    "eventTypeFilters": "Dle typu: ",
+    "eventLocationFilters": "Dle lokace: ",
+    "eventLanguageFilters": "Dle jazyka: "
+  },
   "text": {
     "introLine1": "Co, kdy, kde v českém světě improvizace.",
     "introLineKosile": "Toto je neziskový web. Přispějte na jeho provoz a další rozvoj, ideálně nákupem kvalitní, české, ručně šité <1>košile od Uhlíře</1>, které jako autor nabízím.",
 
     "mailButton": "Odebírat novinky do e-mailu",
-    "filters": "Filtrovat: ",
-    "eventTypeFilters": "Dle typu: ",
-    "eventLocationFilters": "Dle lokace: ",
+
     "madeBy": "Tento zájmový web vytvořil <1>Vojtěch Uhlíř</1>, improvizátor, programátor.",
     "alsoMade": "Jezdíte v zimě na běžkách? Koukněte na <1>www.prispevkynabezky.cz</1>! Web, který usnadňuje příspěvky na úpravu běžeckých tratí, jehož jsem také autorem.",
 
@@ -40,7 +47,7 @@
   },
   "event": {
     "openEventLink": "Zobrazit událost",
-    "more": "Více...",
+    "more": "Více",
     "groupWebsite": "Web souboru: ",
     "groupsWebsites": "Weby souborů: ",
     "shareEvent": "Získat odkaz"
@@ -57,6 +64,8 @@
     "Prague": "Praha",
     "Bohemia": "Čechy bez Prahy",
     "MoraviaAndSilesia": "Morava a Slezsko",
+    "CsEventLanguage": "Česky",
+    "EnEventLanguage": "Anglicky",
 
     "weekDays": {
       "0": { "shortName": "Ne" },

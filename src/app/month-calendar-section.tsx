@@ -4,9 +4,10 @@ import { ImproEventCard, getImproEventSlug } from "./improevent";
 import { Districts, LocationFilter } from "../assets/data/data-locations";
 import Travolta from "../assets/img/travolta.gif";
 import { Image } from "react-bootstrap";
-import { EventTypeFilters, LocationFilters } from "./main";
+import { EventTypeFilters, LanguageEventFilters, LocationFilters } from "./main";
 import { MonthEventsCalendar } from "../assets/data/types";
 import { useTranslation } from "react-i18next";
+import { SupportedLocales } from "./i18n";
 
 type Props = {
   monthSection: MonthEventsCalendar;
@@ -15,6 +16,7 @@ type Props = {
   filters: {
     showEventTypes: EventTypeFilters;
     showLocations: LocationFilters;
+    showLanguages: LanguageEventFilters;
   };
 };
 
@@ -43,6 +45,9 @@ export const MonthCalendarSection = ({
 
   const events = monthSection.events
     .filter((improEvent) => {
+      if (!filters.showLanguages.cs && improEvent.language === SupportedLocales.cs) return false;
+      if (!filters.showLanguages.en && improEvent.language === SupportedLocales.en) return false;
+
       if (!filters.showEventTypes.play && improEvent.eventType === "play") return false;
       if (!filters.showEventTypes.workshop && improEvent.eventType === "workshop") return false;
       if (!filters.showEventTypes.jam && improEvent.eventType === "jam") return false;
@@ -103,10 +108,8 @@ export const MonthCalendarSection = ({
         {Boolean(events.length) && <Stack gap={4}>{events}</Stack>}
         {!Boolean(events.length) && (
           <>
-            {isFirst && <>O žádné akci do konce tohoto měsíce už nevíme. Koukni na další měsíc.</>}
-            {!isFirst && (
-              <>Zatím o žádné akci v tomto měsíci nevíme. Zkus to znova za nějakou dobu.</>
-            )}
+            {isFirst && t(`titles.noMoreEvents`)}
+            {!isFirst && t(`titles.noEventsThisMonth`)}
 
             <Image
               src={Travolta}

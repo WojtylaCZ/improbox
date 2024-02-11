@@ -8,6 +8,11 @@ import * as enLocale from "../assets/locales/en/translation.json";
 export const fallbackLocale = "cs";
 export const supportedLocales = ["cs", "en"];
 
+export const enum SupportedLocales {
+  "cs" = "cs",
+  "en" = "en",
+}
+
 i18n
   // i18next-http-backend
   // loads translations from your server

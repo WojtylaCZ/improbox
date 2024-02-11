@@ -11,7 +11,10 @@
     "error": "Too much impro here.",
     "jumpHome": "Go to homepage",
     "showPastEvents": "Show past events",
-    "hidePastEvents": "Hide past events"
+    "hidePastEvents": "Hide past events",
+
+    "noMoreEvents": "There is no more events happening this month. Or check filters.",
+    "noEventsThisMonth": "There is no event happening this month. Try it again after while. Or check filters."
   },
   "alerts": {
     "linkCopied": "Link copied!"
@@ -25,14 +28,18 @@
       "4": "Send me a message!"
     }
   },
+  "filters": {
+    "title": "To filter: ",
+    "eventTypeFilters": "By event type: ",
+    "eventLocationFilters": "By location: ",
+    "eventLanguageFilters": "By language: "
+  },
   "text": {
     "introLine1": "What, when, where in Czech world of improv comedy.",
     "introLineKosile": "This is a non profit website. Support further updates and the author by purchasing a premium, czech handmade shirt on <1>košile Od Uhlíře</1>, which myself as author, I'm making.",
 
     "mailButton": "I want to subscribe for new events and updates",
-    "filters": "Filters: ",
-    "eventTypeFilters": "By event type: ",
-    "eventLocationFilters": "By location: ",
+
     "madeBy": "This web was created by <1>Vojtěch Uhlíř</1>, an improv actor and a software engineer.",
     "alsoMade": "Do you x-country ski during the winter? Check out <1>www.prispevkynabezky.cz</1>! Web that makes donation for x-country ski trails maintance easy I also made.",
 
@@ -41,7 +48,7 @@
   },
   "event": {
     "openEventLink": "Go to the event",
-    "more": "More...",
+    "more": "More",
     "groupWebsite": "Website of the group: ",
     "groupsWebsites": "Websites of the groups: ",
     "shareEvent": "Copy event link"
@@ -58,6 +65,8 @@
     "Prague": "Prague",
     "Bohemia": "Bohemia without Prague",
     "MoraviaAndSilesia": "Moravia and Silesia",
+    "CsEventLanguage": "Czech",
+    "EnEventLanguage": "English",
 
     "weekDays": {
       "0": { "shortName": "Su" },
