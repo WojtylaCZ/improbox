@@ -85,12 +85,7 @@ export const HeaderBar = () => {
               </div>
             </Nav.Item>
             <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
-              <div
-                className="d-flex justify-content-center align-items-center"
-                style={{ height: "40px" }}
-              >
-                <SelectLocaleDropdown />
-              </div>
+              <SelectLocaleDropdown />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
