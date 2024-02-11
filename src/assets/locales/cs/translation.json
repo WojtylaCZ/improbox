@@ -1,16 +1,25 @@
 {
   "menu": {
     "events": "Program akcí",
+    "forOrganisers": "Pro pořadatele",
     "about": "O webu"
   },
   "titles": {
     "mainH1": "Přehled impro akcí v Česku",
-    "aboutH2": "Kontakt",
-
+    "aboutH2": "O webu",
     "error": "Tady se improvizavalo až moc.",
     "jumpHome": "Přejít na začátek",
     "showPastEvents": "Zobrazit uplynulé akce",
     "hidePastEvents": "Skrýt uplynulé akce"
+  },
+  "pages": {
+    "forOrganisers": {
+      "title": "Pro pořadatele",
+      "1": "Plánujete představení, workshop, kurz, který není na programu?",
+      "2": "Poptáváte nové členy do souboru, sháníte na hraní či jinou akci lidi?",
+      "3": "Rádi byste zpropagovali vaši událost?",
+      "4": "Ozvěte se!"
+    }
   },
   "alerts": {
     "linkCopied": "Link zkopírován!"

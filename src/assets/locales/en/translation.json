@@ -1,11 +1,12 @@
 {
   "menu": {
     "events": "Events lineup",
+    "forOrganisers": "For promoters",
     "about": "About"
   },
   "titles": {
     "mainH1": "Improv events lineup in Czechia",
-    "aboutH2": "Contact",
+    "aboutH2": "About",
 
     "error": "Too much impro here.",
     "jumpHome": "Go to homepage",
@@ -14,6 +15,15 @@
   },
   "alerts": {
     "linkCopied": "Link copied!"
+  },
+  "pages": {
+    "forOrganisers": {
+      "title": "For promoters",
+      "1": "Do you have an upcoming event, workshop or a course that is on the Improbox line up?",
+      "2": "Are looking for a new actors, an interim help or other need for new people?",
+      "3": "Would you like to get help to promote your event?",
+      "4": "Send me a message!"
+    }
   },
   "text": {
     "introLine1": "What, when, where in Czech world of improv comedy.",

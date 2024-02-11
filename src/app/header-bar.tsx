@@ -51,13 +51,13 @@ export const HeaderBar = () => {
             >
               {t("menu.events")}
             </Nav.Link>
-            {/* <Nav.Link
+            <Nav.Link
               className="mx-2 text-light text-nowrap"
-              // href={`/${localeParam ? localeParam.concat("/jak-prispet") : "jak-prispet"}`}
-              // onClick={() => sendAnalyticsEvent(AnalyticsEvents.MenuDonateClicked, {})}
+              href={`/${localeParam ? localeParam.concat("/pro-poradatele") : "pro-poradatele"}`}
+              onClick={() => sendAnalyticsEvent(AnalyticsEvents.MenuForOrganisersClicked, {})}
             >
-              {t("menu.donate")}
-            </Nav.Link> */}
+              {t("menu.forOrganisers")}
+            </Nav.Link>
             <Nav.Link
               className="mx-2 text-light text-nowrap"
               href={`/${localeParam ? localeParam.concat("/o-webu") : "o-webu"}`}
@@ -65,14 +65,6 @@ export const HeaderBar = () => {
             >
               {t("menu.about")}
             </Nav.Link>
-            <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
-              <div
-                className="d-flex justify-content-center align-items-center"
-                style={{ height: "40px" }}
-              >
-                <SelectLocaleDropdown />
-              </div>
-            </Nav.Item>
             <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
               <div
                 className="d-flex justify-content-center align-items-center pb-1"
@@ -90,6 +82,14 @@ export const HeaderBar = () => {
                 <a href={"https://www.instagram.com/improbox.cz"}>
                   <Image src={IgIcon} alt="Instagram" width="20px" height="22px" />
                 </a>
+              </div>
+            </Nav.Item>
+            <Nav.Item className="mx-2 d-flex justify-content-center align-items-center">
+              <div
+                className="d-flex justify-content-center align-items-center"
+                style={{ height: "40px" }}
+              >
+                <SelectLocaleDropdown />
               </div>
             </Nav.Item>
           </Nav>

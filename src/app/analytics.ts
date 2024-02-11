@@ -7,6 +7,7 @@ export const initAnalytics = () => {
 export const enum AnalyticsEvents {
   MenuBrandClicked = "MenuBrandClicked",
   MenuEventsClicked = "MenuEventsClicked",
+  MenuForOrganisersClicked = "MenuForOrganisersClicked",
   MenuAboutClicked = "MenuAboutClicked",
 
   LanguageChanged = "LanguageChanged",
