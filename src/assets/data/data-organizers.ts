@@ -390,7 +390,7 @@ export const organizersTable: Array<Organizer> = [
     id: "scriptforbrains",
     name: "Script for Brains",
     websiteUrl: "www.pragueimprov.com",
-    facebookCalendarId: "",
+    facebookCalendarId: "Script for Brains",
     language: "en",
   },
   {
