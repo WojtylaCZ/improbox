@@ -466,14 +466,14 @@ export const organizersTable: Array<Organizer> = [
   {
     id: "improinstitut",
     name: "Impro Institut",
-    websiteUrl: "https://improinstitut.cz ",
+    websiteUrl: "www.improinstitut.cz ",
     facebookCalendarId: "IMPRO INSTITUT",
     language: "cs",
   },
   {
     id: "improvacademy",
     name: "The Improv Academy",
-    websiteUrl: "https://improvacademy.cz",
+    websiteUrl: "www.improvacademy.cz",
     facebookCalendarId: "",
     language: "en",
   },

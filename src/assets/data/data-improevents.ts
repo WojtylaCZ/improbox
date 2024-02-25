@@ -3230,7 +3230,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       {
         id: "",
         slugExtra: "",
-        name: "The Comedy Show",
+        name: "The Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://improvacademy.cz/events-%26-shows",
         organizerIds: ["improvacademy"],
@@ -3380,7 +3380,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       {
         id: "",
         slugExtra: "",
-        name: "The Comedy Show",
+        name: "The Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://improvacademy.cz/events-%26-shows",
         organizerIds: ["improvacademy"],
@@ -3447,7 +3447,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       {
         id: "",
         slugExtra: "",
-        name: "The Comedy Show",
+        name: "The Comedy Show (EN)",
         eventType: "play",
         websiteUrl: "https://improvacademy.cz/events-%26-shows",
         organizerIds: ["improvacademy"],
