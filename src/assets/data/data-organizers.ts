@@ -33,7 +33,7 @@ export const organizersTable: Array<Organizer> = [
     id: "nedivse",
     name: "NeDivSe - Neobvyklá Divadelní Sešlost",
     websiteUrl: "www.facebook.com/nedivse",
-    facebookCalendarId: "",
+    facebookCalendarId: "NeDivSe",
     language: "cs",
   },
   {
@@ -461,6 +461,13 @@ export const organizersTable: Array<Organizer> = [
     name: "Monika Nevolová ",
     websiteUrl: "umenivpraci.cz",
     facebookCalendarId: "Monika Mondieu Nevolová",
+    language: "cs",
+  },
+  {
+    id: "improinstitut",
+    name: "Impro Institut",
+    websiteUrl: "https://improinstitut.cz/",
+    facebookCalendarId: "IMPRO INSTITUT",
     language: "cs",
   },
 ];

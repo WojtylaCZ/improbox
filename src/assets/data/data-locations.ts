@@ -27,6 +27,7 @@ export const Districts = {
   Říčany: LocationFilter.CechyBezPrahy,
   "České Budějovice": LocationFilter.CechyBezPrahy,
   Šumperk: LocationFilter.MoravaASlezsko,
+  Litomyšl: LocationFilter.CechyBezPrahy,
 };
 
 export const LocationDistrictMapping = new Map<string, District>([
