@@ -257,7 +257,7 @@ export const organizersTable: Array<Organizer> = [
     id: "saysomethingcz",
     name: "saysomething.cz",
     websiteUrl: "www.saysomething.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "saysomething.czf",
     language: "cs",
   },
   {
