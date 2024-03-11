@@ -100,23 +100,23 @@ const start = async () => {
     console.log(unknownDataOriginalCalendarEvents.forEach((e) => console.log(e)));
   }
 
-  const value = fbCalendarEvents["e1326994691323483@facebook.com"];
-  if (instanceOfVEvent(value)) {
-    const event = {
-      id: value.uid,
-      slugExtra: "",
-      name: value.summary,
-      eventType: "?",
-      websiteUrl: value.url,
-      organizers: [],
-      playDate: value.start.toISOString().split("T")[0],
-      district: LocationDistrictMapping.get(value.location) ?? "?",
-      language: "de",
-    };
+  // const value = fbCalendarEvents["e1326994691323483@facebook.com"];
+  // if (instanceOfVEvent(value)) {
+  //   const event = {
+  //     id: value.uid,
+  //     slugExtra: "",
+  //     name: value.summary,
+  //     eventType: "?",
+  //     websiteUrl: value.url,
+  //     organizers: [],
+  //     playDate: value.start.toISOString().split("T")[0],
+  //     district: LocationDistrictMapping.get(value.location) ?? "?",
+  //     language: "de",
+  //   };
 
-    // console.log(value);
-    // console.log(event);
-  }
+  // console.log(value);
+  // console.log(event);
+  // }
 };
 
 start();
