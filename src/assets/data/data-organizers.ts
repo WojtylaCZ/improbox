@@ -404,7 +404,7 @@ export const organizersTable: Array<Organizer> = [
     id: "instantnigaucink",
     name: "Instantní Gaučink",
     websiteUrl: "www.facebook.com/suroskard",
-    facebookCalendarId: "",
+    facebookCalendarId: "Instantní Gaučink",
     language: "cs",
   },
   {
@@ -476,5 +476,12 @@ export const organizersTable: Array<Organizer> = [
     websiteUrl: "www.improvacademy.cz",
     facebookCalendarId: "",
     language: "en",
+  },
+  {
+    id: "howtoflow",
+    name: "How to flow",
+    websiteUrl: "www.howtoflow.cz",
+    facebookCalendarId: "",
+    language: "cs",
   },
 ];
