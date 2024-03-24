@@ -264,7 +264,7 @@ export const organizersTable: Array<Organizer> = [
     id: "altf4",
     name: "ALT + F4",
     websiteUrl: "www.facebook.com/divadloaltf4",
-    facebookCalendarId: "",
+    facebookCalendarId: "ALT + F4",
     language: "cs",
   },
   {
@@ -397,7 +397,7 @@ export const organizersTable: Array<Organizer> = [
     id: "olivy",
     name: "Olivy",
     websiteUrl: "www.olivy.org",
-    facebookCalendarId: "",
+    facebookCalendarId: "OLIVY - olomoucká improvizace O.Li.V.Y.",
     language: "cs",
   },
   {
@@ -482,6 +482,13 @@ export const organizersTable: Array<Organizer> = [
     name: "How to flow",
     websiteUrl: "www.howtoflow.cz",
     facebookCalendarId: "",
+    language: "cs",
+  },
+  {
+    id: "zadvermi",
+    name: "O. s. ZA DVEŘMI",
+    websiteUrl: "www.divadlo-zadvermi.cz",
+    facebookCalendarId: "O. s. ZA DVEŘMI",
     language: "cs",
   },
 ];

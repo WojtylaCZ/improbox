@@ -90,4 +90,7 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Podskalská 14, 12000 Prague, Czech Republic", "Praha"],
   ["Divadlo Na Prádle", "Praha"],
   ["Industra", "Brno"],
+  ["Otevřený prostor Trpoměchy u Slaného", "Středočeský kraj"],
+  ["Žižkostel", "Praha"],
+  ["sál kulturního zařízení v Náměšti na Hané", "Olomouc"],
 ]);
