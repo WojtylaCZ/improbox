@@ -491,4 +491,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "O. s. ZA DVEŘMI",
     language: "cs",
   },
+  {
+    id: "sis",
+    name: "Šejkspírovská improvizovaná společnost",
+    websiteUrl: "www.facebook.com/profile.php?id=61556487249447",
+    facebookCalendarId: "Šejkspírovská improvizovaná společnost",
+    language: "cs",
+  },
 ];

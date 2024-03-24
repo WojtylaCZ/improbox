@@ -3762,6 +3762,17 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         language: "cs",
       },
       {
+        id: "e720017590243571@facebook.com",
+        slugExtra: "",
+        name: "Mnoho povyku impro nic",
+        eventType: "play",
+        websiteUrl: "https://www.facebook.com/events/720017590243571/",
+        organizerIds: ["sis"],
+        playDate: "2024-04-15",
+        district: "Praha",
+        language: "cs",
+      },
+      {
         id: "e316663091270123@facebook.com",
         slugExtra: "",
         name: "Bakaláři",
