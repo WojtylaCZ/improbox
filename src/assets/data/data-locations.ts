@@ -93,4 +93,6 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Otevřený prostor Trpoměchy u Slaného", "Středočeský kraj"],
   ["Žižkostel", "Praha"],
   ["sál kulturního zařízení v Náměšti na Hané", "Olomouc"],
+  ["Dolní oblast Vítkovice", "Ostrava"],
+  ["Pracovna", "Praha"],
 ]);

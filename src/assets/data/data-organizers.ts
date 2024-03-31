@@ -208,7 +208,7 @@ export const organizersTable: Array<Organizer> = [
     id: "nepripraveni",
     name: "Nepřipravení",
     websiteUrl: "www.nepripraveni.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "Nepřipravení - improvizace a zábava",
     language: "cs",
   },
   {
