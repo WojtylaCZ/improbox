@@ -498,4 +498,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Šejkspírovská improvizovaná společnost",
     language: "cs",
   },
+  {
+    id: "cechovovafuska",
+    name: "Čechovova fuška",
+    websiteUrl: "www.facebook.com/profile.php?id=61558151027838",
+    facebookCalendarId: "Čechovova fuška - improvizační skupina",
+    language: "cs",
+  },
 ];

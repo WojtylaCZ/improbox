@@ -28,6 +28,7 @@ export const Districts = {
   "České Budějovice": LocationFilter.CechyBezPrahy,
   Šumperk: LocationFilter.MoravaASlezsko,
   Litomyšl: LocationFilter.CechyBezPrahy,
+  Bratislava: LocationFilter.MoravaASlezsko,
 };
 
 export const LocationDistrictMapping = new Map<string, District>([
@@ -96,4 +97,6 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Dolní oblast Vítkovice", "Ostrava"],
   ["Pracovna", "Praha"],
   ["Studio Maiselovka", "Praha"],
+  ["Boardgame Cafe - Meeples & Coffee", "Praha"],
+  ["Prostor", "Boskovice"],
 ]);
