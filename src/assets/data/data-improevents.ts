@@ -4115,7 +4115,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       {
         id: "e1353577382025305@facebook.com",
         slugExtra: "",
-        name: "Workshop with Jonathan Pitts",
+        name: "Workshop with Jonathan Pitts (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1353577382025305/",
         organizerIds: [],
@@ -4148,7 +4148,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       {
         id: "e982567546566785@facebook.com",
         slugExtra: "",
-        name: "Impro speciál s Jonathanem ",
+        name: "Impro speciál s Jonathanem (EN)",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/982567546566785/",
         organizerIds: [],
