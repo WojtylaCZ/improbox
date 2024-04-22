@@ -4121,7 +4121,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         organizerIds: [],
         playDate: "2024-05-02",
         district: "Praha",
-        language: "cs",
+        language: "en",
       },
       {
         id: "e1662837327580688@facebook.com",
@@ -4154,7 +4154,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         organizerIds: [],
         playDate: "2024-05-05",
         district: "Praha",
-        language: "cs",
+        language: "en",
       },
       {
         id: "e1076859186845586@facebook.com",
