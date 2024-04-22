@@ -4146,6 +4146,17 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         language: "cs",
       },
       {
+        id: "e982567546566785@facebook.com",
+        slugExtra: "",
+        name: "Impro speciál s Jonathanem ",
+        eventType: "workshop",
+        websiteUrl: "https://www.facebook.com/events/982567546566785/",
+        organizerIds: [],
+        playDate: "2024-05-05",
+        district: "Praha",
+        language: "cs",
+      },
+      {
         id: "e1076859186845586@facebook.com",
         slugExtra: "",
         name: "Víkendový workshop improvizace v Brně",
