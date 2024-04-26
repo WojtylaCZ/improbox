@@ -228,7 +228,6 @@ export const ImproEventCard = ({
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: "center",
                   }}
                 >
                   <Button
@@ -256,6 +255,7 @@ export const ImproEventCard = ({
                       justifyContent: "center",
                       alignItems: "center",
                       marginTop: "8px",
+                      height: "100%",
                     }}
                   >
                     <span style={{ fontSize: "small" }}> {t("event.more")}</span>
@@ -264,6 +264,7 @@ export const ImproEventCard = ({
                       style={{
                         display: "flex",
                         width: "10px",
+                        height: "1em",
                         marginLeft: "8px",
                       }}
                     >
