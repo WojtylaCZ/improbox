@@ -40,7 +40,7 @@ export const organizersTable: Array<Organizer> = [
     id: "justimpro",
     name: "Just! Impro",
     websiteUrl: "www.justimpro.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "Just! Impro",
     language: "cs",
   },
   {
@@ -503,6 +503,13 @@ export const organizersTable: Array<Organizer> = [
     name: "Čechovova fuška",
     websiteUrl: "www.facebook.com/profile.php?id=61558151027838",
     facebookCalendarId: "Čechovova fuška - improvizační skupina",
+    language: "cs",
+  },
+  {
+    id: "improvize",
+    name: "Improvize",
+    websiteUrl: "https://www.facebook.com/improvize1",
+    facebookCalendarId: "Improvize",
     language: "cs",
   },
 ];
