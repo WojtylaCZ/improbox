@@ -29,3 +29,18 @@ export type MonthEventsCalendar = {
   monthDate: string;
   events: Array<ImproEvent>;
 };
+
+export type BusinessType = "buy" | "rent";
+
+export type BookItem = {
+  id: string;
+  slugExtra: string;
+  name: string;
+  author: string;
+  inventoryState: "Skladem" | "Na cestě";
+  image: string;
+  businessType: BusinessType;
+  websiteUrl: string;
+  language: "cs" | "en";
+  recommends: Array<string>;
+};

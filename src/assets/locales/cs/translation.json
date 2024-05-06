@@ -1,6 +1,7 @@
 {
   "menu": {
     "events": "Program akcí",
+    "forActors": "Pro improvizátory",
     "forOrganisers": "Pro pořadatele",
     "about": "O webu"
   },
@@ -22,6 +23,11 @@
       "2": "Poptáváte nové členy do souboru, sháníte na hraní či jinou akci lidi?",
       "3": "Rádi byste zpropagovali vaši událost?",
       "4": "Ozvěte se!"
+    },
+    "forActors": {
+      "title": "Pro hráče a improvizátory",
+      "1": "Hledáte zdroje pro vás další rozvoj, inspiraci a růst? Koukněte na knihy k dispozici níže.",
+      "2": "Nákupem knihy podpoříte provoz a další rozvoj tohoto webu. Díky moc, Vojta."
     }
   },
   "alerts": {
@@ -34,6 +40,8 @@
     "eventLanguageFilters": "Dle jazyka: "
   },
   "text": {
+    "moreInfo": "Detaily",
+    "lessInfo": "Zavřít",
     "introLine1": "Co, kdy, kde v českém světě improvizace.",
     "introLineKosile": "Toto je neziskový web. Přispějte na jeho provoz a další rozvoj, ideálně nákupem kvalitní, české, ručně šité <1>košile od Uhlíře</1>, které jako autor nabízím.",
 
@@ -47,10 +55,14 @@
   },
   "event": {
     "openEventLink": "Zobrazit událost",
-    "more": "Více",
     "groupWebsite": "Web souboru: ",
     "groupsWebsites": "Weby souborů: ",
     "shareEvent": "Získat odkaz události"
+  },
+  "eshop": {
+    "item": {
+      "buy": "Koupit"
+    }
   },
   "dataLabels": {
     "play": "Představení",

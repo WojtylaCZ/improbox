@@ -1,6 +1,7 @@
 {
   "menu": {
     "events": "Events lineup",
+    "forActors": "Pro actors",
     "forOrganisers": "For promoters",
     "about": "About"
   },
@@ -26,6 +27,11 @@
       "2": "Are looking for a new actors, an interim help or other need for new people?",
       "3": "Would you like to get help to promote your event?",
       "4": "Send me a message!"
+    },
+    "forActors": {
+      "title": "For improv actors",
+      "1": "Are you looking for some material for your improv growth, inspiration? Check out books below.",
+      "2": "Purchasing a book through Improbox.cz you are supporting maintanance and further work on this web. Thank you, Vojta."
     }
   },
   "filters": {
@@ -35,6 +41,8 @@
     "eventLanguageFilters": "By language: "
   },
   "text": {
+    "moreInfo": "Details",
+    "lessInfo": "Close",
     "introLine1": "What, when, where in Czech world of improv comedy.",
     "introLineKosile": "This is a non profit website. Support further updates and the author by purchasing a premium, czech handmade shirt on <1>košile Od Uhlíře</1>, which myself as author, I'm making.",
 
@@ -52,6 +60,11 @@
     "groupWebsite": "Website of the group: ",
     "groupsWebsites": "Websites of the groups: ",
     "shareEvent": "Copy event link"
+  },
+  "eshop": {
+    "item": {
+      "buy": "Buy"
+    }
   },
   "dataLabels": {
     "play": "Show",

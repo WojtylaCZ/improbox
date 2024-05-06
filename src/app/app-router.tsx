@@ -9,6 +9,7 @@ import { ErrorPage } from "./error-page";
 import { Main } from "./main";
 import { AboutPage } from "./about-page";
 import { ForOrganisersPage } from "./for-organisers-page";
+import { ForActorsPage } from "./for-actors-page";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,8 @@ const router = createBrowserRouter(
         element={<ForOrganisersPage />}
         errorElement={<ErrorPage />}
       />
+
+      <Route path="/:locale?/pro-hrace" element={<ForActorsPage />} errorElement={<ErrorPage />} />
 
       <Route path="*" element={<ErrorPage />} errorElement={<ErrorPage />} />
     </>
