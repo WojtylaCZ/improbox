@@ -29,6 +29,7 @@ export const Districts = {
   Šumperk: LocationFilter.MoravaASlezsko,
   Litomyšl: LocationFilter.CechyBezPrahy,
   Bratislava: LocationFilter.MoravaASlezsko,
+  Plzeň: LocationFilter.CechyBezPrahy,
 };
 
 export const LocationDistrictMapping = new Map<string, District>([

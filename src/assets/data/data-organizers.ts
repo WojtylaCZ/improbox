@@ -512,4 +512,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Improvize",
     language: "cs",
   },
+  {
+    id: "nobuco",
+    name: "Nobuco",
+    websiteUrl: "https://www.nobuco.cz/",
+    facebookCalendarId: "Nobuco",
+    language: "cs",
+  },
 ];
