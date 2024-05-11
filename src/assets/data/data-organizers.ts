@@ -520,7 +520,7 @@ export const organizersTable: Array<Organizer> = [
     language: "cs",
   },
   {
-    id: "kabinet-improv-dovednosti",
+    id: "kabinet-impro-dovednosti",
     name: "Kabinet Improvizačních Dovedností",
     websiteUrl: "www.kabinetimprovizace.cz",
     facebookCalendarId: "Kabinet Improvizačních Dovedností",
