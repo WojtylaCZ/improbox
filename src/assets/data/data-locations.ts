@@ -30,6 +30,7 @@ export const Districts = {
   Litomyšl: LocationFilter.CechyBezPrahy,
   Bratislava: LocationFilter.MoravaASlezsko,
   Plzeň: LocationFilter.CechyBezPrahy,
+  Dobříš: LocationFilter.CechyBezPrahy,
 };
 
 export const LocationDistrictMapping = new Map<string, District>([
@@ -102,4 +103,5 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Velký mlýn", "Praha"],
   ["Švandovo Divadlo", "Praha"],
   ["Kellyxír", "Praha"],
+  ["Harmonizační studio Osm", "Praha"],
 ]);

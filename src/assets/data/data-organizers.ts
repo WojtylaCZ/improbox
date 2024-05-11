@@ -519,4 +519,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Nobuco",
     language: "cs",
   },
+  {
+    id: "kabinet-improv-dovednosti",
+    name: "Kabinet Improvizačních Dovedností",
+    websiteUrl: "www.kabinetimprovizace.cz",
+    facebookCalendarId: "Kabinet Improvizačních Dovedností",
+    language: "cs",
+  },
 ];
