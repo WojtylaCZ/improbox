@@ -508,14 +508,14 @@ export const organizersTable: Array<Organizer> = [
   {
     id: "improvize",
     name: "Improvize",
-    websiteUrl: "https://www.facebook.com/improvize1",
+    websiteUrl: "www.facebook.com/improvize1",
     facebookCalendarId: "Improvize",
     language: "cs",
   },
   {
     id: "nobuco",
     name: "Nobuco",
-    websiteUrl: "https://www.nobuco.cz/",
+    websiteUrl: "www.nobuco.cz/",
     facebookCalendarId: "Nobuco",
     language: "cs",
   },
@@ -524,6 +524,13 @@ export const organizersTable: Array<Organizer> = [
     name: "Kabinet Improvizačních Dovedností",
     websiteUrl: "www.kabinetimprovizace.cz",
     facebookCalendarId: "Kabinet Improvizačních Dovedností",
+    language: "cs",
+  },
+  {
+    id: "vyvar",
+    name: "Vývar",
+    websiteUrl: "www.facebook.com/profile.php?id=61556462099186",
+    facebookCalendarId: "Improvizační skupina Vývar",
     language: "cs",
   },
 ];
