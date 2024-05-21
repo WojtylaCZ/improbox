@@ -4430,7 +4430,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         name: "Zápas v divadelní improvizaci: Čechovova fuška versus něčí jehněčí",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/7952038681496180/",
-        organizerIds: ["cechovovafuska"],
+        organizerIds: ["cechovovafuska", "necijehneci"],
         playDate: "2024-05-23",
         district: "Říčany",
         language: "cs",
