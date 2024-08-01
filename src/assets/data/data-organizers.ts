@@ -533,4 +533,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Improvizační skupina Vývar",
     language: "cs",
   },
+  {
+    id: "improvykrik",
+    name: "improVýkřik",
+    websiteUrl: "https://www.facebook.com/VYKRIK",
+    facebookCalendarId: "Improvizační skupina Výkřik",
+    language: "cs",
+  },
 ];
