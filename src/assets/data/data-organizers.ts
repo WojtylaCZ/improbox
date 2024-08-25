@@ -540,4 +540,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Improvizační skupina Výkřik",
     language: "cs",
   },
+  {
+    id: "cai",
+    name: "Club Anonymních Improvizátorů",
+    websiteUrl: "https://www.facebook.com/profile.php?id=61558355502244",
+    facebookCalendarId: "Club Anonymních Improvizátorů ",
+    language: "cs",
+  },
 ];
