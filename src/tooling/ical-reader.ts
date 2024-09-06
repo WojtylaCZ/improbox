@@ -39,13 +39,15 @@ const start = async () => {
 
   Object.entries(fbCalendarEvents).forEach(([key, value]) => {
     if (instanceOfVEvent(value)) {
+      console.log(value);
+
       if (!LocationDistrictMapping.get(value.location)) {
         unknownDataEventIds.add(key);
       }
 
       const organizer = organizersTable.find(
         // @ts-ignore
-        (o) => o.facebookCalendarId === value.organizer.params!.CN
+        (o) => o.facebookCalendarId === value.organizer?.params?.CN || false
       );
 
       if (!organizer) {
