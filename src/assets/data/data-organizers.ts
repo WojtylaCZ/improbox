@@ -257,7 +257,7 @@ export const organizersTable: Array<Organizer> = [
     id: "saysomethingcz",
     name: "saysomething.cz",
     websiteUrl: "www.saysomething.cz",
-    facebookCalendarId: "saysomething.czf",
+    facebookCalendarId: "saysomething.cz",
     language: "cs",
   },
   {
@@ -546,5 +546,19 @@ export const organizersTable: Array<Organizer> = [
     websiteUrl: "https://www.facebook.com/profile.php?id=61558355502244",
     facebookCalendarId: "Club Anonymních Improvizátorů ",
     language: "cs",
+  },
+  {
+    id: "Kokoloko",
+    name: "Kokoloko",
+    websiteUrl: "https://www.kokoloko.cz",
+    facebookCalendarId: "Kokoloko_production",
+    language: "cs",
+  },
+  {
+    id: "exit87",
+    name: "Exit 87",
+    websiteUrl: "https://www.facebook.com/profile.php?id=61562645797839",
+    facebookCalendarId: "Exit 87",
+    language: "en",
   },
 ];
