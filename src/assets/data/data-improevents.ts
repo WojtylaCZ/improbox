@@ -3841,7 +3841,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e821718839760294@facebook.com",
-        slugExtra: "",
+        slugExtra: "1",
         name: "Improv Workshop - We're in this together (EN)",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/821718839760294/",
@@ -3852,7 +3852,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e337663902194698@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Improv Jam! (EN)",
         eventType: "jam",
         websiteUrl: "https://www.facebook.com/events/337663902194698/",
@@ -4920,7 +4920,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e1100519044338442@facebook.com",
-        slugExtra: "",
+        slugExtra: "1",
         name: "Piknik @ Letní improúterky 2024",
         eventType: "workshop",
         websiteUrl: "https://www.facebook.com/events/1100519044338442/",
@@ -4931,7 +4931,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e1501011224126684@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Letní improúterky 2024",
         eventType: "workshop",
         websiteUrl:
@@ -5294,7 +5294,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e491351780300303@facebook.com",
-        slugExtra: "",
+        slugExtra: "1",
         name: "Improvizace pro rodiče s dětmi 6-9 let",
         eventType: "workshop",
         websiteUrl:
@@ -5306,7 +5306,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e2298078750540699@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Improvizace pro rodiče s dětmi 9-12 let",
         eventType: "workshop",
         websiteUrl:
@@ -5522,7 +5522,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e507916918792533@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "IMPRO FLIRT: rychlé základy improvizace pro každodenní spokojený život",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/507916918792533/",
@@ -5623,7 +5623,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e2298078753874032@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Improvizace pro rodiče s dětmi 9-12 let",
         eventType: "workshop",
         websiteUrl:
@@ -5650,7 +5650,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         name: "KOMIKAZE - Komediálně improvizovaná show",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1254643999046151/",
-        organizerIds: ["Kokoloko"],
+        organizerIds: ["kokoloko"],
         playDate: "2024-10-21",
         district: "Brno",
         language: "cs",
@@ -5672,7 +5672,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         name: "KOMIKAZE - Komediálně improvizovaná show",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1053788449701182/",
-        organizerIds: ["Kokoloko"],
+        organizerIds: ["kokoloko"],
         playDate: "2024-10-22",
         district: "Olomouc",
         language: "cs",
@@ -5683,7 +5683,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         name: "Improshow v nových kategoriích",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/1557399478214394/",
-        organizerIds: ["Bizoni"],
+        organizerIds: ["bizoni"],
         playDate: "2024-10-23",
         district: "Hradec Králové",
         language: "cs",
@@ -5755,7 +5755,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         name: "Komikaze: IMPRO SHOW",
         eventType: "play",
         websiteUrl: "https://www.facebook.com/events/534854192572254/",
-        organizerIds: ["Praha"],
+        organizerIds: [],
         playDate: "2024-11-06",
         district: "Praha",
         language: "cs",
@@ -5807,7 +5807,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e491351786966969@facebook.com",
-        slugExtra: "",
+        slugExtra: "1",
         name: "Improvizace pro rodiče s dětmi 6-9 let",
         eventType: "workshop",
         websiteUrl:
@@ -5819,7 +5819,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
       },
       {
         id: "e2298078743874033@facebook.com",
-        slugExtra: "",
+        slugExtra: "2",
         name: "Improvizace pro rodiče s dětmi 9-12 let",
         eventType: "workshop",
         websiteUrl:

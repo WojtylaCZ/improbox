@@ -548,7 +548,7 @@ export const organizersTable: Array<Organizer> = [
     language: "cs",
   },
   {
-    id: "Kokoloko",
+    id: "kokoloko",
     name: "Kokoloko",
     websiteUrl: "https://www.kokoloko.cz",
     facebookCalendarId: "Kokoloko_production",
