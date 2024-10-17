@@ -52,6 +52,8 @@ export const enum AnalyticsEvents {
 
   PastEventsExpanded = "PastEventsExpanded",
   PastEventsCollapsed = "PastEventsCollapsed",
+
+  BuyBookClicked = "BuyBookClicked",
 }
 
 export const sendAnalyticsEvent = (

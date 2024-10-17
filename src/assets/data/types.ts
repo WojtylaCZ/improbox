@@ -35,7 +35,8 @@ export type BusinessType = "buy" | "rent";
 export type BookItem = {
   id: string;
   slugExtra: string;
-  name: string;
+  title: string;
+  subtitle: string;
   author: string;
   inventoryState: "Skladem" | "Na cestě";
   image: string;
@@ -43,4 +44,5 @@ export type BookItem = {
   websiteUrl: string;
   language: "cs" | "en";
   recommends: Array<string>;
+  priceCZK: number;
 };

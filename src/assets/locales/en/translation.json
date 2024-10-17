@@ -1,7 +1,7 @@
 {
   "menu": {
     "events": "Events lineup",
-    "forActors": "Pro actors",
+    "forActors": "For actors",
     "forOrganisers": "For promoters",
     "about": "About"
   },
@@ -30,8 +30,8 @@
     },
     "forActors": {
       "title": "For improv actors",
-      "1": "Are you looking for some material for your improv growth, inspiration? Check out books below.",
-      "2": "Purchasing a book through Improbox.cz you are supporting maintanance and further work on this web. Thank you, Vojta."
+      "1": "Are you looking for a material for your improv growth or an inspiration? Check out books below.",
+      "2": "Purchasing a book through Improbox.cz you support maintanance and further work on this web. Books are in stock here in Czechia so you do not need to order them from abroad."
     }
   },
   "filters": {

@@ -29,11 +29,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
   const [isExpanded, setIsExpanded] = useState(false);
   const ref = React.useRef<HTMLInputElement>(null);
 
-  const bookItemSlug = bookItem.id;
-  // const improEventSlug = getImproEventSlug(bookItem);
-  // const improEventOrganizers = bookItem.organizerIds.map((oId) => {
-  //   return organizersTable.find((o) => o.id === oId)!;
-  // });
+  const bookItemId = bookItem.id;
 
   const scrollToTarget = () => {
     if (ref && ref.current) {
@@ -43,7 +39,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
   };
 
   useEffect(() => {
-    if (eventSlugParam === bookItemSlug) {
+    if (eventSlugParam === bookItemId) {
       setIsExpanded(true);
       scrollToTarget();
       return;
@@ -53,38 +49,27 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
       setIsExpanded(isFirst);
       // window.scrollTo(0, 0);
     }
-  }, [eventSlugParam, bookItemSlug, setIsExpanded, isFirst]);
+  }, [eventSlugParam, bookItemId, setIsExpanded, isFirst]);
 
-  const handleExpandClick = useCallback(() => {
-    if (!isExpanded) {
-      sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, { improEventSlug: bookItemSlug });
-    } else {
-      sendAnalyticsEvent(AnalyticsEvents.ImproEventCollapsed, { improEventSlug: bookItemSlug });
-    }
-    setIsExpanded(!isExpanded);
-  }, [bookItemSlug, isExpanded]);
+  // const handleExpandClick = useCallback(() => {
+  //   if (!isExpanded) {
+  //     sendAnalyticsEvent(AnalyticsEvents.ImproEventExpanded, { improEventSlug: bookItemSlug });
+  //   } else {
+  //     sendAnalyticsEvent(AnalyticsEvents.ImproEventCollapsed, { improEventSlug: bookItemSlug });
+  //   }
+  //   setIsExpanded(!isExpanded);
+  // }, [bookItemSlug, isExpanded]);
 
   const handleEventLinkClick = useCallback(() => {
-    sendAnalyticsEvent(AnalyticsEvents.ImproEventLinkOpened, { improEventSlug: bookItemSlug });
-  }, [bookItemSlug]);
-
-  const handleOrganiseWebLinkClick = useCallback(() => {
-    sendAnalyticsEvent(AnalyticsEvents.OrganiserWebsiteOpened, { improEventSlug: bookItemSlug });
-  }, [bookItemSlug]);
-
-  // const eventPlay = Date.parse(bookItem.playDate);
-  // const eventPlayDate = new Date(eventPlay);
-  // const todayDate = Date.now();
-
-  // past event is 24 hours old
-  // const isPastEvent = eventPlay < todayDate - 86400000;
+    sendAnalyticsEvent(AnalyticsEvents.BuyBookClicked, { improBookId: bookItemId });
+  }, [bookItemId]);
 
   return (
     <div
       style={{
         backgroundColor: "#ffffff",
-        border: `${eventSlugParam === bookItemSlug ? "3px" : "1px"} solid ${
-          eventSlugParam === bookItemSlug ? "#dd2822" : "#220101"
+        border: `${eventSlugParam === bookItemId ? "3px" : "1px"} solid ${
+          eventSlugParam === bookItemId ? "#dd2822" : "#220101"
         }`,
         borderRadius: "8px",
         boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
@@ -120,7 +105,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                       color: "#000000",
                     }}
                   >
-                    {bookItem.name}
+                    {bookItem.title}
                   </span>
                 </div>
                 <h3
@@ -133,7 +118,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                 </h3>
               </div>
             </Col>
-            <Col xs={12} sm={{ span: 1, order: 2 }}>
+            <Col xs={12} sm={{ span: 1, order: 2 }} md={2}>
               {/* state */}
 
               <div
@@ -159,7 +144,10 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                   }}
                 >
                   {/* {useEventTypeLabel(bookItem.eventType)} */}
-                  {bookItem.inventoryState}
+                  {/* {bookItem.inventoryState} */}
+                  {bookItem.language === "cs"
+                    ? t(`dataLabels.CsEventLanguage`)
+                    : t(`dataLabels.EnEventLanguage`)}
                 </div>
                 {/* <div
                   style={{
@@ -194,7 +182,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                       // color: isPastEvent ? "#aaa8a8" : undefined, //default color,
                     }}
                   >
-                    {1099}
+                    {bookItem.priceCZK}
                   </span>
                   <span
                     style={{
@@ -241,7 +229,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                 </div>
               </div>
             </Col>
-            <Col xs={12} sm={{ span: 12, order: 4 }} md={{ span: 1, order: 4 }}>
+            {/* <Col xs={12} sm={{ span: 12, order: 4 }} md={{ span: 1, order: 4 }}>
               <div
                 onClick={handleExpandClick}
                 style={{
@@ -267,7 +255,7 @@ export const BookItemCard = ({ bookItem, isFirst }: { bookItem: BookItem; isFirs
                   {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </div>

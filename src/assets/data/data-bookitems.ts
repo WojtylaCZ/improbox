@@ -1,30 +1,112 @@
 import { BookItem } from "./types";
-import big_book_improv_games from "./../img/big_book_improv_games.jpg";
-import long_form_short_book from "./../img/long_form_short_book.jpg";
+import big_book_improv_games from "./../img/books/big-book-improv-games.jpg";
+import long_form_short_book from "./../img/books/long-form-short-book.jpg";
+import long_form_improv from "./../img/books/logn-form-improv.png";
+import the_visual_guide from "./../img/books/the-visual-guide-to-improv.png";
+import improvisation_for_the_theater from "./../img/books/improvisation-for-the-theater.png";
+import impro_en from "./../img/books/impro-en.png";
+import impro_cs from "./../img/books/impro-cs.png";
 
 export const bookItemsTable: Array<BookItem> = [
   {
+    id: "4",
+    slugExtra: "",
+    title: "The Visual guide to improv",
+    author: "Anna Harvard, Katarina Wahlberg",
+    subtitle: "",
+    image: the_visual_guide,
+    businessType: "buy",
+    websiteUrl: "",
+    language: "en",
+    recommends: [],
+    inventoryState: "Skladem",
+    priceCZK: 690,
+  },
+  {
+    id: "2",
+    slugExtra: "",
+    title: "Long Form Short Book",
+    author: "Francisco Antillón Romo",
+    subtitle: "A short book about game of the scene based long form improv",
+    image: long_form_short_book,
+    businessType: "buy",
+    websiteUrl: "",
+    language: "en",
+    recommends: [],
+    inventoryState: "Skladem",
+    priceCZK: 390,
+  },
+
+  {
+    id: "4",
+    slugExtra: "",
+    title: "Improvisation for the Theater",
+    author: "Viola Spolin",
+    subtitle: "A Handbook of Teaching and Directing Techniques (Drama and Performance Studies)",
+    image: improvisation_for_the_theater,
+    businessType: "buy",
+    websiteUrl: "",
+    language: "en",
+    recommends: [],
+    inventoryState: "Skladem",
+    priceCZK: 640,
+  },
+  {
     id: "1",
     slugExtra: "",
-    name: "The Big Book of Improv Games",
+    title: "The Big Book of Improv Games",
+    subtitle: "A compendium of performance-based short-form games",
     author: "Andrew M Spragge, Karen L Eichler",
     image: big_book_improv_games,
     businessType: "buy",
     websiteUrl: "",
     language: "en",
-    recommends: ["Láďa Karda", "Míša Puchalka"],
+    recommends: [],
     inventoryState: "Skladem",
+    priceCZK: 890,
   },
+
   {
-    id: "1",
+    id: "3",
     slugExtra: "",
-    name: "Long Form Short Book",
-    author: "Francisco Antillón Romo",
-    image: long_form_short_book,
+    title: "Long-form improv",
+    author: "Ben Hauck",
+    subtitle:
+      "The complete guide to creating characters, sustaining scenes, and performing extraordinary harolds",
+    image: long_form_improv,
     businessType: "buy",
     websiteUrl: "",
     language: "en",
-    recommends: ["Láďa Karda", "Míša Puchalka"],
+    recommends: [],
     inventoryState: "Skladem",
+    priceCZK: 790,
+  },
+  {
+    id: "5",
+    slugExtra: "",
+    title: "Impro",
+    author: "Keith Johnstone",
+    subtitle: "Improvisation and the Theater",
+    image: impro_en,
+    businessType: "buy",
+    websiteUrl: "",
+    language: "en",
+    recommends: [],
+    inventoryState: "Skladem",
+    priceCZK: 690,
+  },
+  {
+    id: "5",
+    slugExtra: "",
+    title: "Impro",
+    author: "Keith Johnstone",
+    subtitle: "Improvisation and the Theater",
+    image: impro_cs,
+    businessType: "buy",
+    websiteUrl: "",
+    language: "cs",
+    recommends: [],
+    inventoryState: "Skladem",
+    priceCZK: 1990,
   },
 ];
