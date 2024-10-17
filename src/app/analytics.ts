@@ -8,6 +8,7 @@ export const enum AnalyticsEvents {
   MenuBrandClicked = "MenuBrandClicked",
   MenuEventsClicked = "MenuEventsClicked",
   MenuForOrganisersClicked = "MenuForOrganisersClicked",
+  MenuForActorsClicked = "MenuForActorsClicked",
   MenuAboutClicked = "MenuAboutClicked",
 
   LanguageChanged = "LanguageChanged",
@@ -51,6 +52,8 @@ export const enum AnalyticsEvents {
 
   PastEventsExpanded = "PastEventsExpanded",
   PastEventsCollapsed = "PastEventsCollapsed",
+
+  BuyBookClicked = "BuyBookClicked",
 }
 
 export const sendAnalyticsEvent = (

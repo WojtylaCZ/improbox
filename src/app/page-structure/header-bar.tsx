@@ -53,6 +53,13 @@ export const HeaderBar = () => {
             </Nav.Link>
             <Nav.Link
               className="mx-2 text-light text-nowrap"
+              href={`/${localeParam ? localeParam.concat("/pro-hrace") : "pro-hrace"}`}
+              onClick={() => sendAnalyticsEvent(AnalyticsEvents.MenuForActorsClicked, {})}
+            >
+              {t("menu.forActors")}
+            </Nav.Link>
+            <Nav.Link
+              className="mx-2 text-light text-nowrap"
               href={`/${localeParam ? localeParam.concat("/pro-poradatele") : "pro-poradatele"}`}
               onClick={() => sendAnalyticsEvent(AnalyticsEvents.MenuForOrganisersClicked, {})}
             >
