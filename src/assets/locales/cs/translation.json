@@ -55,6 +55,7 @@
   },
   "event": {
     "openEventLink": "Zobrazit událost",
+    "more": "Více",
     "groupWebsite": "Web souboru: ",
     "groupsWebsites": "Weby souborů: ",
     "shareEvent": "Získat odkaz události"
