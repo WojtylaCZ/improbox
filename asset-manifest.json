@@ -1,21 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.c1f4a4fe.css",
-    "main.js": "/static/js/main.79c7fc77.js",
+    "main.js": "/static/js/main.74377b19.js",
     "static/js/496.c4f471ae.chunk.js": "/static/js/496.c4f471ae.chunk.js",
+    "static/media/improvisation-for-the-theater.png": "/static/media/improvisation-for-the-theater.aea2b8bce86451618498.png",
     "static/media/travolta.gif": "/static/media/travolta.25353442322ca9a66207.gif",
+    "static/media/the-visual-guide-to-improv.png": "/static/media/the-visual-guide-to-improv.6293d08cacc0e1f37377.png",
+    "static/media/logn-form-improv.png": "/static/media/logn-form-improv.1a2bb960d0a132728af1.png",
+    "static/media/impro-en.png": "/static/media/impro-en.41dc6f171ddf532572a1.png",
+    "static/media/big-book-improv-games.jpg": "/static/media/big-book-improv-games.0911bc8a1ac419b76c35.jpg",
+    "static/media/long-form-short-book.jpg": "/static/media/long-form-short-book.b592d2fb5764f5cedb63.jpg",
     "static/media/fb.png": "/static/media/fb.cd10ef5072dd017176a7.png",
+    "static/media/impro-cs.png": "/static/media/impro-cs.5ddd28324f620800b4d3.png",
     "static/media/ig.png": "/static/media/ig.1751f456a1018a556261.png",
     "static/media/actors.png": "/static/media/actors.9ad3d5ff76271e32a078.png",
     "index.html": "/index.html",
     "static/media/chevron-down.svg": "/static/media/chevron-down.bdc5512bebaafee5cfb979d7683ecb5e.svg",
     "static/media/chevron-up.svg": "/static/media/chevron-up.0fab3e8c7e4f106fee079a2fdd13ffa2.svg",
     "main.c1f4a4fe.css.map": "/static/css/main.c1f4a4fe.css.map",
-    "main.79c7fc77.js.map": "/static/js/main.79c7fc77.js.map",
+    "main.74377b19.js.map": "/static/js/main.74377b19.js.map",
     "496.c4f471ae.chunk.js.map": "/static/js/496.c4f471ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1f4a4fe.css",
-    "static/js/main.79c7fc77.js"
+    "static/js/main.74377b19.js"
   ]
 }
