@@ -39,7 +39,7 @@ const start = async () => {
 
   Object.entries(fbCalendarEvents).forEach(([key, value]) => {
     if (instanceOfVEvent(value)) {
-      console.log(value);
+      // console.log(value);
 
       if (!LocationDistrictMapping.get(value.location)) {
         unknownDataEventIds.add(key);
