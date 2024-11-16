@@ -313,7 +313,7 @@ export const organizersTable: Array<Organizer> = [
     id: "improdva",
     name: "Improdva",
     websiteUrl: "www.facebook.com/improdva",
-    facebookCalendarId: "",
+    facebookCalendarId: "Improdva",
     language: "cs",
   },
   {
