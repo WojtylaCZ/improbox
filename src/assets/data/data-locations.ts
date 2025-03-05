@@ -117,4 +117,5 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Divadlo Kolowrat", "Praha"],
   ["Divadlo v Řeznické", "Praha"],
   ["Divadlo Open Gate", "Středočeský kraj"],
+  ["Tvůrčí dům Elišky Peškové", "Praha"],
 ]);
