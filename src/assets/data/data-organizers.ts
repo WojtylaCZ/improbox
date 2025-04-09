@@ -561,4 +561,18 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Exit 87",
     language: "en",
   },
+  {
+    id: "tlak",
+    name: "Improvizační jednotka TLAK",
+    websiteUrl: "https://www.facebook.com/profile.php?id=61569683368568",
+    facebookCalendarId: "Improvizační jednotka TLAK",
+    language: "cs",
+  },
+  {
+    id: "vezmikapranapilates",
+    name: "Vezmi kapra na pilates",
+    websiteUrl: "https://www.facebook.com/profile.php?id=61564930971632",
+    facebookCalendarId: "Vezmi kapra na pilates",
+    language: "cs",
+  },
 ];
