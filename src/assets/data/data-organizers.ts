@@ -575,4 +575,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Vezmi kapra na pilates",
     language: "cs",
   },
+  {
+    id: "radioivo",
+    name: "RÁDIO IVO",
+    websiteUrl: "https://www.facebook.com/radio.ivo",
+    facebookCalendarId: "RADIO IVO",
+    language: "cs",
+  },
 ];
