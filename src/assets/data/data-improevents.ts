@@ -7368,7 +7368,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         id: "e1205548441193316@facebook.com",
         slugExtra: "",
         name: "RÁDIO IVO: Život nedoceníš Na Zábradlí",
-        eventType: "jam",
+        eventType: "play",
         websiteUrl:
           "https://www.facebook.com/events/1205523177862509/?event_time_id=1205548441193316",
         organizerIds: ["radioivo"],
@@ -7631,7 +7631,7 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         id: "e1205547331193427@facebook.com",
         slugExtra: "",
         name: "RÁDIO IVO: Život nedoceníš Na Zábradlí",
-        eventType: "jam",
+        eventType: "play",
         websiteUrl:
           "https://www.facebook.com/events/1205523177862509/?event_time_id=1205547331193427",
         organizerIds: ["radioivo"],
