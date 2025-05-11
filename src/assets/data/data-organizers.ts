@@ -411,7 +411,7 @@ export const organizersTable: Array<Organizer> = [
     id: "allimp",
     name: "All Imp",
     websiteUrl: "www.divadloallimp.cz",
-    facebookCalendarId: "",
+    facebookCalendarId: "All Imp",
     language: "cs",
   },
   {
@@ -580,6 +580,13 @@ export const organizersTable: Array<Organizer> = [
     name: "RÁDIO IVO",
     websiteUrl: "https://www.facebook.com/radio.ivo",
     facebookCalendarId: "RADIO IVO",
+    language: "cs",
+  },
+  {
+    id: "godsavedramaqueen",
+    name: "God Save the Drama Queen",
+    websiteUrl: "https://www.facebook.com/profile.php?id=61571947091047",
+    facebookCalendarId: "",
     language: "cs",
   },
 ];
