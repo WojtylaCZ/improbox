@@ -589,4 +589,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "",
     language: "cs",
   },
+  {
+    id: "letniimprouterky",
+    name: "Letní improúterky",
+    websiteUrl: "https://www.facebook.com/improuterky",
+    facebookCalendarId: "Letní improúterky",
+    language: "cs",
+  },
 ];
