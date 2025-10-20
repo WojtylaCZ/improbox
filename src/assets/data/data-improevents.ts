@@ -8737,17 +8737,6 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         language: "cs",
       },
       {
-        id: "e728419463507479@facebook.com",
-        slugExtra: "",
-        name: "👨‍👩‍👧‍👦IMPROVIZACE pro RODIČE&DĚTI",
-        eventType: "play",
-        websiteUrl: "https://www.facebook.com/events/728419463507479/",
-        organizerIds: ["katerinaburesova", "michaelapuchalka"],
-        playDate: "2025-11-21",
-        district: "Praha",
-        language: "cs",
-      },
-      {
         id: "e784100487863695@facebook.com",
         slugExtra: "",
         name: "Impro v žánrech: FANTASY",
