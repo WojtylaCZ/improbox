@@ -8870,6 +8870,18 @@ export const improEventsTable: Array<MonthEventsCalendar> = [
         language: "cs",
       },
       {
+        id: "0",
+        slugExtra: "",
+        name: "Improv Workshop",
+        eventType: "workshop",
+        websiteUrl:
+          "https://docs.google.com/forms/d/e/1FAIpQLScjsnMqYpVTOIMLlXy5Sc4wJoH0Lywd3SfQB6j0OUS9NM2kvw/viewform",
+        organizerIds: ["nickford" ],
+        playDate: "2025-11-23",
+        district: "Praha",
+        language: "en",
+      },
+      {
         id: "e1306034424599809@facebook.com",
         slugExtra: "",
         name: "The Randoms: Hlava rodiny",
