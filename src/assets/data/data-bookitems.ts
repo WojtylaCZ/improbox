@@ -63,24 +63,24 @@ export const bookItemsTable: Array<BookItem> = [
     language: "en",
     recommends: [],
     inventoryState: "Skladem",
-    priceCZK: 890,
+    priceCZK: 690,
   },
 
-  {
-    id: "3",
-    slugExtra: "",
-    title: "Long-form improv",
-    author: "Ben Hauck",
-    subtitle:
-      "The complete guide to creating characters, sustaining scenes, and performing extraordinary harolds",
-    image: long_form_improv,
-    businessType: "buy",
-    websiteUrl: "",
-    language: "en",
-    recommends: [],
-    inventoryState: "Skladem",
-    priceCZK: 790,
-  },
+  // {
+  //   id: "3",
+  //   slugExtra: "",
+  //   title: "Long-form improv",
+  //   author: "Ben Hauck",
+  //   subtitle:
+  //     "The complete guide to creating characters, sustaining scenes, and performing extraordinary harolds",
+  //   image: long_form_improv,
+  //   businessType: "buy",
+  //   websiteUrl: "",
+  //   language: "en",
+  //   recommends: [],
+  //   inventoryState: "Skladem",
+  //   priceCZK: 790,
+  // },
   {
     id: "5",
     slugExtra: "",
@@ -107,6 +107,6 @@ export const bookItemsTable: Array<BookItem> = [
     language: "cs",
     recommends: [],
     inventoryState: "Skladem",
-    priceCZK: 1990,
+    priceCZK: 1790,
   },
 ];
