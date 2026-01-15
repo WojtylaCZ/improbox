@@ -32,6 +32,7 @@ export const Districts = {
   Plzeň: LocationFilter.CechyBezPrahy,
   Dobříš: LocationFilter.CechyBezPrahy,
   Opava: LocationFilter.MoravaASlezsko,
+  Prachatice: LocationFilter.CechyBezPrahy,
 };
 
 export const LocationDistrictMapping = new Map<string, District>([
@@ -129,4 +130,17 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Truhlárna", "Praha"],
   ["Crowd Cafe", "Praha"],
   ["Divadlo Kámen Praha - Studio DK", "Praha"],
+  ["Křížová 95/20", "Brno"],
+  ["Křížová 95/20, 603 00 Brno, Česko", "Brno"],
+  ["Centrum Jasoň", "Praha"],
+  ["Putimská 716/4, Prague", "Praha"],
+  ["Společenský dům Opatovice nad Labem", "Pardubice"],
+  ["PAVIJAn PUB", "Hradec Králové"],
+  ["PavijanPub, HK", "Hradec Králové"],
+  ["Muzeum České Loutky A Cirkusu", "Prachatice"],
+  ["Centrum Loreto", "Praha"],
+  ["Malířská 227/14 Praha 7, Prague, Czech Republic", "Praha"],
+  ["Malířská 227/14", "Praha"],
+  ["Květnov, Vysočina, Czech Republic", "Jihlava"],
+  ["Květnov", "Jihlava"],
 ]);

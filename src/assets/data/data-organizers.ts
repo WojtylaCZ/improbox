@@ -602,5 +602,12 @@ export const organizersTable: Array<Organizer> = [
     websiteUrl: "https://www.facebook.com/profile.php?id=61575038140416",
     facebookCalendarId: "ImproHack",
     language: "cs",
+  },
+  {
+    id: "pilulky",
+    name: "Pilulky",
+    websiteUrl: "https://www.facebook.com/profile.php?id=100054481089470",
+    facebookCalendarId: "Pilulky",
+    language: "cs",
   }
 ];
