@@ -609,5 +609,19 @@ export const organizersTable: Array<Organizer> = [
     websiteUrl: "https://www.facebook.com/profile.php?id=100054481089470",
     facebookCalendarId: "Pilulky",
     language: "cs",
-  }
+  },
+  {
+    id: "smecka",
+    name: "smečka",
+    websiteUrl: "https://www.facebook.com/smecka.impro",
+    facebookCalendarId: "",
+    language: "cs",
+  },
+  {
+    id: "jokedivision",
+    name: "Joke Division",
+    websiteUrl: "https://www.facebook.com/jokedivisioncz",
+    facebookCalendarId: "Joke Division CZ",
+    language: "cs",
+  },
 ];

@@ -143,4 +143,9 @@ export const LocationDistrictMapping = new Map<string, District>([
   ["Malířská 227/14", "Praha"],
   ["Květnov, Vysočina, Czech Republic", "Jihlava"],
   ["Květnov", "Jihlava"],
+  ["SpoluChvíle", "Praha"],
+  ["Sokolská 584, 257 22 Cercany, Czech Republic", "Benešov"],
+  ["Jugoslávských partyzánů 26, Praha 6", "Praha"],
+  ["Plch, 533 45 Plch, Česko", "Pardubice"],
+  ["Gerstnerova 658/5, 170 00 Praha, Česko", "Praha"],
 ]);
