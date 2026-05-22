@@ -614,7 +614,7 @@ export const organizersTable: Array<Organizer> = [
     id: "smecka",
     name: "smečka",
     websiteUrl: "https://www.facebook.com/smecka.impro",
-    facebookCalendarId: "",
+    facebookCalendarId: "Improvizační soubor smečka.",
     language: "cs",
   },
   {
