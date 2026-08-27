@@ -624,4 +624,11 @@ export const organizersTable: Array<Organizer> = [
     facebookCalendarId: "Joke Division CZ",
     language: "cs",
   },
+  {
+    id: "reknivez",
+    name: "Řeknivěž",
+    websiteUrl: "https://www.facebook.com/reknivez",
+    facebookCalendarId: "Řeknivěž",
+    language: "cs",
+  },
 ];
